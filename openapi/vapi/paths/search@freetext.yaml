@@ -1,0 +1,102 @@
+post:
+  tags:
+    - Product services
+  summary: /search/freetext
+  operationId: searchFreetext
+  description: >
+    Free text search
+
+    - This service provides a **free text search across all products and
+    destinations**
+
+    - The `text` parameter is required
+
+    - **Note:** results include a type indicator (`type`) that you can use to
+    display each result appropriately based on its content
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            destId:
+              type: integer
+              description: >
+                **unique numeric identifier** of the destination to search
+                within 
+
+                - `destinationId` can be retrieved from the
+                [/taxonomy/destinations](#operation/taxonomyDestinations)
+                service
+            topX:
+              $ref: ../components/schemas/topX.yaml
+            currencyCode:
+              type: string
+              description: >-
+                **currency code** for the currency in which to display product
+                pricing information
+            text:
+              type: string
+              description: '**text** to search for'
+            searchTypes:
+              type: array
+              description: >
+                **array** of search domain specifiers where each item is *one
+                of*:
+                  - `"PRODUCT"`: a tour / activity
+                  - `"DESTINATION"`: continent, country, city, region
+                  - `"ATTRACTION"`: an attraction within a destination (only available to partners with SEO access)
+                  - `"RECOMMENDATION"`: an attraction within a destination (only available to partners with SEO access)
+              items:
+                type: string
+                enum:
+                  - PRODUCT
+                  - DESTINATION
+                  - ATTRACTION
+                  - RECOMMENDATION
+            sortOrder:
+              $ref: ../components/schemas/sortOrder.yaml
+        examples:
+          '1':
+            summary: by product or destination
+            value:
+              destId: 684
+              topX: 1-3
+              currencyCode: EUR
+              text: grand
+              searchTypes:
+                - ATTRACTION
+                - RECOMMENDATION
+          '2':
+            summary: by attraction or recommendation
+            value:
+              destId: 684
+              topX: 1-3
+              currencyCode: USD
+              text: grand
+              searchTypes:
+                - PRODUCT
+                - DESTINATION
+                
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    description: '**array** of search results'
+                    items:
+                      $ref: ../components/schemas/SearchFreetextResponse.yaml  
+          examples:
+            '1':
+              $ref: ../components/examples/search-freetext-example-1.yaml
+            '2':
+              $ref: ../components/examples/search-freetext-example-2.yaml

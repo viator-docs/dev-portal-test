@@ -1,0 +1,390 @@
+summary: available products example
+value:
+  errorReference: null
+  data:
+    - sortOrder: 1
+      supplierName: Big Bus Tours
+      currencyCode: USD
+      catIds:
+        - 6
+        - 12
+      subCatIds:
+        - 97
+        - 98
+        - 5330
+        - 26963
+        - 32024
+        - 45
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: UnconditionalBE
+      onRequestPeriod: null
+      primaryGroupId: null
+      pas:
+        productCode: 5010SYDNEY
+        travellerMix: 1A
+        tourGrades:
+          24HOUR:
+            tourGradeCode: 24HOUR
+            title: '24 Hour Classic Ticket '
+            description: >-
+              Unlimited use on Big Bus Sydney & Bondi Hop-on Hop-off Tour for 24
+              hours from time of first use
+            bookingEngine: UNCONDITIONAL_FREESALE
+            sapi: false
+            languageServices:
+              de:
+                - AUDIO
+              en:
+                - AUDIO
+              es:
+                - AUDIO
+              fr:
+                - AUDIO
+              ja:
+                - AUDIO
+              ko:
+                - AUDIO
+              zh:
+                - AUDIO
+            availDates:
+              - priceFrom: USD 36.97
+                priceQuote:
+                  retailPrice: USD 36.97
+                  generalRetailPrice: USD 36.97
+                  priceSource: MANUAL
+                  merchantNetPrice: USD 29.52
+                dateList: >-
+                  20200321 20200322 20200323 20200324 20200325 20200326 20200327
+                  20200328 20200329 20200330 20200331 20200401 20200402 20200403
+                  20200404 20200405 20200406 20200407 20200408 20200409 20200410
+                  20200411 20200412 20200413 20200414 20200415 20200416 20200417
+                  20200418 20200419 20200420 20200421 
+          48HOUR:
+            tourGradeCode: 48HOUR
+            title: '48 Hour Premium Ticket '
+            description: >-
+              48 Hour Premium Ticket: Unlimited use on Big Bus Sydney & Bondi
+              Tour for 48 hours from time of first use PLUS a guided walking
+              tour of The Rocks, Syd
+            bookingEngine: UNCONDITIONAL_FREESALE
+            sapi: false
+            languageServices:
+              de:
+                - AUDIO
+              en:
+                - AUDIO
+              es:
+                - AUDIO
+              fr:
+                - AUDIO
+              ja:
+                - AUDIO
+              ko:
+                - AUDIO
+              zh:
+                - AUDIO
+            availDates:
+              - priceFrom: USD 49.50
+                priceQuote:
+                  retailPrice: USD 49.50
+                  generalRetailPrice: USD 49.50
+                  priceSource: MANUAL
+                  merchantNetPrice: USD 39.53
+                dateList: >-
+                  20200321 20200322 20200323 20200324 20200325 20200326 20200327
+                  20200328 20200329 20200330 20200331 20200401 20200402 20200403
+                  20200404 20200405 20200406 20200407 20200408 20200409 20200410
+                  20200411 20200412 20200413 20200414 20200415 20200416 20200417
+                  20200418 20200419 20200420 20200421 
+          DELUXE:
+            tourGradeCode: DELUXE
+            title: 48 Hour Deluxe Bus and Cruise
+            description: >-
+              Big Bus and Habour Cruise: Combine two great Sydney experiences
+              into one with a hop-on hop off Big Bus Tours and a hop-on hop-off
+              Sydney Harbour cruise <br/>Duration: 2 days: SPECIAL OFFER: EXTRA
+              FREE DAY when you purchase a Deluxe ticket - have 3 days to
+              explore Sydney not 2. Limited time only.
+
+              <br/>Complimentary Walking Tour: Complimentary English-speaking
+              90-minute guided walking tour of “The Rocks” historic and
+              harbourside precinct.
+            bookingEngine: UNCONDITIONAL_FREESALE
+            sapi: false
+            languageServices:
+              de:
+                - AUDIO
+              en:
+                - AUDIO
+              es:
+                - AUDIO
+              fr:
+                - AUDIO
+              ja:
+                - AUDIO
+              ko:
+                - AUDIO
+              zh:
+                - AUDIO
+            availDates:
+              - priceFrom: USD 68.93
+                priceQuote:
+                  retailPrice: USD 68.93
+                  generalRetailPrice: USD 68.93
+                  priceSource: MANUAL
+                  merchantNetPrice: USD 55.05
+                dateList: >-
+                  20200321 20200322 20200323 20200324 20200325 20200326 20200327
+                  20200328 20200329 20200330 20200331 20200401 20200402 20200403
+                  20200404 20200405 20200406 20200407 20200408 20200409 20200410
+                  20200411 20200412 20200413 20200414 20200415 20200416 20200417
+                  20200418 20200419 20200420 20200421 
+          TG1:
+            tourGradeCode: TG1
+            title: 48Hour Deluxe PLUS Attractions
+            description: >-
+              Hop-on Hop-Off and Attractions: 48hr Big Bus Tours, 1-day Hop-On
+              Hop-Off Harbour Cruise, 4 Attractions: Tower Eye, Madame Tussauds,
+              Wildlife Zoo, Aquarium<br/>Duration: 2 days: SPECIAL OFFER: EXTRA
+              FREE DAY when you purchase a Deluxe ticket - have 3 days to
+              explore Sydney not 2. Limited time only.
+
+              <br/>Complimentary Walking Tours: Complimentary English-speaking
+              guided walking tour of “The Rocks” historic and harbourside
+              precinct.
+            bookingEngine: UNCONDITIONAL_FREESALE
+            sapi: false
+            languageServices:
+              de:
+                - AUDIO
+              en:
+                - AUDIO
+              es:
+                - AUDIO
+              fr:
+                - AUDIO
+              ja:
+                - AUDIO
+              ko:
+                - AUDIO
+              zh:
+                - AUDIO
+            availDates:
+              - priceFrom: USD 89.81
+                priceQuote:
+                  retailPrice: USD 89.81
+                  generalRetailPrice: USD 89.81
+                  priceSource: MANUAL
+                  merchantNetPrice: USD 71.74
+                dateList: >-
+                  20200321 20200322 20200323 20200324 20200325 20200326 20200327
+                  20200328 20200329 20200330 20200331 20200401 20200402 20200403
+                  20200404 20200405 20200406 20200407 20200408 20200409 20200410
+                  20200411 20200412 20200413 20200414 20200415 20200416 20200417
+                  20200418 20200419 20200420 20200421 
+        incompleteQuote: false
+        removedChildAges: []
+      available: true
+      productUrlName: Sydney-and-Bondi-Hop-on-Hop-off-Tour
+      primaryDestinationUrlName: Sydney
+      duration: 2 hours
+      price: 36.97
+      supplierCode: '5010'
+      translationLevel: 0
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/94/40/f3.jpg
+      primaryDestinationName: Sydney
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/07/94/40/f3.jpg
+      priceFormatted: $36.97
+      rrp: 0
+      rrpformatted: ''
+      photoCount: 124
+      reviewCount: 1605
+      primaryDestinationId: 357
+      merchantNetPriceFrom: 29.52
+      onSale: false
+      videoCount: 1
+      rating: 4.5
+      shortTitle: Big Bus Sydney and Bondi Hop-on Hop-off Tour
+      specialOfferAvailable: false
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: $29.52
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      shortDescription: >-
+        Explore Sydney and Bondi Beach on this hop-on hop-off sightseeing tour,
+        which takes you by double-decker bus to 34 stops around the city
+        including Sydney Opera House, Sydney Harbour Bridge, Darling Harbour,
+        Bondi Beach and more. Enjoy unobstructed views and recorded commentary
+        on board. Simply hop off to walk around and sightsee in depth. Your
+        ticket is valid for 24 or 48 hours, so you can experience Sydney and
+        Bondi's most noteworthy attractions, sights, and shopping and dining
+        areas at your own pace.
+      title: Big Bus Sydney and Bondi Hop-on Hop-off Tour
+      code: 5010SYDNEY
+    - sortOrder: 2
+      supplierName: Sundance Helicopters
+      currencyCode: USD
+      catIds:
+        - 1
+        - 25
+        - 12
+      subCatIds:
+        - 113
+        - 2
+        - 98
+        - 26963
+        - 45
+        - 95
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: FreesaleOnRequestBE
+      onRequestPeriod: 336
+      primaryGroupId: null
+      pas:
+        productCode: 2280SUN
+        travellerMix: 1A
+        tourGrades:
+          SUNSET_ASTAR:
+            tourGradeCode: SUNSET_ASTAR
+            title: 'A-Star Helicopter '
+            description: Grand Canyon West Rim Deluxe Sunset Tour by A-Star Helicopter
+            bookingEngine: FREESALE_ON_REQUEST
+            sapi: false
+            languageServices:
+              de:
+                - AUDIO
+              en:
+                - AUDIO
+              es:
+                - AUDIO
+              fr:
+                - AUDIO
+              it:
+                - AUDIO
+              ja:
+                - AUDIO
+              ko:
+                - AUDIO
+              pt:
+                - AUDIO
+              ru:
+                - AUDIO
+              tw:
+                - AUDIO
+            availDates:
+              - priceFrom: USD 490.00
+                priceQuote:
+                  retailPrice: USD 490.00
+                  generalRetailPrice: USD 490.00
+                  priceSource: MANUAL
+                  merchantNetPrice: USD 420.68
+                dateList: >-
+                  20200321 20200322 20200323 20200324 20200325 20200326 20200327
+                  20200328 20200329 20200330 20200331 20200401 20200402 20200403
+                  20200404 20200405 20200406 20200407 20200408 20200409 20200410
+                  20200411 20200412 20200413 20200414 20200415 20200416 20200417
+                  20200418 20200419 20200420 20200421 
+          SUNSET_EC130:
+            tourGradeCode: SUNSET_EC130
+            title: EC-130 Helicopter Upgrade
+            description: 'Grand Canyon West Rim Deluxe Sunset Tour by EC-130 Helicopter '
+            bookingEngine: FREESALE_ON_REQUEST
+            sapi: false
+            languageServices:
+              de:
+                - AUDIO
+              en:
+                - AUDIO
+              es:
+                - AUDIO
+              fr:
+                - AUDIO
+              it:
+                - AUDIO
+              ja:
+                - AUDIO
+              ko:
+                - AUDIO
+              pt:
+                - AUDIO
+              ru:
+                - AUDIO
+              tw:
+                - AUDIO
+            availDates:
+              - priceFrom: USD 515.00
+                priceQuote:
+                  retailPrice: USD 515.00
+                  generalRetailPrice: USD 515.00
+                  priceSource: MANUAL
+                  merchantNetPrice: USD 441.98
+                dateList: >-
+                  20200321 20200322 20200323 20200324 20200325 20200326 20200327
+                  20200328 20200329 20200330 20200331 20200401 20200402 20200403
+                  20200404 20200405 20200406 20200407 20200408 20200409 20200410
+                  20200411 20200412 20200413 20200414 20200415 20200416 20200417
+                  20200418 20200419 20200420 20200421 
+        incompleteQuote: false
+        removedChildAges: []
+      available: true
+      productUrlName: Grand-Canyon-West-Rim-Deluxe-Sunset-Helicopter-Tour
+      primaryDestinationUrlName: Las-Vegas
+      duration: 3 hours 30 minutes
+      price: 490
+      supplierCode: '2280'
+      translationLevel: 0
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/7a/ec/1c.jpg
+      primaryDestinationName: Las Vegas
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/07/7a/ec/1c.jpg
+      priceFormatted: $490.00
+      rrp: 0
+      rrpformatted: ''
+      photoCount: 7
+      reviewCount: 399
+      primaryDestinationId: 684
+      merchantNetPriceFrom: 420.68
+      onSale: false
+      videoCount: 1
+      rating: 5
+      shortTitle: Grand Canyon from Las Vegas West Rim Sunset Helicopter Tour
+      specialOfferAvailable: false
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: $420.68
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      shortDescription: >-
+        Take off from Las Vegas on a magical sunset helicopter tour to the Grand
+        Canyon. You'll enjoy a 45-minute helicopter flight each way, land at the
+        Grand Canyon for a glass of Champagne and snacks while you watch the sun
+        start it's descent behind the walls of the canyon, then fly low over the
+        famous neon-lit Las Vegas Strip on your return.
+      title: Grand Canyon West Rim Deluxe Sunset Helicopter Tour
+      code: 2280SUN
+  dateStamp: '2020-02-10T15:41:53+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331005'

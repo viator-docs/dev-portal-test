@@ -1,0 +1,7 @@
+in: query
+name: currencyCode
+schema:
+  type: string
+description: |
+  **currency code** for the currency in which pricing is displayed
+  - default=`'USD'`

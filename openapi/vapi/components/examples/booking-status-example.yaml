@@ -1,0 +1,45 @@
+summary: booking status example
+value:
+  errorReference: null
+  data:
+    - sortOrder: 1
+      bookingStatus:
+        status: 3
+        text: Confirmed
+        type: CONFIRMED
+        level: ITINERARY
+        failed: false
+        confirmed: true
+        amended: false
+        pending: false
+        cancelled: false
+      itemSummaries:
+        - sortOrder: 0
+          bookingStatus:
+            status: 1
+            text: Paid &amp; Confirmed
+            type: CONFIRMED
+            level: ITEM
+            failed: false
+            confirmed: true
+            amended: false
+            pending: false
+            cancelled: false
+          travelDate: '2020-03-31'
+          distributorItemRef: itemRef1000000
+          itineraryId: 1005851866
+          itemId: 580669678
+      itineraryId: 1005851866
+      bookingDate: '2020-02-11'
+      distributorRef: distributorRef100000
+  dateStamp: '2020-02-11T18:38:25+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331004'

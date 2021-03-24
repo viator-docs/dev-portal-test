@@ -1,0 +1,704 @@
+summary: productCode
+value:
+  errorReference: null
+  data:
+    - sortOrder: 1
+      destinationId: 0
+      productCodes: null
+      phone: null
+      brand: null
+      hotelString: 'I live locally / I''m staying with friends, relatives'
+      city: null
+      postcode: null
+      latitude: null
+      longitude: null
+      notes: null
+      address: null
+      name: 'I live locally / I''m staying with friends, relatives'
+      id: local
+    - sortOrder: 2
+      destinationId: 0
+      productCodes: null
+      phone: null
+      brand: null
+      hotelString: My hotel is not yet booked
+      city: null
+      postcode: null
+      latitude: null
+      longitude: null
+      notes: null
+      address: null
+      name: My hotel is not yet booked
+      id: notBooked
+    - sortOrder: 3
+      destinationId: 0
+      productCodes: null
+      phone: null
+      brand: null
+      hotelString: My hotel is not listed
+      city: null
+      postcode: null
+      latitude: null
+      longitude: null
+      notes: null
+      address: null
+      name: My hotel is not listed
+      id: notListed
+    - sortOrder: 4
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89158-4300
+      latitude: 36.107323
+      longitude: -115.17628
+      notes: null
+      address: '3730 Las Vegas Boulevard South, '
+      name: ARIA Resort & Casino
+      id: '1091925'
+    - sortOrder: 5
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4321
+      latitude: 36.113705
+      longitude: -115.16985
+      notes: null
+      address: '3645 Las Vegas Blvd S, '
+      name: Bally's Las Vegas Hotel & Casino
+      id: '1121312'
+    - sortOrder: 6
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4303
+      latitude: 36.112026
+      longitude: -115.175285
+      notes: null
+      address: 3600 Las Vegas Blvd S
+      name: Bellagio Las Vegas
+      id: '1091703'
+    - sortOrder: 7
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-8933
+      latitude: 36.115753
+      longitude: -115.174446
+      notes: null
+      address: '3570 Las Vegas Blvd South, '
+      name: Caesars Palace
+      id: '1091762'
+    - sortOrder: 8
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-1138
+      latitude: 36.13704
+      longitude: -115.16351
+      notes: null
+      address: '2880 Las Vegas Blvd S, '
+      name: Circus Circus Hotel & Casino Las Vegas
+      id: '1091770'
+    - sortOrder: 9
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89119-1002
+      latitude: 36.093147
+      longitude: -115.17744
+      notes: null
+      address: 3940 S Las Vegas Blvd
+      name: Delano Las Vegas
+      id: '1496876'
+    - sortOrder: 10
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89101-2931
+      latitude: 36.17198
+      longitude: -115.14171
+      notes: null
+      address: 206 N. 3rd Street
+      name: Downtown Grand
+      id: '5790631'
+    - sortOrder: 11
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89101-5614
+      latitude: 36.169106
+      longitude: -115.139015
+      notes: null
+      address: '600 East Fremont Street, '
+      name: El Cortez Hotel & Casino
+      id: '1111692'
+    - sortOrder: 12
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4539
+      latitude: 36.108875
+      longitude: -115.16867
+      notes: null
+      address: '80 East Harmon Avenue, '
+      name: Elara By Hilton Grand Vacations - Center Strip
+      id: '2639337'
+    - sortOrder: 13
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-1967
+      latitude: 36.128822
+      longitude: -115.1649
+      notes: null
+      address: '3131 Las Vegas Boulevard S, '
+      name: Encore At Wynn Las Vegas
+      id: '2123368'
+    - sortOrder: 14
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4300
+      latitude: 36.098976
+      longitude: -115.17598
+      notes: null
+      address: '3850 S Las Vegas Blvd, '
+      name: Excalibur Hotel & Casino
+      id: '1097786'
+    - sortOrder: 15
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-8901
+      latitude: 36.116383
+      longitude: -115.172195
+      notes: null
+      address: '3555 Las Vegas Blvd S, '
+      name: Flamingo Las Vegas Hotel & Casino
+      id: '1091844'
+    - sortOrder: 16
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89101-5622
+      latitude: 36.170788
+      longitude: -115.14377
+      notes: null
+      address: 200 Fremont St
+      name: Fremont Hotel & Casino
+      id: '1111699'
+    - sortOrder: 17
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89103-4088
+      latitude: 36.11706
+      longitude: -115.19205
+      notes: null
+      address: '4000 W Flamingo Rd, '
+      name: Gold Coast Hotel & Casino
+      id: '1091823'
+    - sortOrder: 18
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89101-5603
+      latitude: 36.17005
+      longitude: -115.145645
+      notes: null
+      address: '129 Fremont St, '
+      name: Golden Nugget Hotel & Casino
+      id: '1091828'
+    - sortOrder: 19
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-8922
+      latitude: 36.119415
+      longitude: -115.17206
+      notes: null
+      address: '3475 Las Vegas Boulevard South, '
+      name: Harrah's Las Vegas Hotel & Casino
+      id: '1114889'
+    - sortOrder: 20
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-8919
+      latitude: 36.116592
+      longitude: -115.1696
+      notes: null
+      address: '3575 Las Vegas Blvd S, '
+      name: Hilton Grand Vacations at the Flamingo
+      id: '1217597'
+    - sortOrder: 21
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4702
+      latitude: 36.11815
+      longitude: -115.16341
+      notes: null
+      address: '3950 Koval Ln, '
+      name: Holiday Inn Club Vacations at Desert Club Resort
+      id: '2164660'
+    - sortOrder: 22
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89119-1004
+      latitude: 36.09734
+      longitude: -115.17634
+      notes: null
+      address: '3900 S Las Vegas Blvd, '
+      name: Luxor Hotel & Casino
+      id: '1111709'
+    - sortOrder: 23
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89119-1006
+      latitude: 36.0959
+      longitude: -115.174095
+      notes: null
+      address: '3950 Las Vegas Boulevard South, '
+      name: Mandalay Bay Resort & Casino
+      id: '1091886'
+    - sortOrder: 24
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: '89109'
+      latitude: 36.10761
+      longitude: -115.16966
+      notes: null
+      address: '75 East Harmon Avenue, '
+      name: Marriott's Grand Chateau
+      id: '1567617'
+    - sortOrder: 25
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4319
+      latitude: 36.102436
+      longitude: -115.16935
+      notes: null
+      address: 3799 S Las Vegas Blvd
+      name: MGM Grand Las Vegas
+      id: '1091891'
+    - sortOrder: 26
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4338
+      latitude: 36.102093
+      longitude: -115.17433
+      notes: null
+      address: '3790 Las Vegas Boulevard South, '
+      name: New York - New York Hotel and Casino
+      id: '1091904'
+    - sortOrder: 27
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-7304
+      latitude: 36.10006
+      longitude: -115.167595
+      notes: null
+      address: '115 E Tropicana Avenue, '
+      name: OYO Las Vegas Hotel and Casino
+      id: '1600446'
+    - sortOrder: 28
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89103-3903
+      latitude: 36.114502
+      longitude: -115.19429
+      notes: null
+      address: '4321 West Flamingo Road, '
+      name: Palms Casino Resort
+      id: '1208820'
+    - sortOrder: 29
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4345
+      latitude: 36.11242
+      longitude: -115.17175
+      notes: null
+      address: '3655 Las Vegas Boulevard South, '
+      name: Paris Las Vegas
+      id: '1143336'
+    - sortOrder: 30
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4337
+      latitude: 36.132004
+      longitude: -115.16145
+      notes: null
+      address: '3770 S Las Vegas Blvd, South Part of the Strip, Next to NY Hotel'
+      name: Park MGM Las Vegas
+      id: '1097712'
+    - sortOrder: 31
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4331
+      latitude: 36.110043
+      longitude: -115.17096
+      notes: null
+      address: '3667 Las Vegas Boulevard South, '
+      name: Planet Hollywood Resort & Casino
+      id: '1091687'
+    - sortOrder: 32
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4308
+      latitude: 36.106483
+      longitude: -115.17092
+      notes: null
+      address: '3745 Las Vegas Boulevard South, '
+      name: Polo Towers Suites
+      id: '1091916'
+    - sortOrder: 33
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89103-4043
+      latitude: 36.1161
+      longitude: -115.18675
+      notes: null
+      address: '3700 W Flamingo, '
+      name: Rio All-Suite Hotel & Casino
+      id: '1091673'
+    - sortOrder: 34
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4504
+      latitude: 36.106987
+      longitude: -115.166756
+      notes: null
+      address: 145 East Harmon Avenue
+      name: Signature at MGM Grand
+      id: '1601419'
+    - sortOrder: 35
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4309
+      latitude: 36.109745
+      longitude: -115.17384
+      notes: null
+      address: '3708 Las Vegas Boulevard South, '
+      name: 'The Cosmopolitan of Las Vegas, Autograph Collection'
+      id: '2829539'
+    - sortOrder: 36
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-8918
+      latitude: 36.114937
+      longitude: -115.172455
+      notes: null
+      address: 3595 Las Vegas Boulevard South
+      name: The Cromwell Hotel Las Vegas
+      id: '7537691'
+    - sortOrder: 37
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89101-5600
+      latitude: 36.169464
+      longitude: -115.142784
+      notes: null
+      address: '301 Fremont Street, '
+      name: The D Casino Hotel Las Vegas
+      id: '1091679'
+    - sortOrder: 38
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-8921
+      latitude: 36.118
+      longitude: -115.17194
+      notes: null
+      address: '3535 Las Vegas Blvd S, '
+      name: The LINQ Hotel & Casino
+      id: '1186114'
+    - sortOrder: 39
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-8923
+      latitude: 36.121216
+      longitude: -115.17343
+      notes: null
+      address: '3400 Las Vegas Blvd. S., '
+      name: The Mirage Hotel & Casino
+      id: '1097737'
+    - sortOrder: 40
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-1414
+      latitude: 36.12396
+      longitude: -115.16791
+      notes: null
+      address: '3325 Las Vegas Blvd South, '
+      name: The Palazzo at The Venetian
+      id: '1675000'
+    - sortOrder: 41
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89104-2507
+      latitude: 36.147305
+      longitude: -115.155594
+      notes: null
+      address: '2000 Las Vegas Boulevard South, '
+      name: 'The STRAT Hotel, Casino & SkyPod'
+      id: '1114898'
+    - sortOrder: 42
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-8941
+      latitude: 36.121475
+      longitude: -115.16994
+      notes: null
+      address: '3355 Las Vegas Blvd S, '
+      name: The Venetian Resort
+      id: '1097704'
+    - sortOrder: 43
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-8916
+      latitude: 36.123917
+      longitude: -115.17123
+      notes: null
+      address: '3300 Las Vegas Blvd S, '
+      name: Treasure Island Hotel & Casino
+      id: '1091967'
+    - sortOrder: 44
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-4325
+      latitude: 36.09878
+      longitude: -115.17033
+      notes: null
+      address: '3801 Las Vegas Blvd South, '
+      name: Tropicana Las Vegas - A DoubleTree by Hilton Hotel
+      id: '1097730'
+    - sortOrder: 45
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-1936
+      latitude: 36.12944
+      longitude: -115.17272
+      notes: null
+      address: '2000 Fashion Show Drive, '
+      name: Trump International Hotel Las Vegas
+      id: '2022061'
+    - sortOrder: 46
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89169-4708
+      latitude: 36.113308
+      longitude: -115.160835
+      notes: null
+      address: '255 East Flamingo Road, '
+      name: Tuscany Suites & Casino
+      id: '1224853'
+    - sortOrder: 47
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89158-4538
+      latitude: 36.109516
+      longitude: -115.17793
+      notes: null
+      address: '2600 W. Harmon Avenue, '
+      name: Vdara Hotel & Spa at ARIA Las Vegas
+      id: '2474086'
+    - sortOrder: 48
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89158-4382
+      latitude: 36.106415
+      longitude: -115.17404
+      notes: null
+      address: |-
+        3752 S Las Vegas Blvd S
+
+        , 
+      name: Waldorf Astoria Las Vegas
+      id: '2456410'
+    - sortOrder: 49
+      destinationId: 684
+      productCodes: null
+      phone: +1 123 456 7890
+      brand: null
+      hotelString: null
+      city: Las Vegas
+      postcode: 89109-1967
+      latitude: 36.126553
+      longitude: -115.16552
+      notes: null
+      address: '3131 Las Vegas Boulevard South, '
+      name: Wynn Las Vegas
+      id: '1503598'
+  dateStamp: '2020-02-10T18:29:35+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331005'

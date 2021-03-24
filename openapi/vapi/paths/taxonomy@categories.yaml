@@ -1,0 +1,117 @@
+get:
+  tags:
+    - Taxonomy services
+  summary: /taxonomy/categories
+  operationId: taxonomyCategories
+  description: >
+    Get all product categories
+
+    - Retrieves a list of product categories for a destination that can be used
+    as a means of filtering when searching for products using the
+    [/search/products](/#operation/searchProducts)
+    service
+
+    - This service can be used to get a list of all categories and subcategories
+    for a destination by including its `destId`, or you can omit the `destId` to
+    get a list of all categories and subcategories
+
+    - **Note:** If no `destId` is passed, `productCount` and `thumbnailURL` will
+    be `null` as they are destination-specific fields
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+    - in: query
+      name: destId
+      schema:
+        type: integer
+      description: >
+        **unique numeric identifier** of the destination to enquire about
+        (optional)
+
+        - `destinationId` is returned by
+        [/taxonomy/destinations](#operation/taxonomyDestinations)
+      example: 684
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    description: '**array** of category data objects'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          description: '**unique numeric identifier** for the category'
+                          example: 1
+                        productCount:
+                          type: integer
+                          description: >
+                            **number** of products in this category in the
+                            destination specified by `destId`
+
+                            - **note**: will be `null` if no `destId` is
+                            included in the query
+                          example: 47
+                        thumbnailURL:
+                          type: string
+                          description: >
+                            **URL** for this category's thumbnail image,
+                            selected from the most popular product within the
+                            category
+
+                            - **note:** will be `null` if no `destId` is
+                            included in the query
+                          example: >-
+                            http://cache.graphicslib.viator.com/graphicslib-prelive/thumbs154x109/2280/SITours/grand-canyon-all-american-helicopter-tour-in-las-vegas-115053.jpg
+                        groupName:
+                          type: string
+                          description: '**natural-language name** of *this* product category'
+                          example: 'Air, Helicopter and Balloon Tours'
+                        groupUrlName:
+                          type: string
+                          description: '**URL-formatted name** of *this* product category'
+                        subcategories:
+                          type: array
+                          description: '**array** of subcategory objects'
+                          items:
+                            type: object
+                            properties:
+                              sortorder:
+                                type: integer
+                                description: >-
+                                  **sort order** (suggested) of the subcategory
+                                  within the category
+                                example: 1
+                              categoryId:
+                                type: integer
+                                description: >-
+                                  **unique numeric identifier** of *this*
+                                  product category
+                                example: 1
+                              subcategoryId:
+                                type: integer
+                                description: >-
+                                  **unique numeric identifier** of *this*
+                                  product subcategory
+                                example: 1
+                              subcategoryName:
+                                type: string
+                                description: >-
+                                  **natural-language name** of *this* product
+                                  subcategory
+                                example: Air Tours
+                              subCategoryUrlName:
+                                type: string
+                                description: >-
+                                  **URL-formatted name** of *this* product
+                                  subcategory
+          examples:
+            '1':
+              $ref: ../components/examples/taxonomy-categories-example.yaml

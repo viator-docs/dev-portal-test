@@ -1,0 +1,163 @@
+summary: search products example (by attraction link)
+value:
+  errorReference: null
+  data:
+    - sortOrder: 2
+      supplierName: Miami Double Decker
+      currencyCode: USD
+      catIds: null
+      subCatIds: null
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: FreesaleBE
+      onRequestPeriod: null
+      primaryGroupId: null
+      pas: null
+      available: true
+      productUrlName: Everglades-Airboat-Safari
+      primaryDestinationUrlName: Miami
+      duration: 5 hours
+      specialOfferAvailable: true
+      price: 27.55
+      videoCount: 0
+      rating: 4
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/6e/f3/ca.jpg
+      shortTitle: Everglades Airboat Safari
+      supplierCode: '5408'
+      translationLevel: 0
+      onSale: false
+      primaryDestinationName: Miami
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/06/6e/f3/ca.jpg
+      priceFormatted: $27.55
+      rrp: 29
+      rrpformatted: $29.00
+      photoCount: 9
+      reviewCount: 12
+      primaryDestinationId: 662
+      merchantNetPriceFrom: 21.12
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: $21.12
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: '2'
+      admission: '3'
+      specialReservation: false
+      shortDescription: "Explore the Everglades National Park and Florida's natural eco-system on an airboat! See and experience the wild alligators in their natural habitat. Have the chance to see alligators up close in their natural habitat, as well as the many exhibits scattered throughout the park.\_ Transportation is available from your hotel when option is selected."
+      title: Everglades Airboat Safari
+      code: 5408P24
+    - sortOrder: 4
+      supplierName: US2U
+      currencyCode: USD
+      catIds: null
+      subCatIds: null
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: FreesaleBE
+      onRequestPeriod: null
+      primaryGroupId: null
+      pas: null
+      available: true
+      productUrlName: Everglades-Airboat-Tour-with-Transport-from-Miami
+      primaryDestinationUrlName: Miami
+      duration: 5 hours
+      specialOfferAvailable: true
+      price: 51.3
+      videoCount: 0
+      rating: 3.5
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/e9/60/52.jpg
+      shortTitle: Everglades Airboat Ride Ranger-Guided Eco-Tour from Miami
+      supplierCode: '6331'
+      translationLevel: 0
+      onSale: false
+      primaryDestinationName: Miami
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/06/e9/60/52.jpg
+      priceFormatted: $51.30
+      rrp: 54
+      rrpformatted: $54.00
+      photoCount: 0
+      reviewCount: 22
+      primaryDestinationId: 662
+      merchantNetPriceFrom: 40.97
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: $40.97
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: '2'
+      admission: '3'
+      specialReservation: false
+      shortDescription: "Choose between daily morning or afternoon departure from Miami Beach or Downtown Miami and\_experience everything the Everglades have to offer during this ca. 4-5 hour Everglades tour (depending on traffic). English, Spanish or German guides are available on your bus. After your pick-up you will drive to the Everglades where you will first board an Airboat\_guided by your park ranger which takes you on an exciting high speed ride through the river of grass and allows you to discover the beauty of this unique eco-system. Observe a variety of animals including birds, turtles and alligators in their natural habitat and watch the gators up close during the alligator presentation following the airboat ride"
+      title: >-
+        Everglades Airboat & Gators AM or PM pick-up - English,Spanish,German or
+        French
+      code: 6331EVERAIRTRANS
+    - sortOrder: 6
+      supplierName: US2U
+      currencyCode: USD
+      catIds: null
+      subCatIds: null
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: FreesaleBE
+      onRequestPeriod: null
+      primaryGroupId: null
+      pas: null
+      available: true
+      productUrlName: Everglades-Tour-auf-Deutsch
+      primaryDestinationUrlName: Miami
+      duration: 5 hours
+      specialOfferAvailable: true
+      price: 65.45
+      videoCount: 0
+      rating: 3
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/a5/43/8f.jpg
+      shortTitle: Everglades Airboat 1 hour with AM or PM pick-up
+      supplierCode: '6331'
+      translationLevel: 0
+      onSale: false
+      primaryDestinationName: Miami
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/09/a5/43/8f.jpg
+      priceFormatted: $65.45
+      rrp: 77
+      rrpformatted: $77.00
+      photoCount: 0
+      reviewCount: 1
+      primaryDestinationId: 662
+      merchantNetPriceFrom: 61.5
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: $61.50
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: '2'
+      admission: '3'
+      specialReservation: false
+      shortDescription: >-
+        Discover the Everglades on this popular tour. Enjoy a one hour Airboat
+        tour and a wildlife show displaying a variety of animals.
+      title: Everglades Airboat 1 hour with AM or PM pick-up
+      code: 6331P14
+  dateStamp: '2020-02-09T14:37:22+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 24
+  errorMessageText: null
+  vmid: '331001'

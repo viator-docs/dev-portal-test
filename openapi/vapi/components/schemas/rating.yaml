@@ -1,0 +1,11 @@
+type: number
+description: >
+  **average user rating** of *this* product
+
+
+  users rate products by assigning a star-rating from 1-5; this value shows the
+  average of the star ratings provided by users;
+
+
+  the `ratingCounts` associative array in this response provides a breakdown of
+  how many submissions for each star rating have been received

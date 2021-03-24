@@ -1,0 +1,245 @@
+post:
+  tags:
+    - Product services
+  summary: /search/products/codes
+  operationId: searchProductsCodes
+  description: >
+    Search by product code
+
+    - This service returns an array of products given an array of product
+    identifiers that is useful for wishlist / shopping cart / user account
+    display 
+
+    - **Note**: requesting an inactive or non-existent product code will return
+    `0`, `null` and blank values (as per the 'invalid_product' example).
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            currencyCode:
+              type: string
+              description: >-
+                **currency code** for the currency in which to display product
+                pricing
+            productCodes:
+              type: array
+              description: '**array** of product codes to search for'
+              items:
+                type: string
+        examples:
+          two_valid_products:
+            value:
+              currencyCode: EUR
+              productCodes:
+                - 2280SUN
+                - '229016'
+                - 5010SYDNEY
+          invalid_product:
+            value:
+              currencyCode: USD
+              productCodes:
+                - '123457890'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    description: '**array** of product objects'
+                    items:
+                      type: object
+                      properties:
+                        sortOrder:
+                          type: integer
+                          description: '**sort order** for *this* search result'
+                        supplierName:
+                          type: string
+                          description: >-
+                            **natural-language name** of *this* product's
+                            supplier
+                        currencyCode:
+                          type: string
+                          description: >-
+                            **currency** in which *this* product's pricing is
+                            displayed
+                        catIds:
+                          type: array
+                          description: >
+                            **list** of category identifiers *this* product
+                            falls under
+
+                            - `categoryId` is available from the
+                            [/taxonomy/categories](#operation/taxonomyCategories)
+                            service
+                          items:
+                            type: integer
+                        subCatIds:
+                          type: array
+                          description: >
+                            **list** of subcategory identifiers that *this*
+                            product falls under 
+
+                            - `subcategoryId` is available from the
+                            [/taxonomy/categories](#operation/taxonomyCategories)
+                            service
+                          items:
+                            type: integer
+                        webURL:
+                          $ref: ../components/schemas/webURL.yaml
+                        specialReservationDetails:
+                          type: string
+                          description: ignore (Viator only)
+                          nullable: true
+                        panoramaCount:
+                          type: integer
+                          description: >-
+                            **number** of panoramic images available for *this*
+                            product
+                        merchantCancellable:
+                          type: boolean
+                          description: >
+                            ignore (Viator only)
+
+                                
+                            For cancellation information regarding the booking, please refer to the `merchantTermsAndConditions` object
+                        bookingEngineId:
+                          $ref: ../components/schemas/bookingEngineId.yaml
+                        onRequestPeriod:
+                          $ref: ../components/schemas/onRequestPeriod.yaml
+                        primaryGroupId:
+                          type: string
+                          description: ignore (Viator only)
+                          nullable: true
+                        pas:
+                          type: object
+                          nullable: true
+                          description: ignore (Viator only)
+                        shortDescription:
+                          type: string
+                          description: >-
+                            **natural-language description** of *this* product
+                            (short)
+                          example: >-
+                            Enjoy a fun filled day out, the whole family can
+                            enjoy Manly SEA LIFE Sanctuary! You'll see a vast
+                            array of marine life and meet some of Australia's
+                            most deadly animals. Learn all about these animals
+                            during the daily live shows and guided tours. The
+                            expert staff will share stories, interesting facts
+                            and answer all of your questions about these often
+                            misunderstood creatures.
+                        price:
+                          $ref: ../components/schemas/price.yaml
+                        rrp:
+                          $ref: ../components/schemas/rrp.yaml
+                        specialReservation:
+                          type: boolean
+                          description: ignore (Viator only)
+                        rating:
+                          $ref: ../components/schemas/rating.yaml
+                        thumbnailURL:
+                          type: string
+                          description: '**URL** for *this* product''s thumbnail image'
+                        photoCount:
+                          type: integer
+                          description: >-
+                            **number** of user photos published for *this*
+                            product
+                        reviewCount:
+                          $ref: ../components/schemas/reviewCount.yaml
+                        supplierCode:
+                          type: string
+                          description: '**unique identifier** of *this* product''s supplier'
+                        uniqueShortDescription:
+                          type: string
+                          description: ignore (Viator only)
+                          nullable: true
+                        rrpformatted:
+                          $ref: ../components/schemas/rrpFormatted.yaml
+                        onSale:
+                          $ref: ../components/schemas/onSale.yaml
+                        savingAmount:
+                          $ref: ../components/schemas/savingAmount.yaml
+                        savingAmountFormated:
+                          $ref: ../components/schemas/savingAmountFormated.yaml
+                        essential:
+                          type: string
+                          description: ignore (Viator only)
+                          nullable: true
+                        admission:
+                          type: string
+                          description: ignore (Viator only)
+                          nullable: true
+                        translationLevel:
+                          $ref: ../components/schemas/translationLevel.yaml
+                        primaryDestinationId:
+                          type: integer
+                          description: >-
+                            **unique numeric identifier** of *this* product's
+                            primary destination
+                        primaryDestinationName:
+                          description: >-
+                            **natural-language name** of *this* product's
+                            primary destination
+                          type: string
+                        priceFormatted:
+                          type: string
+                          description: >-
+                            **currency-formatted suggested sell 'from' price**
+                            of *this* product
+                        merchantNetPriceFrom:
+                          $ref: ../components/schemas/merchantNetPriceFrom.yaml
+                        merchantNetPriceFromFormatted:
+                          $ref: ../components/schemas/merchantNetPriceFromFormatted.yaml
+                        specialOfferAvailable:
+                          type: boolean
+                          description: >-
+                            **indicator**: `true` if a special offer is
+                            available for *this* product. If `true`, this means
+                            that the `specialOffer` field in the response from
+                            the [/product] service will contain a text string
+                            providing details of the special offer which you may
+                            wish to display in your product search results. E.g.
+                            'Book by May 27 to save 34% off our previously
+                            offered price!'
+                        thumbnailHiResURL:
+                          type: string
+                          description: >-
+                            **URL** for *this* product's high-resolution
+                            thumbnail image
+                        shortTitle:
+                          type: string
+                          description: >-
+                            **natural-language title** (shortened) of *this*
+                            product
+                        videoCount:
+                          type: integer
+                          description: >-
+                            ignore (Viator only) – videos are not available to
+                            partners
+                        title:
+                          type: string
+                          description: '**natural-language title** of *this* product'
+                        duration:
+                          type: string
+                          description: >-
+                            **natural-language description** of *this* product's
+                            duration
+                        code:
+                          type: string
+                          description: '**unique alphanumeric identifier** of *this* product'
+          examples:
+            '1':
+              $ref: ../components/examples/search-products-codes-example-1.yaml
+            '2':
+              $ref: ../components/examples/search-products-codes-example-2.yaml

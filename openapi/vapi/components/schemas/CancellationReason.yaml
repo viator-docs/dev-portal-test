@@ -1,0 +1,10 @@
+type: object
+properties:
+  cancellationReasonCode:
+    type: string
+    description: Machine-interpretable identification code for this cancellation
+    example: Customer_Service.Weather
+  cancellationReasonText:
+    type: string
+    description: Natural-language description of this cancellation reason
+    example: The weather conditions were unsuitable

@@ -1,71 +1,181 @@
-training:
-  - page: developer-portal/index.md
-  - group: Training exercises
+PAPIv1-merchant:
+  - label: Home
+    page: developer-portal/index.md
+  - group: Partner support
+    expanded: false
+    pages:
+      - label: Scope of support
+        page: developer-portal/merchant/support-procedures/scope-of-support.md
+      - label: Operating hours
+        page: developer-portal/merchant/support-procedures/operating-hours.md
+      - label: How to support your customers
+        page: developer-portal/merchant/support-procedures/how-to-support-your-customers.md
+      - label: How to contact us
+        page: developer-portal/merchant/support-procedures/how-to-contact-us.md
+      - label: Cancellation processing
+        page: developer-portal/merchant/support-procedures/cancellation-processing.md
+      - label: Amendment processing
+        page: developer-portal/merchant/support-procedures/amendment-processing.md
+      - label: FAQs
+        page: developer-portal/merchant/support-procedures/faqs.md
+  - group: Site certification
+    expanded: false
+    pages:
+      - label: Introduction
+        page: developer-portal/merchant/site-certification/introduction.md
+      - label: Certification elements
+        page: developer-portal/merchant/site-certification/certification-elements.md
+      - label: Front-end checks
+        page: developer-portal/merchant/site-certification/front-end-checks.md
+      - label: Back-end checks
+        page: developer-portal/merchant/site-certification/back-end-checks.md
+      - label: Customer communications checks
+        page: developer-portal/merchant/site-certification/customer-communications-checks.md
+      - label: Booking cancellation checks in the production environment
+        page: developer-portal/merchant/site-certification/booking-cancellation-in-production-environment.md
+  - group: Implementation guide
     expanded: true
     pages:
-      - label: Setup
-        page: developer-portal/setup.md
-      - label: Markdown
-        page: developer-portal/markdown.md
-      - label: Folder structure
-        page: developer-portal/awesome/folders.md
-      - label: Mermaid diagrams
-        page: developer-portal/mermaid.md
-      - label: Page table of contents
-        page: developer-portal/page-table-of-contents.md
-      - separator: This is a separator
-      - label: Sidebar navigation
-        page: developer-portal/sidebar-nav.md
-      - label: Search
-        page: developer-portal/search.md
-      - label: Top nav and footers
-        page: developer-portal/nav-footer.md
-      - label: Logo and favicon
-        page: developer-portal/logo.md
-      - label: Metadata
-        page: developer-portal/metadata.md
-      - label: Colors
-        page: developer-portal/colors.md
-      - label: Typography
-        page: developer-portal/typography.md
-      - label: Analytics
-        page: developer-portal/analytics.md
-      - label: Home page
-        page: developer-portal/home-page.md
-      - label: Adding API reference docs
-        page: developer-portal/oas-definitions.md
-      - label: Adding an API response to an MDX page
-        page: developer-portal/mdx.mdx
-      - label: Creating React components
-        page: developer-portal/custom-component.mdx
-  - group: Petstore reference
-    expanded: false
+      - label: Overview
+        page: developer-portal/papiv1/overview.md
+      - label: Updates
+        page: developer-portal/papiv1/updates.md
+      - label: Authentication
+        page: developer-portal/papiv1/authentication.md
+      - label: Testing
+        page: developer-portal/papiv1/testing.md
+      - group: Key concepts
+        expanded: false
+        pages:
+          - label: Content ingestion and caching
+            page: developer-portal/papiv1/key-concepts/content-ingestion-and-caching-strategy.md
+          - label: Categorization of content
+            page: developer-portal/papiv1/key-concepts/categorization-of-content.md
+          - label: Booking concepts
+            page: developer-portal/papiv1/key-concepts/booking-concepts.md
+          - label: Availability services
+            page: developer-portal/papiv1/key-concepts/availability-services.md
+          - label: Understanding the pricingUnit field
+            page: developer-portal/papiv1/key-concepts/understanding-pricingunit.md
+          - label: Working with age bands
+            page: developer-portal/papiv1/key-concepts/working-with-age-bands.md
+          - label: How to report a product issue
+            page: developer-portal/papiv1/key-concepts/reporting-a-product-issue.md
+          - label: Selling on-request products
+            page: developer-portal/papiv1/key-concepts/selling-on-request-products.md
+          - label: Localization and translation
+            page: developer-portal/papiv1/key-concepts/localization-and-translation.md
+          - label: Merchant pricing
+            page: developer-portal/papiv1/key-concepts/merchant-pricing.md
+          - label: Special offers and on-sale pricing
+            page: developer-portal/papiv1/key-concepts/special-offers-and-on-sale-pricing.md
+          - label: Supplier communications
+            page: developer-portal/papiv1/key-concepts/supplier-communications.md
+          - label: Cancellation policy
+            page: developer-portal/papiv1/key-concepts/cancellation-policy.md
+          - label: Booking references
+            page: developer-portal/papiv1/key-concepts/booking-references.md
+      - group: Workflows
+        expanded: false
+        pages:
+          - label: Add to cart
+            page: developer-portal/papiv1/workflows/add-to-cart.md
+          - label: Checkout
+            page: developer-portal/papiv1/workflows/checkout.md
+          - label: View voucher or confirmation status
+            page: developer-portal/papiv1/workflows/view-voucher-or-confirmation-status.md
+          - label: Booking process flow
+            page: developer-portal/papiv1/workflows/booking-process-flow.md
+          - label: Cancellation UX
+            page: developer-portal/papiv1/workflows/cancellation-ux.md
+          - label: Cancellation API workflow
+            page: developer-portal/papiv1/workflows/cancellation-api-workflow.md
+          - label: Calculating prices
+            page: developer-portal/papiv1/workflows/calculating-prices.md
+          - label: Finding hotel pick-up points
+            page: developer-portal/papiv1/workflows/finding-hotel-pickup-points.md
+          - label: Making a booking
+            page: developer-portal/papiv1/workflows/making-a-booking.md
+          - label: Get the booking status for multiple items
+            page: developer-portal/papiv1/workflows/get-booking-status-for-multiple-items.md
+          - label: Get the tour-grade pricing matrix
+            page: developer-portal/papiv1/workflows/get-tourgrade-pricing-matrix.md
+          - label: Dealing with vouchers
+            page: developer-portal/papiv1/workflows/dealing-with-vouchers.md
+          - label: Reviewing bookings
+            page: developer-portal/papiv1/workflows/reviewing-bookings.md
+          - label: Checking bookings
+            page: developer-portal/papiv1/workflows/checking-bookings.md
+      - label: FAQs
+        page: developer-portal/papiv1/faqs.md
+      - label: Appendices
+        page: developer-portal/papiv1/appendices.md
+      # - label: Setup
+      #   page: developer-portal/setup.md
+      # - separator: Admin
+      # - label: Upgrade instructions
+      #   page: developer-portal/upgrade.md
+      # - label: Markdown
+      #   page: developer-portal/markdown.md
+      # - label: Folder structure
+      #   page: developer-portal/awesome/folders.md
+      # - label: Mermaid diagrams
+      #   page: developer-portal/mermaid.md
+      # - label: Page table of contents
+      #   page: developer-portal/page-table-of-contents.md
+      # - separator: This is a separator
+      # - label: Sidebar navigation
+      #   page: developer-portal/sidebar-nav.md
+      # - label: Search
+      #   page: developer-portal/search.md
+      # - label: Top nav and footers
+      #   page: developer-portal/nav-footer.md
+      # - label: Logo and favicon
+      #   page: developer-portal/logo.md
+      # - label: Metadata
+      #   page: developer-portal/metadata.md
+      # - label: Colors
+      #   page: developer-portal/colors.md
+      # - label: Typography
+      #   page: developer-portal/typography.md
+      # - label: Analytics
+      #   page: developer-portal/analytics.md
+      # - label: Home page
+      #   page: developer-portal/home-page.md
+      # - label: Adding API reference docs
+      #   page: developer-portal/oas-definitions.md
+      # - label: Adding an API response to an MDX page
+      #   page: developer-portal/mdx.mdx
+      # - label: Creating React components
+      #   page: developer-portal/custom-component.mdx
+  - group: API specification
+    expanded: true
     pages:
       - page: openapi/reference.page.yaml/*
 
-  - group: Admin
-    expanded: true
-    pages:
-      - group: Routine
-        expanded: true
-        pages:
-          - group: Rock
-            expanded: true
-            pages:
-              - group: Paper
-                expanded: true
-                pages:
-                  - group: Scissors
-                    expanded: true
-                    pages:
-                      - group: 1-2-3
-                        expanded: true
-                        pages:
-                          - group: Go
-                            expanded: true
-                            pages:
-                              - label: Upgrading
-                                # page: developer-portal/upgrade.md
-alternative:
-  - page: developer-portal/sidebar-alternative.md
-    label: Alternative sidebar example
+  # - group: Admin
+  #   expanded: true
+  #   pages:
+  #     - group: Routine
+  #       expanded: true
+  #       pages:
+  #         - group: Rock
+  #           expanded: true
+  #           pages:
+  #             - group: Paper
+  #               expanded: true
+  #               pages:
+  #                 - group: Scissors
+  #                   expanded: true
+  #                   pages:
+  #                     - group: 1-2-3
+  #                       expanded: true
+  #                       pages:
+  #                         - group: Go
+  #                           expanded: true
+  #                           pages:
+  #                             - label: Upgrading
+  #                               # page: developer-portal/upgrade.md
+# alternative:
+#   - page: developer-portal/sidebar-alternative.md
+#     label: Alternative sidebar example

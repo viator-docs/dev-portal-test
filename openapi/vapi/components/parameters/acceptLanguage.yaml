@@ -1,0 +1,11 @@
+in: header
+name: Accept-Language
+description: >
+  Specifies the language into which the natural-language fields in the response
+  from this service will be translated (see [Accept-Language
+  header](../../../../developer-portal/papiv1/appendices/#accept-Language-header) for available langage
+  codes)
+required: true
+schema:
+  type: string
+  example: en-US

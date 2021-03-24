@@ -1,0 +1,471 @@
+post:
+  tags:
+    - Booking services
+  summary: /booking/calculateprice
+  operationId: bookingCalculateprice
+  description: >
+    Confirm the price of a tour / activity prior to booking
+
+
+    For more information, see: [Calculating
+    prices](#section/Common-workflows-and-data-validation/Calculating-prices)  
+
+
+    - **Note**: Availability and pricing data is limited to a period of **six
+    months** into the future from the present time
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        example:
+          currencyCode: USD
+          items:
+            - travelDate: '2020-12-12'
+              productCode: 5010SYDNEY
+              tourGradeCode: 24HOUR
+              travellers:
+                - bandId: 1
+        schema:
+          type: object
+          properties:
+            currencyCode:
+              type: string
+              description: >-
+                **currency code** for the currency in which to display pricing
+                details
+            items:
+              type: array
+              description: '**array** of travel detail objects'
+              items:
+                type: object
+                properties:
+                  travelDate:
+                    type: string
+                    description: >-
+                      **date** for which to calculate the total price (must be
+                      in the future)
+                  productCode:
+                    type: string
+                    description: >-
+                      **unique alphanumeric identifier** of the product the
+                      total price for which you which to calculate
+                  tourGradeCode:
+                    type: string
+                    description: >-
+                      **alphanumeric identifier** for the tour grade for which
+                      to calculate the total price
+                  travellers:
+                    type: array
+                    description: >-
+                      **array of objects** detailing the age bands for which to
+                      calculate the total price
+                    items:
+                      type: object
+                      properties:
+                        bandId:
+                          $ref: ../components/schemas/bandId.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      rulesApplied:
+                        description: ignore (Viator only)
+                        type: array
+                        items:
+                          type: string
+                      promoCode:
+                        type: string
+                        description: ignore (Viator only)
+                      itinerary:
+                        type: object
+                        description: '**summary results** for all itinerary items'
+                        properties:
+                          sortOrder:
+                            type: integer
+                            description: '**sort order** for *this* itinerary'
+                          rulesApplied:
+                            type: array
+                            description: ignore (Viator only)
+                            items:
+                              type: string
+                          omniPreRuleList:
+                            type: integer
+                            description: ignore (Viator only)
+                          bookingStatus:
+                            $ref: ../components/schemas/bookingStatus_itinerary.yaml
+                          itemSummaries:
+                            type: array
+                            description: '**array** of item summaries'
+                            items:
+                              type: object
+                              properties:
+                                sortOrder:
+                                  type: integer
+                                  description: '**sort-order** of *this* item summary'
+                                rulesApplied:
+                                  type: array
+                                  description: '**array** of rules applied to *this* item'
+                                  items:
+                                    type: string
+                                bookingStatus:
+                                  $ref: >-
+                                    ../components/schemas/bookingStatus_item.yaml
+                                travellerAgeBands:
+                                  type: array
+                                  description: '**array** of age-band objects'
+                                  items:
+                                    type: object
+                                    properties:
+                                      sortOrder:
+                                        type: integer
+                                        description: '**sort order** for *this* age band'
+                                      count:
+                                        type: integer
+                                        description: '**number of travelers in *this* age band'
+                                      description:
+                                        type: string
+                                        description: >-
+                                          **natural-language** description
+                                          (singular) of *this* age band
+                                      pluralDescription:
+                                        type: string
+                                        description: >-
+                                          **natural-language** description
+                                          (plural) of *this* age band
+                                      ageBandId:
+                                        $ref: ../components/schemas/ageBandId.yaml
+                                voucherKey:
+                                  type: string
+                                  description: >-
+                                    Unique reference for the voucher for this
+                                    booking that can be used as a request
+                                    parameter to search for existing bookings
+                                    using the
+                                    [/booking/mybookings](#operation/bookingMybookings)
+                                    and
+                                    [/booking/pastbooking](#operation/bookingPastbooking)
+                                    endpoints
+                                voucherURL:
+                                  type: string
+                                  description: >-
+                                    **URL of the voucher** for *this* product
+                                    (if available). The customer can access this
+                                    URL to retrieve their voucher.
+                                voucherRequirements:
+                                  type: string
+                                  description: >-
+                                    **natural-language description** of the
+                                    voucher requirements for this tour
+                                    (**note:** Should agree with value in
+                                    `voucherOption` field)
+                                productPulledDown:
+                                  description: ignore (Viator only)
+                                  type: boolean
+                                merchantCancellable:
+                                  type: boolean
+                                  description: >
+                                    ignore (Viator only)
+                                  
+
+                                    For cancellation information regarding the booking, please refer to the `merchantTermsAndConditions` object
+                                productWidgetList:
+                                  description: ignore (Viator only)
+                                  type: string
+                                savingAmount:
+                                  $ref: ../components/schemas/savingAmount.yaml
+                                applePassSupported:
+                                  type: boolean
+                                  description: ignore (Viator only)
+                                supplierName:
+                                  type: string
+                                  description: >-
+                                    **natural-language name** of *this*
+                                    product's supplier
+                                supplierPhoneNumber:
+                                  type: string
+                                  description: '**telephone number** of the supplier'
+                                vouchers:
+                                  type: string
+                                  description: ignore (Viator only)
+                                passbooks:
+                                  type: string
+                                  description: ignore (Viator only)
+                                termsAndConditions:
+                                  description: ignore (Viator only)
+                                  type: string
+                                distributorItemRef:
+                                  type: string
+                                  description: ignore (Viator only)
+                                startingTime:
+                                  type: string
+                                  description: >-
+                                    **starting time** of the tour in the
+                                    supplier's local time zone
+                                languageServicesLanguageCode:
+                                  type: string
+                                  description: ignore (Viator only)
+                                price:
+                                  description: >
+                                    **numeric suggested retail price** for
+                                    *this* product
+
+                                    - For more information, see: [Merchant
+                                    pricing](#section/Key-concepts/Merchant-pricing)
+                                  type: number
+                                productCode:
+                                  type: string
+                                  description: >-
+                                    **unique alphanumeric identifier** of *this*
+                                    product
+                                travelDate:
+                                  type: string
+                                  description: >-
+                                    **date** on which *this* product will
+                                    operate (in the supplier's local time zone)
+                                leadTravellerFirstname:
+                                  type: string
+                                  description: ignore (Viator only)
+                                tourGradeCode:
+                                  type: string
+                                  description: '**alphanumeric specifier** of the tour grade'
+                                leadTravellerSurname:
+                                  type: string
+                                  description: ignore (Viator only)
+                                lastRetailPrice:
+                                  type: number
+                                  description: ignore (Viator only)
+                                leadTravellerTitle:
+                                  type: string
+                                  description: '**title** of the lead traveler''s name'
+                                itineraryId:
+                                  type: integer
+                                  description: ignore (Viator only)
+                                productTitle:
+                                  type: string
+                                  description: '**natural-language title** of *this* product'
+                                itemId:
+                                  type: integer
+                                  description: ignore (Viator only)
+                                priceFormatted:
+                                  type: string
+                                  description: >
+                                    **currency-formatted suggested retail
+                                    price** for *this* product
+
+                                    - For more information, see: [Merchant
+                                    pricing](#section/Merchant-APIs/Merchant-pricing)
+                                destId:
+                                  type: integer
+                                  description: >-
+                                    **unique numeric id** of the destination
+                                    associated with *this* product
+                                voucherOption:
+                                  type: string
+                                  description: >-
+                                    **alphanumeric specifier** of the relevant
+                                    voucher option
+                                barcodeOption:
+                                  type: string
+                                  description: >-
+                                    Indicates whether a voucher is required for
+                                    each passenger; or, whether the requirement
+                                    is one voucher per group booking.
+                                barcodeType:
+                                  type: string
+                                  description: >-
+                                    **alphanumeric specifier** of the barcode
+                                    type
+                                departurePoint:
+                                  type: string
+                                  description: >-
+                                    **HTML-formatted description** of *this*
+                                    product's departure location(s)
+                                departurePointAddress:
+                                  type: string
+                                  description: >-
+                                    **HTML-formatted description** of *this*
+                                    product's departure address
+                                departurePointDirections:
+                                  type: string
+                                  description: >-
+                                    **HTML-formatted descriptive notes** about
+                                    *this* product's departure location
+                                obfsId:
+                                  type: integer
+                                  description: ignore (Viator only)
+                                savingAmountFormated:
+                                  $ref: >-
+                                    ../components/schemas/savingAmountFormated.yaml
+                                bookingEngineId:
+                                  $ref: >-
+                                    ../components/schemas/bookingEngineId-response.yaml
+                                merchantNetPrice:
+                                  type: number
+                                  description: >
+                                    **numeric merchant net rate** for *this*
+                                    product
+
+                                    - For more information, see: [Merchant
+                                    pricing](#section/Merchant-APIs/Merchant-pricing)
+                                merchantNetPriceFormatted:
+                                  type: string
+                                  description: >
+                                    **currency-formatted merchant net rate** for
+                                    *this* product
+
+                                    - For more information, see: [Merchant
+                                    pricing](#section/Merchant-APIs/Merchant-pricing)
+                                lastRetailPriceFormatted:
+                                  type: string
+                                  description: >-
+                                    **currency-formatted most recent retail
+                                    price** for *this* item
+                                departsFrom:
+                                  type: string
+                                  description: >-
+                                    **natural-language description** of *this*
+                                    item's general departure location
+                                tourGradeDescription:
+                                  type: string
+                                  description: >-
+                                    **natural-language description** of *this*
+                                    item's tour grade
+                                pickupHotelId:
+                                  type: integer
+                                  description: ignore (Viator only)
+                                pickupHotelName:
+                                  type: string
+                                  description: ignore (Viator only)
+                                hoursConfirmed:
+                                  type: integer
+                                  description: >
+                                    The `hoursConfirmed` field also indicates if
+                                    the product is freesale or on request. The
+                                    `hoursConfirmed` value is the approximate
+                                    window for confirmation in hours, which can
+                                    be presented to the customer. A value of `0`
+                                    means that the product is **freesale**, and
+                                    a value greater than `0` means that the
+                                    product is **on-request**.
+                                priceUSD:
+                                  type: number
+                                  description: '**numeric price of *this* product** in USD'
+                                currencyCode:
+                                  type: string
+                                  description: >-
+                                    **currency code** for the currency in which
+                                    pricing details are displayed
+                          voucherURL:
+                            type: string
+                            description: >-
+                              **URL of the voucher** for *this* product (if
+                              available). The customer can access this URL to
+                              retrieve their voucher.
+                          securityToken:
+                            type: string
+                            description: ignore (Viator only)
+                          paypalRedirectURL:
+                            type: string
+                            description: ignore (Viator only)
+                          userId:
+                            type: integer
+                            description: ignore (Viator only)
+                          itineraryId:
+                            type: integer
+                            description: '**numeric identifier** for *this* order'
+                          exchangeRate:
+                            type: integer
+                            description: ignore (Viator only)
+                          bookingDate:
+                            type: string
+                            description: '**date** of *this* booking'
+                          voucherKey:
+                            type: string
+                            description: >-
+                              Unique reference for the voucher for this booking
+                              that can be used as a request parameter to search
+                              for existing bookings using the
+                              [/booking/mybookings](#operation/bookingMybookings)
+                              and
+                              [/booking/pastbooking](#operation/bookingPastbooking)
+                              endpoints
+                          bookerEmail:
+                            type: string
+                            description: ignore (Viator only)
+                          distributorRef:
+                            type: string
+                            description: ignore (Viator only)
+                          totalPrice:
+                            type: number
+                            description: >
+                              **numeric total price (total)** for *this* order
+
+                              - For more information, see: [Merchant
+                              pricing](#section/Key-concepts/Merchant-pricing)
+                          totalPriceFormatted:
+                            type: string
+                            description: >
+                              **currency-formatted total price (including
+                              transaction fee)** for *this* order
+
+                              - For more information, see: [Merchant
+                              pricing](#section/Key-concepts/Merchant-pricing)
+                          totalPriceUSD:
+                            type: number
+                            description: '**numeric total price** of *this* order in USD'
+                          hasVoucher:
+                            type: boolean
+                            description: ignore (Viator only)
+                          currencyCode:
+                            type: string
+                            description: >-
+                              **specifier** of the currency in which pricing
+                              details are displayed
+                      paymentGatewayInfo:
+                        type: string
+                        description: ignore (Viator only)
+                      promoCodeValid:
+                        type: boolean
+                        description: ignore (Viator only)
+                      promoCodeExpired:
+                        type: boolean
+                        description: ignore (Viator only)
+                      itineraryFromPrice:
+                        type: number
+                        description: ignore (Viator only)
+                      itineraryFromPriceFormatted:
+                        type: string
+                        description: ignore (Viator only)
+                      itineraryNewPrice:
+                        type: number
+                        description: ignore (Viator only)
+                      itineraryNewPriceFormatted:
+                        type: string
+                        description: ignore (Viator only)
+                      itinerarySaving:
+                        type: integer
+                        description: ignore (Viator only)
+                      itinerarySavingFormatted:
+                        type: string
+                        description: ignore (Viator only)
+                      hasPromoCode:
+                        type: boolean
+                        description: ignore (Viator only)
+                      currencyCode:
+                        type: string
+                        description: >-
+                          **specifier of the currency** in which pricing details
+                          are displayed
+          examples:
+            '1':
+              $ref: ../components/examples/booking-calculateprice-example.yaml

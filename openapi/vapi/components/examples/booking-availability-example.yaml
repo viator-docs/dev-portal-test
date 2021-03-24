@@ -1,0 +1,319 @@
+summary: booking availability example
+value:
+  errorReference: null
+  data:
+    productCode: 5010SYDNEY
+    firstAvailableDate: '2020-06-01'
+    lastAvailableDate: '2021-02-10'
+    availability:
+      - sortOrder: 1
+        bookingDate: '2020-06-01'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 2
+        bookingDate: '2020-06-02'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 3
+        bookingDate: '2020-06-03'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 4
+        bookingDate: '2020-06-04'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 5
+        bookingDate: '2020-06-05'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 6
+        bookingDate: '2020-06-06'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 7
+        bookingDate: '2020-06-07'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 8
+        bookingDate: '2020-06-08'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 9
+        bookingDate: '2020-06-09'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 10
+        bookingDate: '2020-06-10'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 11
+        bookingDate: '2020-06-11'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 12
+        bookingDate: '2020-06-12'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 13
+        bookingDate: '2020-06-13'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 14
+        bookingDate: '2020-06-14'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 15
+        bookingDate: '2020-06-15'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 16
+        bookingDate: '2020-06-16'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 17
+        bookingDate: '2020-06-17'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 18
+        bookingDate: '2020-06-18'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 19
+        bookingDate: '2020-06-19'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 20
+        bookingDate: '2020-06-20'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 21
+        bookingDate: '2020-06-21'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 22
+        bookingDate: '2020-06-22'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 23
+        bookingDate: '2020-06-23'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 24
+        bookingDate: '2020-06-24'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 25
+        bookingDate: '2020-06-25'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 26
+        bookingDate: '2020-06-26'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 27
+        bookingDate: '2020-06-27'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 28
+        bookingDate: '2020-06-28'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 29
+        bookingDate: '2020-06-29'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+      - sortOrder: 30
+        bookingDate: '2020-06-30'
+        retailPrice: 53.1
+        gradeCode: 24HOUR
+        merchantNetPrice: 42.41
+        retailPriceFormatted: $53.10
+        unavailableReason: null
+        merchantNetPriceFormatted: $42.41
+        currencyCode: AUD
+        available: true
+  dateStamp: '2020-02-10T16:43:02+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331004'

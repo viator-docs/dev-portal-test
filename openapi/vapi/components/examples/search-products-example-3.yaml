@@ -1,0 +1,216 @@
+summary: search products example (freesale only)
+value:
+  errorReference: null
+  data:
+    - sortOrder: 1
+      supplierName: New Way Horizon Travel LLC
+      currencyCode: USD
+      catIds:
+        - 4
+        - 20
+        - 9
+        - 25
+        - 26
+        - 12
+      subCatIds:
+        - 113
+        - 98
+        - 36
+        - 116
+        - 85
+        - 11
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: false
+      bookingEngineId: FreesaleBE
+      onRequestPeriod: null
+      primaryGroupId: 4
+      pas: null
+      available: true
+      productUrlName: The-Old-Southwest-Grand-Circle-Leisure-Tour
+      primaryDestinationUrlName: Las-Vegas
+      duration: 15 days
+      shortDescription: >-
+        Do you want to see as many National Parks as you can? Then book our
+        Southwest National Parks Grand Circle Tour, which includes 7 National
+        Parks and an old train ride. Explore amazing, famous National Parks like
+        Arches, Canyonlands, Capitol Reef, Bryce Canyon, Zion, Mesa Verde and
+        more. This includes Utah's Mighty Five and many more. Shoot down white
+        water rapids with an experienced guide or take a lazy, scenic river
+        float. These are just some of the items packed into our extensive Grand
+        Circle Tour.<br><br>Spend 14 magical days exploring petrified dunes,
+        vibrant pine forests, and deserts with oil-painting perfect sunsets.
+        This is a small group setting. Usually, there are no more than ten
+        guests. Each small group has a private guide to tell stories of the old
+        days and give insight into what you are experiencing. With its walking,
+        scenic views, local restaurants, hidden gems, and other fantastic
+        experiences, the Southwest National Parks Grand Circle Tour awaits you!
+      price: 6000
+      shortTitle: The Old Southwest Grand Circle--Leisure Tour
+      specialOfferAvailable: false
+      supplierCode: '50420'
+      translationLevel: 0
+      onSale: false
+      photoCount: 0
+      reviewCount: 0
+      primaryDestinationId: 684
+      merchantNetPriceFrom: 4792.5
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/19/57/60.jpg
+      primaryDestinationName: Las Vegas
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/09/19/57/60.jpg
+      priceFormatted: '$6,000.00'
+      rrp: 0
+      rrpformatted: ''
+      videoCount: 0
+      rating: 0
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: '$4,792.50'
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      title: The Old Southwest Grand Circle--Leisure Tour
+      code: 50420P54
+    - sortOrder: 2
+      supplierName: Destination Las Vegas Group
+      currencyCode: USD
+      catIds:
+        - 1
+        - 18
+        - 26
+        - 12
+      subCatIds:
+        - 2
+        - 26963
+        - 116
+        - 61
+        - 45
+        - 62
+        - 95
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: DeferredCRMBE
+      onRequestPeriod: null
+      primaryGroupId: 18
+      pas: null
+      available: true
+      productUrlName: Helicopter-Wedding-The-Grand-Canon
+      primaryDestinationUrlName: Las-Vegas
+      duration: 3 hours
+      shortDescription: >-
+        If getting married in a natural wonder of the world is on your bucket
+        list, look no farther. You and your guests will enjoy a scenic flight
+        the Grand Canyon West Rim for a private ceremony in the basin of the
+        canyon. Photos, cake, a Champagne toast and limousine transfers are
+        included.
+      price: 3799.99
+      shortTitle: Grand Canyon Helicopter Wedding Ceremony
+      specialOfferAvailable: false
+      supplierCode: '9424'
+      translationLevel: 0
+      onSale: false
+      photoCount: 0
+      reviewCount: 0
+      primaryDestinationId: 684
+      merchantNetPriceFrom: 3236.75
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/75/b7/96.jpg
+      primaryDestinationName: Las Vegas
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/06/75/b7/96.jpg
+      priceFormatted: '$3,799.99'
+      rrp: 0
+      rrpformatted: ''
+      videoCount: 0
+      rating: 0
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: '$3,236.75'
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      title: 'Helicopter Wedding Ceremony: The Grand Canyon'
+      code: 9424P24
+    - sortOrder: 3
+      supplierName: Red Tread Tours LLC
+      currencyCode: USD
+      catIds:
+        - 20
+        - 9
+        - 26
+        - 12
+      subCatIds:
+        - 32
+        - 98
+        - 116
+        - 85
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: false
+      bookingEngineId: DeferredCRMBE
+      onRequestPeriod: null
+      primaryGroupId: 9
+      pas: null
+      available: true
+      productUrlName: 3-Day-Zion-Adventure-Tour
+      primaryDestinationUrlName: Las-Vegas
+      duration: 3 days
+      shortDescription: >-
+        The hosts and guides are locals, so we know the sweet spots away from
+        the crowds. Our multi-lingual abilities are sure to keep the group happy
+        and entertained as we traverse through some unique and gorgeous
+        locations. We’ve simplified logistics, landed some amazing
+        accommodations, and planned in high quality adventure and American
+        meals. We’re happy to customize the tour to groups and families wanting
+        a little more say in the adventure. Just email us!
+      price: 2499
+      shortTitle: 3 Day Zion Adventure Tour
+      specialOfferAvailable: false
+      supplierCode: '240839'
+      translationLevel: 0
+      onSale: false
+      photoCount: 0
+      reviewCount: 0
+      primaryDestinationId: 684
+      merchantNetPriceFrom: 1996.08
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/0a/3d/3f/ff.jpg
+      primaryDestinationName: Las Vegas
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/0a/3d/3f/ff.jpg
+      priceFormatted: '$2,499.00'
+      rrp: 0
+      rrpformatted: ''
+      videoCount: 0
+      rating: 0
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: '$1,996.08'
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      title: 3 Day Zion Adventure Tour
+      code: 240839P1
+  dateStamp: '2020-02-09T15:18:03+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 910
+  errorMessageText: null
+  vmid: '331005'

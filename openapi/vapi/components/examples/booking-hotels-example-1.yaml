@@ -1,0 +1,1271 @@
+summary: destId
+value:
+  errorReference: null
+  data:
+    - sortOrder: 1
+      destinationId: 123
+      productCodes: null
+      phone: +1 123 456 7890
+      city: Hahndorf
+      postcode: '5245'
+      latitude: -35.031216
+      longitude: 138.81102
+      notes: null
+      brand: null
+      hotelString: null
+      address: 35 Main St
+      name: The Hahndorf Inn
+      id: '1001419406'
+    - sortOrder: 2
+      destinationId: 123
+      productCodes: null
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.863453
+      longitude: 138.61
+      notes: null
+      brand: null
+      hotelString: null
+      address: Lot 112 Neagles Rock Road
+      name: Neagles Retreat Villas
+      id: '10984108'
+    - sortOrder: 3
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.831417
+      longitude: 138.60942
+      notes: null
+      brand: null
+      hotelString: null
+      address: 310 Main North Rd
+      name: The Mill Apartments
+      id: '11205163'
+    - sortOrder: 4
+      destinationId: 123
+      productCodes:
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+      phone: +1 123 456 7890
+      city: Reynella
+      postcode: '5161'
+      latitude: -35.08964
+      longitude: 138.53828
+      notes: null
+      brand: null
+      hotelString: null
+      address: '14 Bridge St, Old Reynella'
+      name: St. Francis Winery
+      id: '1255430'
+    - sortOrder: 5
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Enfield
+      postcode: '5094'
+      latitude: -34.845764
+      longitude: 138.60115
+      notes: null
+      brand: null
+      hotelString: null
+      address: Motel 574 Main North Rd
+      name: Adelaide Manor
+      id: '1255431'
+    - sortOrder: 6
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Enfield
+      postcode: '5085'
+      latitude: -34.85016
+      longitude: 138.60077
+      notes: null
+      brand: null
+      hotelString: null
+      address: '471 Main North Rd, '
+      name: Comfort Inn Manhattan
+      id: '1255432'
+    - sortOrder: 7
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Camden Park
+      postcode: '5038'
+      latitude: -34.97334
+      longitude: 138.54086
+      notes: null
+      brand: null
+      hotelString: null
+      address: Morphettville Motor Inn 444 - 446 Anzac Hwy
+      name: Morphettville Motor Inn
+      id: '1257946'
+    - sortOrder: 8
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 120684P5
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Medindie
+      postcode: '5081'
+      latitude: -34.89378
+      longitude: 138.60353
+      notes: null
+      brand: null
+      hotelString: null
+      address: '1 Nottage Tce, '
+      name: Comfort Inn Scottys
+      id: '1257951'
+    - sortOrder: 9
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.820854
+      longitude: 138.61382
+      notes: null
+      brand: null
+      hotelString: null
+      address: 'White Hut Road, '
+      name: Clare Country Club
+      id: '1262285'
+    - sortOrder: 10
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.848263
+      longitude: 138.6178
+      notes: null
+      brand: null
+      hotelString: null
+      address: '74a Main North Rd, '
+      name: Clare Valley Motel
+      id: '1262636'
+    - sortOrder: 11
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.87362
+      longitude: 138.6354
+      notes: null
+      brand: null
+      hotelString: null
+      address: 'Quarry Rd, Sevenhill via Clare Valley'
+      name: Thorn Park by the Vines
+      id: '1289197'
+    - sortOrder: 12
+      destinationId: 123
+      productCodes:
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: West Lakes
+      postcode: '5021'
+      latitude: -34.88005
+      longitude: 138.48842
+      notes: null
+      brand: null
+      hotelString: null
+      address: 141 Brebner Dr
+      name: Lakes Hotel
+      id: '1301167'
+    - sortOrder: 13
+      destinationId: 123
+      productCodes:
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+      phone: +1 123 456 7890
+      city: Largs Bay
+      postcode: '5016'
+      latitude: -34.825584
+      longitude: 138.4865
+      notes: null
+      brand: null
+      hotelString: null
+      address: 198 Esplanade
+      name: Largs Pier Hotel - Motel
+      id: '1301173'
+    - sortOrder: 14
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 120684P5
+        - 142696P2
+        - 142696P5
+        - 196440P1
+        - 19852P6
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 21300P2
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+        - 40887P6
+        - 65854P1
+        - 65854P2
+        - 65854P3
+        - 65854P6
+        - 6763ULTIMATE
+        - 67705P1
+        - 67705P2
+      phone: +1 123 456 7890
+      city: Kent Town
+      postcode: '5067'
+      latitude: -34.924698
+      longitude: 138.6194
+      notes: null
+      brand: null
+      hotelString: null
+      address: 24 Dequetteville Tce
+      name: Adelaide Royal Coach
+      id: '1301183'
+    - sortOrder: 15
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Marion
+      postcode: '5038'
+      latitude: -34.97743
+      longitude: 138.55557
+      notes: null
+      brand: null
+      hotelString: null
+      address: 540 Marion Rd
+      name: Marion Motel and Apartments
+      id: '1320631'
+    - sortOrder: 16
+      destinationId: 123
+      productCodes: null
+      phone: +1 123 456 7890
+      city: Glenelg
+      postcode: '5045'
+      latitude: -34.97872
+      longitude: 138.51253
+      notes: null
+      brand: null
+      hotelString: null
+      address: '17 Colley Tce, '
+      name: Glenelg Beachside Apartments
+      id: '1579776'
+    - sortOrder: 17
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Glen Osmond
+      postcode: '5064'
+      latitude: -34.9604
+      longitude: 138.64185
+      notes: null
+      brand: null
+      hotelString: null
+      address: '373 Glen Osmond Rd, '
+      name: Jacksons Motor Inn
+      id: '1584919'
+    - sortOrder: 18
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Prospect
+      postcode: '5082'
+      latitude: -34.87285
+      longitude: 138.60158
+      notes: null
+      brand: null
+      hotelString: null
+      address: 288-292 Main North Rd
+      name: Comfort Inn & Suites Sombrero
+      id: '1589097'
+    - sortOrder: 19
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.854675
+      longitude: 138.62292
+      notes: null
+      brand: null
+      hotelString: null
+      address: 'Warenda Road, '
+      name: Brice Hill Country Lodge
+      id: '1626470'
+    - sortOrder: 20
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: ''
+      latitude: -33.84362
+      longitude: 138.63342
+      notes: null
+      brand: null
+      hotelString: null
+      address: 'Clare Valley, '
+      name: Springfarm Cottage
+      id: '1630042'
+    - sortOrder: 21
+      destinationId: 123
+      productCodes:
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Gilles Plains
+      postcode: '5086'
+      latitude: -34.852222
+      longitude: 138.665
+      notes: null
+      brand: null
+      hotelString: null
+      address: '647 North East Rd, '
+      name: Highlander Hotel Bar Kitchen Rooftop
+      id: '1633907'
+    - sortOrder: 22
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 120684P5
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Frewville
+      postcode: '5063'
+      latitude: -34.95136
+      longitude: 138.63423
+      notes: null
+      brand: null
+      hotelString: null
+      address: '277 Glen Osmond Road, '
+      name: Welcome Inn 277
+      id: '1661623'
+    - sortOrder: 23
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.829445
+      longitude: 138.60802
+      notes: null
+      brand: null
+      hotelString: null
+      address: '325 Main North Rd, '
+      name: Comfort Inn Clare Central
+      id: '1729496'
+    - sortOrder: 24
+      destinationId: 123
+      productCodes:
+        - 200245P4
+      phone: +1 123 456 7890
+      city: Normanville
+      postcode: '5204'
+      latitude: -35.46194
+      longitude: 138.31508
+      notes: null
+      brand: null
+      hotelString: null
+      address: '73 St Andrews Bvd, '
+      name: Links Lady Bay Resort
+      id: '1803904'
+    - sortOrder: 25
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 21300P1
+        - 21300P7
+        - 21300P9
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Brooklyn Park
+      postcode: '5032'
+      latitude: -34.93242
+      longitude: 138.5395
+      notes: null
+      brand: null
+      hotelString: null
+      address: '406 Sir Donald Bradman Dr, '
+      name: Adelaide Airport Motel
+      id: '2076447'
+    - sortOrder: 26
+      destinationId: 123
+      productCodes:
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+      phone: +1 123 456 7890
+      city: Mawson Lakes
+      postcode: '5095'
+      latitude: -34.80973
+      longitude: 138.61734
+      notes: null
+      brand: null
+      hotelString: null
+      address: 10 Main St
+      name: Mawson Lakes Hotel
+      id: '2122469'
+    - sortOrder: 27
+      destinationId: 123
+      productCodes:
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Gilles Plains
+      postcode: '5086'
+      latitude: -34.85213
+      longitude: 138.6651
+      notes: null
+      brand: null
+      hotelString: null
+      address: '647 North East Rd, '
+      name: Comfort Inn Riverfront Berriedale
+      id: '2218971'
+    - sortOrder: 28
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.856297
+      longitude: 138.62358
+      notes: null
+      brand: null
+      hotelString: null
+      address: 72 Warenda Rd
+      name: St Helens Country Cottages
+      id: '2453318'
+    - sortOrder: 29
+      destinationId: 123
+      productCodes:
+        - 21300P1
+        - 21300P11
+        - 21300P14
+        - 21300P6
+        - 21300P7
+        - 21300P9
+      phone: +1 123 456 7890
+      city: null
+      postcode: '5006'
+      latitude: -34.904903
+      longitude: 138.5927
+      notes: null
+      brand: null
+      hotelString: null
+      address: '190 Gover St, '
+      name: North Adelaide Boutique Stays Accommodation
+      id: '2479967'
+    - sortOrder: 30
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 120684P5
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+        - 6763ULTIMATE
+      phone: +1 123 456 7890
+      city: Frewville
+      postcode: '5063'
+      latitude: -34.94779
+      longitude: 138.62839
+      notes: null
+      brand: null
+      hotelString: null
+      address: '199 Glen Osmond Rd, '
+      name: Frewville Motor Inn
+      id: '2482535'
+    - sortOrder: 31
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 120684P5
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Glenunga
+      postcode: '5064'
+      latitude: -34.94681
+      longitude: 138.6427
+      notes: null
+      brand: null
+      hotelString: null
+      address: 493 Portrush Rd
+      name: Best Western Adelaide Granada Motor Inn
+      id: '2501758'
+    - sortOrder: 32
+      destinationId: 123
+      productCodes:
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 21300P10
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+      phone: +1 123 456 7890
+      city: Mawson Lakes
+      postcode: '5095'
+      latitude: -34.806805
+      longitude: 138.61667
+      notes: null
+      brand: null
+      hotelString: null
+      address: 33 - 37 Main St
+      name: Quest Mawson Lakes
+      id: '2575802'
+    - sortOrder: 33
+      destinationId: 123
+      productCodes:
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Pooraka
+      postcode: '5095'
+      latitude: -34.82837
+      longitude: 138.61504
+      notes: null
+      brand: null
+      hotelString: null
+      address: '859 Main North Rd, '
+      name: Pavlos Motel
+      id: '2628301'
+    - sortOrder: 34
+      destinationId: 123
+      productCodes: null
+      phone: +1 123 456 7890
+      city: Penola
+      postcode: '5277'
+      latitude: -37.381992
+      longitude: 140.83783
+      notes: null
+      brand: null
+      hotelString: null
+      address: '23-25 Church St, '
+      name: Alexander Cameron Suites
+      id: '2640160'
+    - sortOrder: 35
+      destinationId: 123
+      productCodes: null
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.82023
+      longitude: 138.58174
+      notes: null
+      brand: null
+      hotelString: null
+      address: 151 St Georges Tce
+      name: Patly Hill Farm
+      id: '2773041'
+    - sortOrder: 36
+      destinationId: 123
+      productCodes:
+        - 200245P4
+      phone: +1 123 456 7890
+      city: Stansbury
+      postcode: '5582'
+      latitude: -34.91078
+      longitude: 137.79254
+      notes: null
+      brand: null
+      hotelString: null
+      address: 'corner of South & West Terrace, '
+      name: Oyster Court Motel & Holiday Units
+      id: '2774580'
+    - sortOrder: 37
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Tonsley
+      postcode: '5042'
+      latitude: -35.00457
+      longitude: 138.5747
+      notes: null
+      brand: null
+      hotelString: null
+      address: '1274 South Rd, Adelaide'
+      name: Tonsley Hotel Motel
+      id: '2786536'
+    - sortOrder: 38
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Woodville Park
+      postcode: '5011'
+      latitude: -34.87638
+      longitude: 138.54959
+      notes: null
+      brand: null
+      hotelString: null
+      address: '445 Torrens Rd, '
+      name: Lindy Lodge Motel
+      id: '2853212'
+    - sortOrder: 39
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Burnside
+      postcode: '5066'
+      latitude: -34.93765
+      longitude: 138.66063
+      notes: null
+      brand: null
+      hotelString: null
+      address: 516 Glynburn Rd
+      name: The Feathers Hotel
+      id: '3002527'
+    - sortOrder: 40
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Glen Osmond
+      postcode: '5064'
+      latitude: -34.9643
+      longitude: 138.6466
+      notes: null
+      brand: null
+      hotelString: null
+      address: '20 Mount Barker Rd, (Corner Gill Terrace)'
+      name: Tollgate Motel
+      id: '3235180'
+    - sortOrder: 41
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.846573
+      longitude: 138.62152
+      notes: null
+      brand: null
+      hotelString: null
+      address: '9 Warenda Rd, '
+      name: Riesling Trail and Clare Valley Cottages
+      id: '3240942'
+    - sortOrder: 42
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.90826
+      longitude: 138.6238
+      notes: null
+      brand: null
+      hotelString: null
+      address: 'Sevenhill, '
+      name: Skillogalee Cottages
+      id: '3281019'
+    - sortOrder: 43
+      destinationId: 123
+      productCodes: null
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.835503
+      longitude: 138.61389
+      notes: null
+      brand: null
+      hotelString: null
+      address: '191 Main North Rd, '
+      name: Bentleys Hotel Motel
+      id: '3516966'
+    - sortOrder: 44
+      destinationId: 123
+      productCodes: null
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.866726
+      longitude: 138.59903
+      notes: null
+      brand: null
+      hotelString: null
+      address: '220 Spring Gully Rd, '
+      name: Clare View Accommodation
+      id: '3668974'
+    - sortOrder: 45
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 120684P2
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Enfield
+      postcode: '5085'
+      latitude: -34.86265
+      longitude: 138.60156
+      notes: null
+      brand: null
+      hotelString: null
+      address: Motel 393 Main North Rd
+      name: Enfield Motel
+      id: '4257826'
+    - sortOrder: 46
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.864716
+      longitude: 138.62134
+      notes: null
+      brand: null
+      hotelString: null
+      address: Lot 136 Main North Road
+      name: Discovery Parks - Clare
+      id: '4345469'
+    - sortOrder: 47
+      destinationId: 123
+      productCodes:
+        - 200245P4
+      phone: +1 123 456 7890
+      city: Stansbury
+      postcode: '5582'
+      latitude: -34.903656
+      longitude: 137.79562
+      notes: null
+      brand: null
+      hotelString: null
+      address: 16-28 Adelaide Rd
+      name: Stansbury Holiday Motel
+      id: '4856431'
+    - sortOrder: 48
+      destinationId: 123
+      productCodes:
+        - 181322P2
+      phone: +1 123 456 7890
+      city: Brighton
+      postcode: '5048'
+      latitude: -35.01719
+      longitude: 138.51463
+      notes: null
+      brand: null
+      hotelString: null
+      address: '135 Esplanade, cnr Jetty Rd'
+      name: Esplanade Hotel Adelaide
+      id: '4861044'
+    - sortOrder: 49
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5034'
+      latitude: -33.78769
+      longitude: 138.60567
+      notes: null
+      brand: null
+      hotelString: null
+      address: 'off Gaelic Cemetery Road, Stanley Flat'
+      name: Wuthering Heights
+      id: '4971218'
+    - sortOrder: 50
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.7714
+      longitude: 138.5837
+      notes: null
+      brand: null
+      hotelString: null
+      address: '431 Bungaree Road, (Off Highway B82)'
+      name: Bungaree Station
+      id: '5004100'
+    - sortOrder: 51
+      destinationId: 123
+      productCodes:
+        - 56243P2
+        - 56243P3
+        - 56243P6
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.83657
+      longitude: 138.61197
+      notes: null
+      brand: null
+      hotelString: null
+      address: 18 Victoria Rd
+      name: Clare Valley Heritage Retreat
+      id: '6029450'
+    - sortOrder: 52
+      destinationId: 123
+      productCodes: null
+      phone: +1 123 456 7890
+      city: Clare
+      postcode: '5453'
+      latitude: -33.83995
+      longitude: 138.61311
+      notes: null
+      brand: null
+      hotelString: null
+      address: 29 Hope St
+      name: The Reserve Apartment
+      id: '6461957'
+    - sortOrder: 53
+      destinationId: 123
+      productCodes:
+        - 119946P4
+        - 119946P5
+        - 119946P6
+        - 119946P8
+        - 119946P9
+        - 120684P2
+        - 120684P5
+        - 142696P2
+        - 142696P5
+        - 200245P1
+        - 200245P4
+        - 200245P5
+        - 200245P7
+        - 201625P1
+        - 215244P1
+        - 233580P1
+        - 233580P2
+        - 233580P4
+        - 238603P1
+        - 40887P5
+      phone: +1 123 456 7890
+      city: Walkerville
+      postcode: '5081'
+      latitude: -34.896725
+      longitude: 138.61743
+      notes: null
+      brand: null
+      hotelString: null
+      address: The Watson 33 Warwick St
+      name: The Watson Adelaide - Art Series
+      id: '7755816'
+    - sortOrder: 54
+      destinationId: 123
+      productCodes: null
+      phone: +1 123 456 7890
+      city: Moana
+      postcode: '5169'
+      latitude: -35.19921
+      longitude: 138.47296
+      notes: null
+      brand: null
+      hotelString: null
+      address: Moana Tourist Park 44 Nashwauk Cres
+      name: Moana Beach Tourist Park
+      id: '7870501'
+  dateStamp: '2020-02-10T18:33:02+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331004'

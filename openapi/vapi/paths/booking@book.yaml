@@ -1,0 +1,719 @@
+post:
+  tags:
+    - Booking services
+  summary: /booking/book
+  operationId: bookingBook
+  description: |
+    Make a booking
+
+    For more information, see: 
+
+      - [Cancellation policy](#section/Key-concepts/Cancellation-policy)
+      - [Booking concepts](#section/Key-concepts/Booking-concepts)
+      - [Booking process flow](#section/Common-workflows-and-data-validation/Booking-process-flow)
+      - [Making a booking](#section/Common-workflows-and-data-validation/Making-a-booking)
+      - [Supplier communications](#section/Key-concepts/Supplier-communications)
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        examples:
+          single_traveler:
+            value:
+              demo: true
+              currencyCode: USD
+              partnerDetail:
+                distributorRef: distributorRef100000
+              booker:
+                email: apitest@viator.com
+                homePhone: '83798517'
+                firstname: Homer test
+                surname: Simpson test
+                title: Mr
+                cellPhoneCountryCode: '61'
+                cellPhone: '0411041041'
+              items:
+                - partnerItemDetail:
+                    distributorItemRef: itemRef1000000
+                  hotelId: '1091770'
+                  pickupPoint: null
+                  travelDate: '2020-12-31'
+                  productCode: 2280AAHT
+                  tourGradeCode: 'TG1~08:00'
+                  languageOptionCode: en/SERVICE_GUIDE
+                  bookingQuestionAnswers:
+                    - questionId: 23
+                      answer: 70 kgs
+                  specialRequirements: ''
+                  travellers:
+                    - bandId: 1
+                      firstname: Homer test
+                      surname: Simpson test
+                      title: Mr
+                      leadTraveller: true
+          per_person_booking_questions:
+            value:
+              demo: true
+              currencyCode: USD
+              partnerDetail:
+                distributorRef: distroRef34398534535
+              booker:
+                email: apitest@viator.com
+                firstname: Homer Test
+                surname: Simpson Test
+                title: Mr
+              items:
+                - partnerItemDetail:
+                    distributorItemRef: distroItemRef8348234535_1
+                  hotelId: null
+                  pickupPoint: null
+                  travelDate: '2020-12-30'
+                  productCode: 100022P1
+                  tourGradeCode: TG1
+                  languageOptionCode: en/SERVICE_GUIDE
+                  bookingQuestionAnswers:
+                    - questionId: 5
+                      answer: '0123456789, 9876543210'
+                    - questionId: 4
+                      answer: 'Australia, Fiji'
+                    - questionId: 3
+                      answer: '01 July 2022, 31 May 2022'
+                  specialRequirements: ''
+                  travellers:
+                    - bandId: 1
+                      firstname: Homer1
+                      surname: Simpson Test
+                      title: Mr
+                      leadTraveller: true
+                    - bandId: 1
+                      firstname: Homer2
+                      surname: Simpson Test
+                      title: Mr
+                      leadTraveller: true
+        schema:
+          type: object
+          properties:
+            demo:
+              type: boolean
+              description: >-
+                **specifier**: `true` if this is a *demo* booking only (demos do
+                not send any notifications, are automatically confirmed and
+                OnRequest products become freesale products. Default value is
+                true. Production must have `demo` set to `false`.
+            currencyCode:
+              type: string
+              description: >-
+                **currency code** for the currency the booking will be submitted
+                in (you will be billed in this currency)
+            partnerDetail:
+              type: object
+              description: >
+                Applicable only for extra partner detail for either partner or
+                merchant partner for sending partner specific information
+              properties:
+                distributorRef:
+                  type: string
+                  description: >
+                    **unique alphanumeric reference code** for the distributor
+
+                    - Merchant API partners must pass a `distributorRef` at the
+                    order (A.K.A. 'itinerary') level in the `partnerDetail`
+                    object. The `distributorRef` passed must be alphanumeric and
+                    unique to bookings made by the merchant.
+
+                    - Passing an existing `distributorRef`: If an existing
+                    `distributorRef` is passed, the booking with the matching
+                    `distributorRef` will be returned in the response and a new
+                    booking will not be made. The fields in the response are
+                    identical to the response for a new booking.
+            booker:
+              type: object
+              description: >-
+                **object** containing details about the primary contact
+                (**note**: this contact needn't be a traveller)
+              required:
+                - firstname
+                - surname
+              properties:
+                email:
+                  type: string
+                  description: '**email address** of the primary contact'
+                homePhone:
+                  type: string
+                  description: '**phone number** (home) of the primary contact'
+                firstname:
+                  type: string
+                  description: '**first name** of the primary contact'
+                surname:
+                  type: string
+                  description: '**surname** of the primary contact'
+                title:
+                  type: string
+                  description: '**title** of the primary contact'
+                cellPhoneCountryCode:
+                  type: string
+                  description: >
+                    **country code** for the telephone number of the lead
+                    traveler
+
+
+                    **Note**: 
+
+                      * Must be included to enable CLC communications. 
+                      * See [Supplier communications](#section/Merchant-APIs/Supplier-communications) for more information
+                cellPhone:
+                  type: string
+                  description: |
+                    **telephone number** of the lead traveler
+
+                    **Note**:
+
+                      * Must be included to enable CLC communications
+                      * See [Supplier communications](#section/Merchant-APIs/Supplier-communications) for more information
+            items:
+              type: array
+              description: '**array** of items to be booked'
+              items:
+                type: object
+                properties:
+                  partnerItemDetail:
+                    type: object
+                    description: '**object** containing partner details at a per-item level'
+                    properties:
+                      distributorItemRef:
+                        type: string
+                        description: >
+                          **unique alphanumeric code** for the order
+                          ('itinerary') (merchant API partners must pass a
+                          `distributorItemRef` into the `partnerItemDetails`
+                          object for each item in *this* object
+
+                          - this code can be any alphanumeric string and is
+                          defined by the distributor
+                  hotelId:
+                    type: string
+                    description: >
+                      **specifer** of the hotel
+
+                      If [/product](#operation/product)
+                      returns `hotelPickup`: `true` and a list of hotels is
+                      available for *this* product in
+                      [/booking/hotels](#operation/bookingHotels),
+                      a `hotelId` must be captured (as per the hotel service id
+                      field); or, use an alternative `hotelId`, such as:
+                       
+                       - `"notBooked"`: the customer has not yet booked their hotel
+                       - `"notListed"`: the customer's hotel is not listed
+
+                       If the customer chooses one of these options, the product supplier may need to correspond with the user to find out their pick-up location. The best way to do this is by enabling [Closed-Loop-Communication (CLC)](#section/Merchant-APIs/Supplier-communications).
+                  pickupPoint:
+                    type: string
+                    description: >-
+                      **details** about the hotel pick-up point (must be
+                      provided if the `hotelId` selected by the user is
+                      `'notListed'` or if no hotels are returned for *this*
+                      product in
+                      [/booking/hotels](#operation/bookingHotels)
+                      where `hotelPickup` is `true`.
+                  travelDate:
+                    type: string
+                    description: '**date** of travel for the item in format yyyy-mm-dd'
+                  productCode:
+                    type: string
+                    description: >-
+                      **unique alphanumeric identifier** of the product to be
+                      booked
+                  tourGradeCode:
+                    type: string
+                    description: >-
+                      **specifier** of the tour grade to be booked (if tour
+                      grades are supplied in
+                      [/product](#operation/product), you
+                      must allow the customer to select a tour grade code. If no
+                      tour grades are available for *this* product, set this to
+                      `'DEFAULT'`.)
+                  languageOptionCode:
+                    type: string
+                    description: >-
+                      **specifier** of language service provided for this
+                      product that has been chosen for this booking (usually in
+                      the format langcode/Service eg en/SERVICE_GUIDE. If the
+                      product details service
+                      [/product](#operation/product) for
+                      the product returns a langService, this must be provided.)
+                  bookingQuestionAnswers:
+                    type: array
+                    description: >
+                      **array** of objects containing booking questions and the
+                      answers provided for them for *this* product
+
+                      - If a booking question is available in the
+                      `bookingQuestions` array in the response from
+                      [/product](#operation/product) for
+                      *this* product, the matching `bookingQuestionAnswers` must
+                      be passed to *this* service. 
+
+                      - If a product does not have any booking questions, you
+                      can omit the `bookingQuestionAnswers` array in your
+                      request. 
+
+                      - Any invalid or unrequired booking-question answers that
+                      are passed to *this* service will be ignored (and, no
+                      exceptions will be raised) 
+
+                      - You will need to include this array if
+                      [/product](#operation/product)
+                      returns any questions in the `bookingQuestions` array.
+                    items:
+                      type: object
+                      properties:
+                        questionId:
+                          type: integer
+                          description: >-
+                            **numeric identifier** for the question (**note**:
+                            `questionId` can be retrieved from the
+                            [/product](#operation/product)
+                            service)
+                        answer:
+                          type: string
+                          description: >
+                            **answer** to the question for the `questionId`
+                            listed (recommended length for the answer is 500
+                            characters)
+
+
+                            **Note**: To specify answers for each traveler,
+                            separate the values with a comma as in the
+                            per_person_booking_questions request example
+                  specialRequirements:
+                    type: string
+                    description: >-
+                      **text field** to capture any additional requirements for
+                      the booking, such as dietary requirements or if a
+                      wheelchair is required
+                  travellers:
+                    type: array
+                    description: >-
+                      **array** of traveler names, details and whether they are
+                      the lead traveller
+                    items:
+                      type: object
+                      properties:
+                        bandId:
+                          $ref: ../components/schemas/bandId.yaml
+                        firstname:
+                          type: string
+                          description: '**first name** of *this* traveller'
+                        surname:
+                          type: string
+                          description: '**surname** of *this* traveler'
+                        title:
+                          type: string
+                          description: >-
+                            **title** of the traveler (e.g `'Mr'`, `'Mrs'`,
+                            `'Ms'`, `'Miss'`, `'Mstr'`, `'Dr'`)
+                        leadTraveller:
+                          type: boolean
+                          description: >-
+                            **indicator**: `true` if this traveler is the lead
+                            traveler
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      sortOrder:
+                        type: integer
+                        description: '**sort order** for *this* object'
+                      rulesApplied:
+                        type: string
+                        description: ignore (Viator only)
+                      omniPreRuleList:
+                        type: string
+                        description: ignore (Viator only)
+                      bookingStatus:
+                        $ref: ../components/schemas/bookingStatus_itinerary.yaml
+                      itemSummaries:
+                        type: array
+                        description: '**array** of item summaries'
+                        items:
+                          type: object
+                          properties:
+                            sortOrder:
+                              type: integer
+                              description: '**sort order** of *this* item summary'
+                            rulesApplied:
+                              type: string
+                              description: ignore (Viator only)
+                            bookingStatus:
+                              $ref: ../components/schemas/bookingStatus_item.yaml
+                            travellerAgeBands:
+                              type: array
+                              description: >-
+                                **array** of objects detailing the traveler age
+                                bands
+                              items:
+                                type: object
+                                properties:
+                                  sortOrder:
+                                    type: integer
+                                    description: '**sort order** for *this* age band'
+                                  count:
+                                    type: integer
+                                    description: >-
+                                      **numeric** number of travelers in *this*
+                                      age band
+                                  pluralDescription:
+                                    type: string
+                                    description: >-
+                                      **natural-language description** (plural)
+                                      of *this* age band
+                                  description:
+                                    type: string
+                                    description: >-
+                                      **natural-language description**
+                                      (singular) of *this* age band
+                                  ageBandId:
+                                    $ref: ../components/schemas/ageBandId.yaml
+                            voucherKey:
+                              type: string
+                              description: >-
+                                Unique reference for the voucher for this
+                                booking that can be used as a request parameter
+                                to search for existing bookings using the
+                                [/booking/mybookings](#operation/bookingMybookings)
+                                and
+                                [/booking/pastbooking](#operation/bookingPastbooking)
+                                endpoints
+                            voucherURL:
+                              type: string
+                              description: >-
+                                **URL of the voucher** for *this* product (if
+                                available). The customer can access this URL to
+                                retrieve their voucher.
+                            voucherRequirements:
+                              type: string
+                              description: >-
+                                **natural-language description** of the
+                                requirements pertaining to this voucher
+                            productPulledDown:
+                              type: boolean
+                              description: ignore (Viator only)
+                            merchantCancellable:
+                              type: boolean
+                              description: >
+                                ignore (Viator only)
+
+                                
+                                For cancellation information regarding the booking, please refer to the `merchantTermsAndConditions` object
+                            productWidgetList:
+                              type: string
+                              description: ignore (Viator only)
+                            savingAmount:
+                              $ref: ../components/schemas/savingAmount.yaml
+                            applePassSupported:
+                              type: boolean
+                              description: ''
+                            supplierName:
+                              type: string
+                              description: >-
+                                **natural-language name** of *this* product's
+                                supplier
+                            supplierPhoneNumber:
+                              type: string
+                              description: >-
+                                **telephone number** of *this* product's
+                                supplier
+                            vouchers:
+                              type: string
+                              description: ignore (Viator only)
+                            passbooks:
+                              type: string
+                              description: ignore (Viator only)
+                            termsAndConditions:
+                              type: object
+                              description: ignore (Viator only)
+                            merchantTermsAndConditions:
+                              type: object
+                              properties:
+                                termsAndConditions:
+                                  type: string
+                                  description: >-
+                                    **natural-language description** of the
+                                    terms and conditions for *this* product
+                                amountRefundable:
+                                  type: string
+                                  description: >-
+                                    **currency-formatted** amount that will be
+                                    refunded if the cancellation is processed
+                                    now.
+                                cancellationFromTourDate:
+                                  type: array
+                                  description: '**array** of cancellation policy objects'
+                                  items:
+                                    type: object
+                                    properties:
+                                      dayRangeMin:
+                                        description: >-
+                                          **number** of days prior to the tour
+                                          start date that *this* policy window
+                                          ends
+                                        type: integer
+                                      dayRangeMax:
+                                        description: >-
+                                          **number** of days prior to the tour
+                                          start date that *this* policy window
+                                          begins. `null` signifies open-endedness
+                                        type: integer
+                                      percentageRefundable:
+                                        type: integer
+                                        description: >-
+                                          **percentage** of total price refundable
+                                          if cancelled within *this* time window
+                                      policyStartTimestamp:
+                                        type: integer
+                                        description: >-
+                                          **Unix timestamp** giving the exact time
+                                          the policy commences
+                                      policyEndTimestamp:
+                                        type: integer
+                                        description: >-
+                                          **Unix timestamp** giving the exact time
+                                          the policy ends
+                            itineraryId:
+                              type: integer
+                              description: Ignore (Viator only)
+                            productCode:
+                              type: string
+                              description: >-
+                                **unique alphanumeric identifier** of *this*
+                                product
+                            travelDate:
+                              type: string
+                              description: '**date** of travel'
+                            distributorItemRef:
+                              type: string
+                              description: ignore (Viator only)
+                            startingTime:
+                              type: string
+                              description: '**starting time** of this product'
+                            languageServicesCode:
+                              type: string
+                              description: >-
+                                **code** for the language that this product
+                                operates in
+                            price:
+                              description: >
+                                **numeric merchant total price** for *this* item
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+                              type: number
+                            tourGradeCode:
+                              type: string
+                              description: '**identifer** of *this* tour grade'
+                            leadTravellerSurname:
+                              type: string
+                              description: '**surname** of the lead traveler'
+                            productTitle:
+                              type: string
+                              description: '**natural-language title** of *this* product'
+                            voucherOption:
+                              type: string
+                              description: ignore (Viator only)
+                            priceFormatted:
+                              type: string
+                              description: >
+                                **currency-formatted merchant total price** for
+                                *this* item
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+                            itemId:
+                              type: integer
+                              description: '**numeric identifer** of *this* item'
+                            destId:
+                              type: integer
+                              description: >-
+                                **unique numeric identifer** of the destination
+                                of *this* item
+                            barcodeOption:
+                              type: string
+                              description: >-
+                                Indicates whether a voucher is required for each
+                                passenger; or, whether the requirement is one
+                                voucher per group booking.
+                            barcodeType:
+                              type: string
+                              description: >-
+                                **alphanumeric code** specifying the type of
+                                barcode
+                            obfsId:
+                              type: integer
+                              description: ignore (Viator only)
+                            departurePoint:
+                              type: string
+                              description: >-
+                                **natural-language description** of *this*
+                                item's departure point
+                            departurePointAddress:
+                              type: string
+                              description: >-
+                                **HTML-formatted address** of *this* item's
+                                departure point
+                            departurePointDirections:
+                              type: string
+                              description: >-
+                                **natural-language description** of directions
+                                regarding *this* item's departure point
+                            merchantNetPrice:
+                              type: number
+                              description: >
+                                **numeric merchant net rate** for *this* item"
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+                            merchantNetPriceFormatted:
+                              type: string
+                              description: >
+                                **currency-formatted merchant net rate** for
+                                *this* item
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+                            lastRetailPriceFormatted:
+                              type: string
+                              description: >-
+                                **currency-formatted merchant net rate** of
+                                *this* item
+                            departsFrom:
+                              type: string
+                              description: >-
+                                **natural-language description** of *this*
+                                item's departure location
+                            tourGradeDescription:
+                              type: string
+                              description: >-
+                                **natural-language description** of *this* tour
+                                grade
+                            pickupHotelId:
+                              type: string
+                              description: '**identifer** for the pick-up hotel'
+                            pickupHotelName:
+                              type: string
+                              description: '**natural-language name** of the pick-up hotel'
+                            hoursConfirmed:
+                              type: string
+                              description: >
+                                The `hoursConfirmed` field also indicates if the
+                                product is freesale or on request. The
+                                `hoursConfirmed` value is the approximate window
+                                for confirmation in hours, which can be
+                                presented to the customer. A value of `0` means
+                                that the product is **freesale**, and a value
+                                greater than `0` means that the product is
+                                **on-request**.
+                            priceUSD:
+                              type: number
+                              description: '**numeric merchant total price** in USD'
+                            savingAmountFormated:
+                              $ref: ../components/schemas/savingAmountFormated.yaml
+                            bookingEngineId:
+                              $ref: >-
+                                ../components/schemas/bookingEngineId-response.yaml
+                            leadTravellerFirstname:
+                              type: string
+                              description: '**first name** of the lead traveler'
+                            leadTravellerTitle:
+                              type: string
+                              description: '**title** of the lead traveler''s name'
+                            lastRetailPrice:
+                              type: number
+                              description: '**numeric merchant net rate** of *this* item'
+                            currencyCode:
+                              type: string
+                              description: >-
+                                **currency code** for the currency in which
+                                pricing is displayed for *this* item
+                      voucherURL:
+                        type: string
+                        description: >-
+                          **URL of the voucher** for *this* product (if
+                          available). The customer can access this URL to
+                          retrieve their voucher.
+                      securityToken:
+                        type: string
+                        description: ignore (Viator only)
+                      paypalRedirectURL:
+                        type: string
+                        description: ignore (Viator only)
+                      userId:
+                        type: string
+                        description: ignore (Viator only)
+                      itineraryId:
+                        type: integer
+                        description: ignore (Viator only)
+                      exchangeRate:
+                        type: integer
+                        description: ignore (Viator only)
+                      bookingDate:
+                        type: string
+                        description: '**date** of *this* booking'
+                      voucherKey:
+                        type: string
+                        description: >-
+                          Unique reference for the voucher for this booking that
+                          can be used as a request parameter to search for
+                          existing bookings using the
+                          [/booking/mybookings](#operation/bookingMybookings)
+                          and
+                          [/booking/pastbooking](#operation/bookingPastbooking)
+                          endpoints
+                      bookerEmail:
+                        type: string
+                        description: >-
+                          **email address** of the entity that made *this*
+                          booking
+                      distributorRef:
+                        type: string
+                        description: ignore (Viator only)
+                      totalPrice:
+                        type: number
+                        description: >
+                          **numeric merchant total price** for *this* booking
+
+                          - For more information, see: [Merchant
+                          pricing](#section/Merchant-APIs/Merchant-pricing)
+                      totalPriceFormatted:
+                        type: string
+                        description: >
+                          **currency-formatted merchant total price** for *this*
+                          booking
+
+                          - For more information, see: [Merchant
+                          pricing](#section/Merchant-APIs/Merchant-pricing)
+                      totalPriceUSD:
+                        type: number
+                        description: >-
+                          **numeric merchant total price** of *this* booking in
+                          USD
+                      hasVoucher:
+                        type: boolean
+                        description: ignore (Viator only)
+                      currencyCode:
+                        type: string
+                        description: >-
+                          **currency code** of the currency in which *this*
+                          booking was made
+          examples:
+            '1':
+              $ref: ../components/examples/booking-book-example.yaml

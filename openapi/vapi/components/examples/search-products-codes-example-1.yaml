@@ -1,0 +1,141 @@
+summary: two valid products
+value:
+  errorReference: null
+  data:
+    - sortOrder: 1
+      supplierName: Big Bus Tours
+      currencyCode: EUR
+      catIds:
+        - 6
+        - 12
+      subCatIds:
+        - 97
+        - 98
+        - 5330
+        - 26963
+        - 32024
+        - 45
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: UnconditionalBE
+      onRequestPeriod: null
+      primaryGroupId: null
+      pas: null
+      available: true
+      productUrlName: Sydney-and-Bondi-Hop-on-Hop-off-Tour
+      primaryDestinationUrlName: Sydney
+      duration: 2 hours
+      shortDescription: >-
+        Explore Sydney and Bondi Beach on this hop-on hop-off sightseeing tour,
+        which takes you by double-decker bus to 34 stops around the city
+        including Sydney Opera House, Sydney Harbour Bridge, Darling Harbour,
+        Bondi Beach and more. Enjoy unobstructed views and recorded commentary
+        on board. Simply hop off to walk around and sightsee in depth. Your
+        ticket is valid for 24 or 48 hours, so you can experience Sydney and
+        Bondi's most noteworthy attractions, sights, and shopping and dining
+        areas at your own pace.
+      shortTitle: Big Bus Sydney and Bondi Hop-on Hop-off Tour
+      specialOfferAvailable: false
+      price: 33.35
+      supplierCode: '5010'
+      translationLevel: 0
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/94/40/f3.jpg
+      primaryDestinationName: Sydney
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/07/94/40/f3.jpg
+      photoCount: 124
+      reviewCount: 1605
+      primaryDestinationId: 357
+      merchantNetPriceFrom: 26.64
+      priceFormatted: '€33,35'
+      rrp: 0
+      rrpformatted: ''
+      onSale: false
+      videoCount: 1
+      rating: 4.5
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: '€26,64'
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      title: Big Bus Sydney and Bondi Hop-on Hop-off Tour
+      code: 5010SYDNEY
+    - sortOrder: 2
+      supplierName: Sundance Helicopters
+      currencyCode: EUR
+      catIds:
+        - 1
+        - 25
+        - 12
+      subCatIds:
+        - 113
+        - 2
+        - 98
+        - 26963
+        - 45
+        - 95
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: FreesaleOnRequestBE
+      onRequestPeriod: 336
+      primaryGroupId: null
+      pas: null
+      available: true
+      productUrlName: Grand-Canyon-West-Rim-Deluxe-Sunset-Helicopter-Tour
+      primaryDestinationUrlName: Las-Vegas
+      duration: 3 hours 30 minutes
+      shortDescription: >-
+        Take off from Las Vegas on a magical sunset helicopter tour to the Grand
+        Canyon. You'll enjoy a 45-minute helicopter flight each way, land at the
+        Grand Canyon for a glass of Champagne and snacks while you watch the sun
+        start it's descent behind the walls of the canyon, then fly low over the
+        famous neon-lit Las Vegas Strip on your return.
+      shortTitle: Grand Canyon from Las Vegas West Rim Sunset Helicopter Tour
+      specialOfferAvailable: false
+      price: 449.74
+      supplierCode: '2280'
+      translationLevel: 0
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/7a/ec/1c.jpg
+      primaryDestinationName: Las Vegas
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/07/7a/ec/1c.jpg
+      photoCount: 7
+      reviewCount: 399
+      primaryDestinationId: 684
+      merchantNetPriceFrom: 386.11
+      priceFormatted: '€449,74'
+      rrp: 0
+      rrpformatted: ''
+      onSale: false
+      videoCount: 1
+      rating: 5
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: '€386,11'
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      title: Grand Canyon West Rim Deluxe Sunset Helicopter Tour
+      code: 2280SUN
+  dateStamp: '2020-02-09T16:07:17+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 2
+  errorMessageText: null
+  vmid: '331003'

@@ -1,0 +1,3 @@
+type: string
+description: ignore (Viator only)
+nullable: true

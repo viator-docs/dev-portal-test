@@ -1,0 +1,16 @@
+type: integer
+nullable: true
+description: >
+  **number** of hours before the travel date that *this* product will be
+  'on-request' for
+
+  - this field will contain a value if the `bookingEngineId` is
+  `'FreesaleOnRequestBE'`
+
+  - an `onRequestPeriod` of 48 hours means that *this* product is freesale up
+  until 48 hours before the travel date, and is on-request for 48 hours or less
+  until the travel date
+
+  - **note**: 'hours in advance' (the number of hours a product is available for
+  booking before the travel date) may also affect this; however, this value is
+  not available in the API

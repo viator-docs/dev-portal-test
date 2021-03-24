@@ -1,0 +1,164 @@
+post:
+  tags:
+    - Booking services
+  summary: /booking/pricingmatrix
+  operationId: bookingPricingmatrix
+  description: >
+    Get the pricing matrix for tour-grades, product age bands and pax mixes
+
+
+    For more information, see: [Get the tour-grade pricing
+    matrix](#section/Common-workflows-and-data-validation/Get-the-tour-grade-pricing-matrix)
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        example:
+          productCode: 5010SYDNEY
+          tourGradeCode: 24HOUR
+          bookingDate: '2020-12-12'
+          currencyCode: EUR
+        schema:
+          type: object
+          properties:
+            productCode:
+              type: string
+              description: >-
+                **unique alphanumeric identifier** of the product for which to
+                retrieve the pricing matrix
+            tourGradeCode:
+              type: string
+              description: >-
+                **alphanumeric identifier** of the product tour grade for which
+                to retrieve the pricing matrix
+            bookingDate:
+              type: string
+              description: >-
+                **date** for which to retrieve pricing data  (must be in the
+                future) (**note**: this is an optional parameter for normal
+                products; if the date is *not* provided then the nearest
+                available date is determined)
+            currencyCode:
+              type: string
+              description: >-
+                **currency code** of the currency in which to display pricing
+                information
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        pricingUnit:
+                          type: string
+                          description: >
+                            **unit** in which pricing is calculated (currently,
+                            only 'per person' is supported)
+
+                            - see [Understanding the pricingUnit
+                            field](#section/Using-the-API/Understanding-the-pricingUnit-field)
+                            for more information
+                        bookingDate:
+                          type: string
+                          description: '**date** for which to retrieve pricing information'
+                        sortOrder:
+                          type: integer
+                          description: '**sort order** for *this* response object'
+                        ageBandPrices:
+                          type: array
+                          description: '**array** of age band pricing objects'
+                          items:
+                            type: object
+                            properties:
+                              bandId:
+                                $ref: ../components/schemas/bandId.yaml
+                              prices:
+                                type: array
+                                description: >-
+                                  **array** of prices available for *this* age
+                                  band (based on the min and max count required)
+                                items:
+                                  type: object
+                                  properties:
+                                    sortOrder:
+                                      type: string
+                                      description: '**sort order** for *this* pricing object'
+                                    currencyCode:
+                                      type: string
+                                      description: >-
+                                        **currency code** for the currency in
+                                        which pricing is displayed
+                                    price:
+                                      type: number
+                                      description: >
+                                        **numeric suggested retail price** for
+                                        *this* age band
+
+                                        - For more information, see: [Merchant
+                                        pricing](#section/Merchant-APIs/Merchant-pricing)
+                                    priceFormatted:
+                                      type: string
+                                      description: >
+                                        **currency-formatted suggested retail
+                                        price** for *this* age band and the
+                                        suggested sell price
+
+                                        - For more information, see: [Merchant
+                                        pricing](#section/Merchant-APIs/Merchant-pricing)
+                                    merchantNetPrice:
+                                      type: number
+                                      description: >
+                                        **numeric merchant net rate** for *this*
+                                        age band
+
+                                        - For more information, see: [Merchant
+                                        pricing](#section/Merchant-APIs/Merchant-pricing)
+                                    merchantNetPriceFormatted:
+                                      type: string
+                                      description: >
+                                        **currency-formatted merchant net rate**
+                                        for *this* age band
+
+                                        - For more information, see: [Merchant
+                                        pricing](#section/Merchant-APIs/Merchant-pricing)
+                                    minNoOfTravellersRequiredForPrice:
+                                      type: integer
+                                      description: >-
+                                        **minimum number of travelers** that
+                                        this pricing schedule can be applied to;
+                                        e.g., '3' means that the price is for a
+                                        group of three people or more
+                              sortOrder:
+                                description: '**sort order** for *this* age band'
+                                type: integer
+                              minimumCountRequired:
+                                type: integer
+                                description: >
+                                  **minimum number of travelers** that this
+                                  pricing schedule can be applied to
+
+                                  - use this field to specify the smallest group
+                                  size you are interested in making a booking
+                                  for
+                              maximumCountRequired:
+                                type: integer
+                                description: >
+                                  **maximum number of travelers** that this
+                                  pricing schedule can be applied to
+
+                                  - use this field to specify the largest group
+                                  size you are interested in making a booking
+                                  for
+          examples:
+            '1':
+              $ref: ../components/examples/booking-pricingmatrix-example.yaml

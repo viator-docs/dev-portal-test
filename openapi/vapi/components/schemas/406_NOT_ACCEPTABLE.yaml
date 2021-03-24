@@ -1,0 +1,20 @@
+type: object
+properties:
+  code:
+    type: string
+    enum:
+      - INVALID_HEADER_VALUE
+  message:
+    type: string
+    description: >-
+      Describes which in-header parameter was not acceptable to this system;
+      e.g., 'Invalid value for header: exp-api-key'
+  timestamp:
+    type: string
+    description: |
+      Timestamp of the request
+
+        * e.g.: `2019-09-17T03:20:45.737043Z`
+  trackingId:
+    type: string
+    description: Tracking identifier for this error response

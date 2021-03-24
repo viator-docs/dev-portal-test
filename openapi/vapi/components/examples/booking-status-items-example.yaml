@@ -1,0 +1,27 @@
+summary: booking status items example
+value:
+  errorReference: null
+  data:
+    - itemId: 580669678
+      bookingStatus:
+        status: 1
+        text: Paid &amp; Confirmed
+        type: CONFIRMED
+        level: ITEM
+        confirmed: true
+        amended: false
+        failed: false
+        pending: false
+        cancelled: false
+      distributorItemRef: itemRef1000000
+  dateStamp: '2020-02-11T19:03:06+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  vmid: '331001'
+  errorMessageText: null

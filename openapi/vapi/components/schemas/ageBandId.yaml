@@ -1,0 +1,4 @@
+type: integer
+description: |
+  **unique numeric identifier** for the age band
+  - See: [Working with age bands](../../../../developer-portal/papiv1/key-concepts/working-with-age-bands)

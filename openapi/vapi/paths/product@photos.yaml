@@ -1,0 +1,29 @@
+get:
+  tags:
+    - Product services
+  summary: /product/photos
+  operationId: productPhotos
+  description: Get photos of a product submitted by users
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+    - $ref: ../components/parameters/topX.yaml
+    - $ref: ../components/parameters/code.yaml
+    - $ref: ../components/parameters/showUnavailable.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    description: '**array** of photo objects'
+                    items:
+                      $ref: ../components/schemas/photoObject.yaml
+          examples:
+            '1':
+              $ref: ../components/examples/product-photos-example.yaml

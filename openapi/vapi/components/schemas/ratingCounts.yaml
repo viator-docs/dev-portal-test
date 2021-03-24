@@ -1,0 +1,28 @@
+description: >
+  **dictionary** of rating (stars) to number of reviews with each
+  rating for *this* product"
+
+
+  Users rate products by assigning a star-rating from 1-5; these values show the
+  total number of reviews for each of the star ratings (up to a maximum given in
+  the `reviewCount` field in this response).
+
+
+  - **note**: see response sample for structure
+type: object
+properties:
+  1:
+    type: number
+    description: Number of reviews with a one star rating
+  2:
+    type: number
+    description: Number of reviews with a two star rating
+  3:
+    type: number
+    description: Number of reviews with a three star rating
+  4:
+    type: number
+    description: Number of reviews with a four star rating
+  5:
+    type: number
+    description: Number of reviews with a five star rating

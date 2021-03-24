@@ -1,0 +1,201 @@
+summary: search products example by destination
+value:
+  errorReference: null
+  data:
+    - sortOrder: 1
+      supplierName: MintnHoney
+      currencyCode: USD
+      catIds:
+        - 26051
+        - 6
+        - 50127
+      subCatIds:
+        - 50128
+        - 19
+        - 26052
+        - 21
+        - 40293
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: false
+      bookingEngineId: FreesaleBE
+      onRequestPeriod: null
+      primaryGroupId: 26051
+      pas: null
+      available: true
+      productUrlName: Viva-Las-Vinos-Wine-Yoga
+      primaryDestinationUrlName: Las-Vegas
+      duration: 1 hour
+      shortDescription: >-
+        Sip your wine and unwind with wine yoga! This gentle yoga class combines
+        sipping your wine and practicing fun yoga basics in a rad environment. A
+        tad unconventional, this class is filled with laughter, fun, and
+        cheers-ing your neighbor.<br><br>Private parties are available upon
+        request.<br><br>Ticket includes one glass of wine, a souvenir adult
+        sippy (to help prevent the spillage of the wine!), and a gentle quirky
+        yoga class.<br><br>
+      price: 65
+      shortTitle: Yoga Uncorked at The Gramercy
+      specialOfferAvailable: false
+      supplierCode: '73492'
+      translationLevel: 0
+      onSale: false
+      photoCount: 0
+      reviewCount: 0
+      primaryDestinationId: 684
+      merchantNetPriceFrom: 55.38
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/27/7e/88.jpg
+      primaryDestinationName: Las Vegas
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/09/27/7e/88.jpg
+      priceFormatted: $65.00
+      rrp: 0
+      rrpformatted: ''
+      videoCount: 0
+      rating: 0
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: $55.38
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      title: Yoga Uncorked at The Gramercy
+      code: 73492P4
+    - sortOrder: 2
+      supplierName: MintnHoney
+      currencyCode: USD
+      catIds:
+        - 26051
+        - 6
+      subCatIds:
+        - 19
+        - 26052
+        - 21
+        - 40293
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: FreesaleBE
+      onRequestPeriod: null
+      primaryGroupId: 6
+      pas: null
+      available: true
+      productUrlName: Yoga-Uncorked-Artisan-Hotel
+      primaryDestinationUrlName: Las-Vegas
+      duration: 1 hour
+      shortDescription: >-
+        Sip your wine and unwind with wine yoga! This gentle yoga class combines
+        sipping your wine and practicing fun yoga basics in a rad environment. A
+        tad unconventional, this class is filled with laughter, fun, and
+        cheers-ing your neighbor.<br><br>Private parties are available upon
+        request.<br><br>Ticket includes one glass of wine, a souvenir adult
+        sippy (to help prevent the spillage of the wine!), and a gentle quirky
+        yoga class.<br><br>
+      price: 55
+      shortTitle: Yoga Uncorked-Artisan Hotel
+      specialOfferAvailable: false
+      supplierCode: '73492'
+      translationLevel: 0
+      onSale: false
+      photoCount: 0
+      reviewCount: 0
+      primaryDestinationId: 684
+      merchantNetPriceFrom: 46.86
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/ac/2b/2d.jpg
+      primaryDestinationName: Las Vegas
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/09/ac/2b/2d.jpg
+      priceFormatted: $55.00
+      rrp: 0
+      rrpformatted: ''
+      videoCount: 0
+      rating: 0
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: $46.86
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      title: Yoga Uncorked-Artisan Hotel
+      code: 73492P17
+    - sortOrder: 3
+      supplierName: 'Jennifer Pierotti Yoga '
+      currencyCode: USD
+      catIds:
+        - 26051
+        - 50127
+      subCatIds:
+        - 50128
+        - 26052
+        - 40293
+      webURL: null
+      specialReservationDetails: null
+      sslSupported: false
+      panoramaCount: 0
+      merchantCancellable: true
+      bookingEngineId: DeferredCRMBE
+      onRequestPeriod: null
+      primaryGroupId: 26051
+      pas: null
+      available: true
+      productUrlName: Sunset-Yoga-in-Las-Vegas
+      primaryDestinationUrlName: Nevada
+      duration: 1 to 2 hours
+      shortDescription: >-
+        Enjoy a quiet, beautiful short walk to a secluded and breathtaking scene
+        in Las Vegas. Travelers can choose to visit Calico Basin, Mt.
+        Charleston, Wetlands, Seven Magic Mountains, or Lake Las Vegas for a
+        private or group yoga session. Each session will provide the freedom
+        from day-to-day distractions and allow you to immerse yourself in a
+        unique and awe-inspiring locale. Each yoga session will be tailored to
+        the individual and/or group in order to ensure the proper tone and
+        intention is set. This is an all-inclusive experience. Guided walking
+        tour, customized yoga session, yoga mats and water will be provided.
+      price: 250
+      shortTitle: Explore the Beauty of Las Vegas with Private and Group Yoga Classes
+      specialOfferAvailable: false
+      supplierCode: '73458'
+      translationLevel: 0
+      onSale: false
+      photoCount: 0
+      reviewCount: 0
+      primaryDestinationId: 22171
+      merchantNetPriceFrom: 213
+      thumbnailHiResURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/07/3b/bc/78.jpg
+      primaryDestinationName: Nevada
+      thumbnailURL: >-
+        https://hare-media-cdn.tripadvisor.com/media/attractions-splice-spp-154x109/07/3b/bc/78.jpg
+      priceFormatted: $250.00
+      rrp: 0
+      rrpformatted: ''
+      videoCount: 0
+      rating: 0
+      specialReservation: false
+      uniqueShortDescription: null
+      merchantNetPriceFromFormatted: $213.00
+      savingAmount: 0
+      savingAmountFormated: ''
+      essential: null
+      admission: null
+      title: Explore the Beauty of Las Vegas with Private and Group Yoga Classes
+      code: 73458P1
+  dateStamp: '2020-02-09T14:34:51+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 3
+  errorMessageText: null
+  vmid: '331005'

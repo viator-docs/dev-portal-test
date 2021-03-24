@@ -1,0 +1,7 @@
+summary: health check example
+value:
+  allGood: true
+  dbOk: true
+  memcachedOk: true
+  capiOk: true
+  message: null

@@ -1,0 +1,9 @@
+summary: bookings cancel quote example
+value:
+  bookingId: BR-580669678
+  refundDetails:
+    itemPrice: 412.04
+    refundAmount: 412.04
+    refundPercentage: 100
+    currencyCode: USD
+  status: CANCELLABLE

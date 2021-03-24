@@ -1,0 +1,746 @@
+get:
+  tags:
+    - Product services
+  summary: /product
+  operationId: product
+  description: >
+    Get product information
+
+    This service provides all product details required for a product display
+    page, as well as information required for price checks and booking, such
+    as: 
+
+    - age bands
+
+    - tour grades
+
+    - language options 
+
+    - booking questions
+
+    - hotel pickup flags
+
+
+    **currencyCode (in query):** 
+
+    - use this parameter to specify the currency in which product pricing should
+    be displayed
+
+    - the default currency is the currency of your account; or, if you have
+    multi-currency enabled, US dollars
+
+    - "multi-currency" allows pricing and booking in various currencies - please
+    speak to the business development team if you'd like this enabled
+
+    - **Note**: you will be billed in the currency in which the booking was made
+
+
+    **Product photos**
+
+
+    <mark>**<u>Update 13 Feb 2020</u>**: All supplier-provided photos for the
+    selected product are now available in the `productPhotos` array in this
+    endpoint's response. Previously, only two supplier-provided photos were
+    available – one in the `productPhotos` array and one in `thumbnailHiResURL`.
+    </mark>
+
+
+    **Videos**
+
+
+    - Videos are no longer provided via this API
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+    - $ref: ../components/parameters/currencyCode.yaml
+    - $ref: ../components/parameters/sortOrder_REVIEW.yaml
+    - in: query
+      name: voucherOption
+      schema:
+        type: string
+        enum:
+          - VOUCHER_PAPER_ONLY
+          - VOUCHER_E
+      description: |
+        - `"VOUCHER_PAPER_ONLY"`: Paper Vouchers only accepted
+        - `"VOUCHER_E"`: EVouchers + Paper Vouchers accepted
+    - $ref: ../components/parameters/code.yaml
+    - $ref: ../components/parameters/showUnavailable.yaml
+    - in: query
+      name: excludeTourGradeAvailability
+      schema:
+        type: boolean
+      description: >
+        **specifier:** 
+
+        - `true`: return **all** tour grades, including those that are not
+        available
+
+        - `false`: only display tour grades that *are* available
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: object
+                    description: '**object** containing product details'
+                    properties:
+                      supplierName:
+                        type: string
+                        description: '**name** of *this* product''s supplier'
+                      currencyCode:
+                        type: string
+                        description: >-
+                          **currency** in which to display *this* product's
+                          pricing details
+                      catIds:
+                        type: array
+                        description: >
+                          **list** of unique numeric category identifiers that
+                          *this* product falls under
+
+                          - `categoryId` is available from the
+                          [/taxonomy/categories](#operation/taxonomyCategories)
+                          service
+                        items:
+                          type: integer
+                      subCatIds:
+                        type: array
+                        items:
+                          type: integer
+                        description: >
+                          **list** of unique numeric subcategory identifiers
+                          that *this* product falls under
+
+                          - `subcategoryId` is available from the
+                          [/taxonomy/categories](#operation/taxonomyCategories)
+                          service
+                      webURL:
+                        $ref: ../components/schemas/webURL.yaml
+                      specialReservationDetails:
+                        type: string
+                        description: ignore (Viator only)
+                        nullable: true
+                      sslSupported:
+                        type: boolean
+                        description: ignore (Viator only)
+                      panoramaCount:
+                        type: integer
+                        description: >-
+                          **number** of panoramic images available for *this*
+                          product
+                      merchantCancellable:
+                        type: boolean
+                        description: >
+                          ignore (Viator only)
+
+                                
+                          For cancellation information regarding the booking, please refer to the `merchantTermsAndConditions` object
+                      bookingEngineId:
+                        $ref: ../components/schemas/bookingEngineId.yaml
+                      onRequestPeriod:
+                        $ref: ../components/schemas/onRequestPeriod.yaml
+                      primaryGroupId:
+                        type: string
+                        description: ignore (Viator only)
+                        nullable: true
+                      pas:
+                        type: object
+                        description: ignore (Viator only)
+                      available:
+                        type: boolean
+                        description: ignore (Viator only)
+                      productUrlName:
+                        type: string
+                        description: '**URL-formatted name** of *this* product'
+                      primaryDestinationUrlName:
+                        type: string
+                        description: >-
+                          **URL-formatted name** of the destination in which
+                          *this* product is located
+                      voucherRequirements:
+                        description: >-
+                          **natural-language description** of any requirements
+                          pertaining to the use of the voucher
+                      tourGradesAvailable:
+                        type: boolean
+                        description: >
+                          **indicator**: 
+
+                          - `true`: tour grades are available for this product,
+                          meaning you will need to display these tour grades to
+                          the user and include a tour grade when booking *this*
+                          product
+
+                          - `false`: only a default tour grade is available for
+                          *this* product
+                      hotelPickup:
+                        type: boolean
+                        description: >-
+                          **indicator**: `true` if *this* product offers hotel
+                          pick-up; if so, you will need to collect the user's
+                          hotel details
+                      userPhotos:
+                        type: array
+                        description: '**array** of user photo objects'
+                        items:
+                          $ref: ../components/schemas/photoObject.yaml
+                      reviews:
+                        $ref: ../components/schemas/reviews.yaml
+                      videos:
+                        type: string
+                        description: >-
+                          ignore (Viator only) – videos are not available to
+                          partners
+                        nullable: true
+                      tourGrades:
+                        type: array
+                        description: >-
+                          **array** of tour grade objects available for *this*
+                          product
+                        items:
+                          type: object
+                          properties:
+                            sortOrder:
+                              type: integer
+                              description: '**sort order** of *this* tour grade'
+                            currencyCode:
+                              type: string
+                              description: >-
+                                **currency code** of the currency *this*
+                                product's tour grades prices are shown in
+                            langServices:
+                              type: object
+                              description: >-
+                                **dictionary** of language service codes and
+                                their natural-language descriptors
+                              additionalProperties:
+                                type: string
+                            gradeCode:
+                              type: string
+                              description: >-
+                                **unique alphanumeric identifier** of *this*
+                                tour grade
+                            gradeTitle:
+                              type: string
+                              description: >-
+                                **natural-language description** of *this* tour
+                                grade
+                            gradeDepartureTime:
+                              type: string
+                              description: >-
+                                **departure time** for *this* tour grade if
+                                available
+                            gradeDescription:
+                              type: string
+                              description: >-
+                                **natural-language description** of *this* tour
+                                grade
+                            defaultLanguageCode:
+                              type: string
+                              description: >-
+                                **language code** of the standard language for
+                                *this* tour grade
+                            merchantNetPriceFrom:
+                              $ref: ../components/schemas/merchantNetPriceFrom.yaml
+                            merchantNetPriceFromFormatted:
+                              $ref: ../components/schemas/merchantNetPriceFromFormatted.yaml
+                            priceFrom:
+                              type: number
+                              description: >
+                                **numeric suggested retail price** for *this*
+                                tour grade
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+                            priceFromFormatted:
+                              type: string
+                              description: >
+                                **currency-formatted suggested retail price**
+                                for *this* tour grade
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+                      ageBands:
+                        type: array
+                        description: >
+                          **array** of age band objects detailing the age bands
+                          available for *this* product
+                            
+                          - **note**: only the age bands listed here can book
+                          this product using the
+                          [/booking/book](#operation/bookingBook)
+                          service
+                        items:
+                          type: object
+                          properties:
+                            sortOrder:
+                              type: integer
+                              description: '**sort order** for *this* age band object'
+                            ageFrom:
+                              type: integer
+                              description: >-
+                                **numeric lower age limit** of the age range
+                                defined by *this* age band
+                            ageTo:
+                              type: integer
+                              description: >-
+                                **numeric upper age limit** of the age range
+                                included in *this* age band
+                            adult:
+                              type: boolean
+                              description: >-
+                                **indicator**: `true` if *this* age band
+                                describes adults (not children)
+                            bandId:
+                              $ref: ../components/schemas/bandId.yaml
+                            pluralDescription:
+                              type: string
+                              description: >-
+                                **natural-language description** (plural) of
+                                *this* age band
+                            treatAsAdult:
+                              type: boolean
+                              description: >-
+                                **indicator**: `true` if members of this age
+                                band are considered to be adults
+                            count:
+                              type: integer
+                              description: >-
+                                **number** of participants in *this* age band
+                                required to book the product
+                            description:
+                              type: string
+                              description: >-
+                                **natural-language description** (singular) of
+                                *this* age band
+                      bookingQuestions:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            sortOrder:
+                              description: '**sort order** for *this* booking question'
+                              type: integer
+                            questionId:
+                              type: integer
+                              description: >
+                                **unique numeric identifier** for *this* booking
+                                question
+
+                                - **note**: see [Booking
+                                questions](#section/Appendices/Booking-questions)
+                                for more information
+                            stringQuestionId:
+                              type: string
+                              description: >
+                                **unique alphanumeric identifier** for the
+                                booking question
+
+                                - **note**: see [Booking
+                                questions](#section/Appendices/Booking-questions)
+                                for more information
+                            subTitle:
+                              type: string
+                              description: >
+                                **natural-language subtitle** for *this* booking
+                                question
+
+                                - **note**: see [Booking
+                                questions](#section/Appendices/Booking-questions)
+                                for more information
+                            title:
+                              type: string
+                              description: >
+                                **natural-language title** for *this* booking
+                                question
+
+                                - **note**: see [Booking
+                                questions](#section/Appendices/Booking-questions)
+                                for more information
+                            required:
+                              type: boolean
+                              description: >
+                                **boolean indicator**:
+
+                                - `true` if the answer to *this* booking
+                                question <u>must</u> be included in the request
+                                object to the b service when booking *this*
+                                product
+
+                                - **note**: see [Booking
+                                questions](#section/Appendices/Booking-questions)
+                                for more information
+                            message:
+                              type: string
+                              description: >
+                                **natural-language instructions** for *this*
+                                booking question
+
+                                - **note**: see [Booking
+                                questions](#section/Appendices/Booking-questions)
+                                for more information
+                      passengerAttributes:
+                        type: array
+                        nullable: true
+                        description: ignore (Viator only)
+                        items:
+                          type: object
+                          properties:
+                            required:
+                              type: boolean
+                              description: ignore (Viator only)
+                            questionId:
+                              type: string
+                              description: ignore (Viator only)
+                            title:
+                              type: string
+                              description: ignore (Viator only)
+                            errorMissingMessage:
+                              type: string
+                              description: ignore (Viator only)
+                            errorValidationMessage:
+                              type: string
+                              description: ignore (Viator only)
+                            validateType:
+                              type: string
+                              description: ignore (Viator only)
+                            customAttribute_kgs:
+                              type: string
+                              description: ignore (Viator only)
+                            customAttribute_lbs:
+                              type: string
+                              description: ignore (Viator only)
+                      highlights:
+                        type: integer
+                        description: ignore (Viator only)
+                        nullable: true
+                      salesPoints:
+                        type: array
+                        description: >
+                          ignore (Viator only)
+
+
+                          **Note**: The information that was previously returned
+                          in this field is available in the `additionalInfo`,
+                          `inclusions` and `description` fields
+                        items:
+                          type: string
+                      ratingCounts:
+                        $ref: ../components/schemas/ratingCounts.yaml
+                      merchantTermsAndConditions:
+                        type: object
+                        nullable: true
+                        properties:
+                          termsAndConditions:
+                            type: string
+                            description: >-
+                              **natural-language description** of the terms and
+                              conditions for *this* product
+                          merchantTermsAndConditionsType:
+                            type: integer
+                            description: >-
+                              **numeric identifier** for the merchant terms and
+                              conditions type for *this* product
+                          amountRefundable:
+                            type: integer
+                            description: >-
+                              Usually shows the total amount refundable if the
+                              cancellation is processed now. `null` in /product
+                              as no booking has been made.
+                            nullable: true
+                          cancellationFromTourDate:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                dayRangeMin:
+                                  description: >-
+                                    **number** of days prior to the tour start
+                                    date that *this* policy window ends
+                                  type: integer
+                                dayRangeMax:
+                                  description: >-
+                                    **number** of days prior to the tour start
+                                    date that *this* policy window begins
+                                  type: integer
+                                  nullable: true
+                                percentageRefundable:
+                                  type: integer
+                                  description: >-
+                                    **percentage** of total price refundable if
+                                    cancelled within *this* time window
+                                policyStartTimestamp:
+                                  type: integer
+                                  description: >-
+                                    Usually shows the Unix timestamp giving the
+                                    exact time the policy commences. `null` in
+                                    /product as no booking has yet been made.
+                                  nullable: true
+                                policyEndTimestamp:
+                                  type: integer
+                                  description: >-
+                                    Usually shows the Unix timestamp giving the
+                                    exact time the policy ends. `null` in
+                                    /product as no booking has yet been made.
+                                  nullable: true
+                      maxTravellerCount:
+                        type: integer
+                        description: >-
+                          **maximum number of travelers** allowed per-booking
+                          for *this* product
+                      itinerary:
+                        type: string
+                        description: >
+                          **HTML-formatted description** of the itinerary of
+                          *this* tour if available
+
+                          - may contain basic HTML tags; e.g., br, li, b, u, p,
+                          i, ul and ol
+                      destinationId:
+                        type: integer
+                        description: >
+                          **unique numeric identifier** of the destination in
+                          which *this* product is located
+
+                          - `destinationId` is available from the
+                          [/taxonomy/destinations](#operation/taxonomyDestinations)
+                          service
+                      translationLevel:
+                        $ref: ../components/schemas/translationLevel.yaml
+                      additionalInfo:
+                        type: array
+                        description: >
+                          **array** of HTML-formatted clauses providing
+                          additional information about *this* product, such as:
+
+                          - when the confirmation will be received (i.e. at time
+                          of booking, or within 48 hours of booking etc)
+
+                          - accessibility options; such as whether wheelchair
+                          access is available
+
+                          - particulars about the pick-up location and process
+
+                          - **Note**: may contain basic HTML mark-up tags –
+                          e.g., br, li, b, u, p, i, ul and ol
+                        items:
+                          type: string
+                      voucherOption:
+                        type: string
+                        description: >
+                          **specifier** of the type(s) of vouchers that can be
+                          used:
+
+                            - `VOUCHER_PAPER_ONLY` - *only* printed paper vouchers accepted
+                            - `VOUCHER_E` - e-vouchers + printed paper vouchers accepted
+                      applePassSupported:
+                        type: boolean
+                        description: '**indicator**: `true` if Apple Wallet is supported'
+                      productPhotos:
+                        type: array
+                        description: >-
+                          **array** of image objects detailing images available
+                          for *this* product
+                        items:
+                          type: object
+                          properties:
+                            photoURL:
+                              type: string
+                              description: '**URL** of *this* photo'
+                            supplier:
+                              type: string
+                              description: >-
+                                **natural-language name** of the supplier of
+                                *this* photo
+                            caption:
+                              type: string
+                              description: '**natural-language caption** for *this* photo'
+                      inclusions:
+                        type: array
+                        description: >
+                          **array** of HTML-formatted features included in
+                          *this* product
+
+                          - may contain basic HTML mark-up tags; e.g., br, li,
+                          b, u, p, i, ul and ol
+                        items:
+                          type: string
+                      city:
+                        type: string
+                        description: >-
+                          **name** of city or destination that *this* product
+                          operates in
+                      departureTime:
+                        type: string
+                        description: >
+                          **HTML-formatted natural-language description** of
+                          *this* product's departure times
+
+                          - may contain basic HTML mark-up tags; e.g., br, li,
+                          b, u, p, i, ul and ol
+                      departurePoint:
+                        type: string
+                        description: >-
+                          **HTML-formatted natural-language description** of
+                          *this* product's departure location
+                      departureTimeComments:
+                        type: string
+                        description: >-
+                          **HTML-formatted natural-language description** of
+                          extra information pertaining to product departure
+                          times
+                      returnDetails:
+                        type: string
+                        description: >-
+                          **HTML-formatted natural-language description** of
+                          *this* product's drop-off details (if available)
+                      allTravellerNamesRequired:
+                        type: boolean
+                        description: >-
+                          **indicator**: `true` if all traveler names are
+                          required.<br />**Note**: if set to `true`, then all
+                          passenger names must be included in the booking
+                          request, and all must be unique. Placeholder names
+                          cannot be used.
+                      operates:
+                        type: string
+                        description: >-
+                          **HTML-formatted natural-language description** of
+                          *this* product's operation frequency
+                      mapURL:
+                        type: string
+                        description: '**URL** of this product''s map (usually an image)'
+                        nullable: true
+                      exclusions:
+                        type: array
+                        description: >
+                          **array** of HTML-formatted natural-language
+                          exclusions for *this* product
+
+                          - may contain basic HTML mark-up - e.g., br, li, b, u,
+                          p, i, ul and ol
+                        items:
+                          type: string
+                      description:
+                        type: string
+                        description: >-
+                          **HTML-formatted natural-language description** of
+                          *this* product (extended)
+                      location:
+                        type: string
+                        description: >
+                          **natural-language description** of *this* product's
+                          location
+
+                          -  can be a combination of the country and city, or a
+                          custom location
+                      country:
+                        type: string
+                        description: >-
+                          **natural-language name** of the country in which
+                          *this* product operates
+                      region:
+                        type: string
+                        description: >-
+                          **natural-language name** of the region in which
+                          *this* product operates
+                      price:
+                        $ref: ../components/schemas/price.yaml
+                      supplierCode:
+                        type: string
+                        description: >-
+                          **unique identification code** of *this* product's
+                          supplier
+                      thumbnailHiResURL:
+                        type: string
+                        description: >-
+                          **URL** of *this* product's high-resolution thumbnail
+                          image
+                      primaryDestinationName:
+                        type: string
+                        description: >-
+                          **natural-language name** of *this* product's primary
+                          destination
+                      thumbnailURL:
+                        type: string
+                        description: '**URL** for *this* product''s thumbnail image'
+                      priceFormatted:
+                        $ref: ../components/schemas/priceFormatted.yaml
+                      rrp:
+                        $ref: ../components/schemas/rrp.yaml
+                      rrpFormatted:
+                        $ref: ../components/schemas/rrpFormatted.yaml
+                      onSale:
+                        $ref: ../components/schemas/onSale.yaml
+                      photoCount:
+                        description: '**number** of user photos available for *this* product'
+                        type: integer
+                      reviewCount:
+                        $ref: ../components/schemas/reviewCount.yaml
+                      primaryDestinationId:
+                        description: >-
+                          **unique numeric identifier** of *this* product's
+                          primary destination
+                        type: integer
+                      videoCount:
+                        type: integer
+                        description: >-
+                          ignore (Viator only) – videos are not available to
+                          partners
+                      rating:
+                        $ref: ../components/schemas/rating.yaml
+                      savingAmount:
+                        $ref: ../components/schemas/savingAmount.yaml
+                      savingAmountFormated:
+                        $ref: ../components/schemas/savingAmountFormated.yaml
+                      essential:
+                        type: string
+                        description: ignore (Viator only)
+                        nullable: true
+                      admission:
+                        type: string
+                        description: ignore (Viator only)
+                        nullable: true
+                      shortTitle:
+                        type: string
+                        description: >-
+                          **natural-language title** (shortened) of *this*
+                          product
+                      specialOfferAvailable:
+                        $ref: ../components/schemas/specialOfferAvailable.yaml
+                      specialOffer:
+                        $ref: ../components/schemas/specialOffer.yaml
+                      merchantNetPriceFrom:
+                        $ref: ../components/schemas/merchantNetPriceFrom.yaml 
+                      merchantNetPriceFromFormatted:
+                        $ref: ../components/schemas/merchantNetPriceFromFormatted.yaml
+                      specialReservation:
+                        type: boolean
+                        description: ignore (Viator only)
+                      shortDescription:
+                        type: string
+                        description: >-
+                          **natural-language description** (shortened) of *this*
+                          product
+                      title:
+                        type: string
+                        description: '**natural-language title** of *this* product'
+                      duration:
+                        type: string
+                        description: >-
+                          **natural-language description** of *this* product's
+                          duration
+                      code:
+                        type: string
+                        description: '**unique alphanumeric identifier** of *this* product'
+          examples:
+            '1':
+              $ref: ../components/examples/product-example-1.yaml
+            '2':
+              $ref: ../components/examples/product-example-2.yaml

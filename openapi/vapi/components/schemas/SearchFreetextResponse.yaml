@@ -1,0 +1,26 @@
+type: object
+properties:
+  sortOrder:
+    type: integer
+    description: '**sort order** for *this* data object'
+  searchType:
+    type: string
+    enum:
+      - PRODUCT
+      - DESTINATION
+      - ATTRACTION
+      - RECOMMENDATION
+    description: >
+      **indicator** of the entity type for *this* result
+      that is *one of*:
+        - `"PRODUCT"`: a tour / activity
+        - `"DESTINATION"`: continent, country, city, region
+        - `"ATTRACTION"`: an attraction within a destination (only available to partners with SEO access)
+        - `"RECOMMENDATION"`: an attraction within a destination (only available to partners with SEO access)
+discriminator:
+  propertyName: searchType
+  mapping:
+    PRODUCT: ./SearchFreetextResponseProduct.yaml
+    DESTINATION: ./SearchFreetextResponseDestination.yaml
+    ATTRACTION: ./SearchFreetextResponseAttraction.yaml
+    RECOMMENDATION: ./SearchFreetextResponseRecommendation.yaml

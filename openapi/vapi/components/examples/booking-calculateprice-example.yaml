@@ -1,0 +1,128 @@
+summary: booking calculateprice example
+value:
+  errorReference: null
+  data:
+    rulesApplied: null
+    promoCode: null
+    itinerary:
+      sortOrder: 0
+      rulesApplied: null
+      omniPreRuleList: null
+      bookingStatus:
+        status: 0
+        text: Waiting to be Booked
+        type: WAITING
+        level: ITINERARY
+        confirmed: false
+        pending: false
+        amended: false
+        cancelled: false
+        failed: false
+      itemSummaries:
+        - sortOrder: 0
+          rulesApplied: null
+          bookingStatus:
+            status: 0
+            text: Waiting to be Booked
+            type: WAITING
+            level: ITEM
+            failed: false
+            confirmed: false
+            amended: false
+            pending: false
+            cancelled: false
+          travellerAgeBands:
+            - sortOrder: 0
+              count: 1
+              pluralDescription: Adults
+              description: Adult
+              ageBandId: 1
+          voucherKey: ''
+          voucherURL: null
+          voucherRequirements: >-
+            You can present either a paper or an electronic voucher for this
+            activity.
+          appleWalletURL: null
+          productPulledDown: false
+          merchantCancellable: true
+          productWidgetList: null
+          savingAmount: 0
+          applePassSupported: false
+          supplierName: Big Bus Tours
+          supplierPhoneNumber: +1 123 456 7890
+          vouchers: null
+          passbooks: null
+          termsAndConditions: null
+          productCode: 5010SYDNEY
+          travelDate: '2020-03-03'
+          tourGradeCode: 24HOUR
+          distributorItemRef: null
+          startingTime: null
+          languageServicesLanguageCode: null
+          price: 31.3
+          leadTravellerSurname: null
+          itineraryId: 1005847086
+          productTitle: Big Bus Sydney and Bondi Hop-on Hop-off Tour
+          merchantNetPrice: 29.53
+          priceFormatted: $31.30
+          destId: 357
+          voucherOption: VOUCHER_E
+          itemId: 580659274
+          barcodeOption: perperson
+          barcodeType: qrcode
+          departurePoint: You may start this tour at any of the stops listed.
+          departurePointAddress: null
+          departurePointDirections: null
+          leadTravellerFirstname: ''
+          rnplInfo: null
+          obfsId: 31185
+          leadTravellerTitle: null
+          lastRetailPrice: 29.53
+          savingAmountFormated: $0.00
+          pickupHotelName: null
+          hoursConfirmed: 0
+          lastRetailPriceFormatted: $29.53
+          tourGradeDescription: 24 Hour Classic Ticket  (24HOUR)
+          bookingEngineId: UF
+          merchantNetPriceFormatted: $29.53
+          departsFrom: 'The Rocks, Australia'
+          pickupHotelId: null
+          priceUSD: 31.3
+          currencyCode: USD
+      voucherURL: null
+      securityToken: 595798ee27965d5178ab6a800f9b796ed7efac8fd303086e4113e1e99848932c
+      paypalRedirectURL: null
+      exchangeRate: 1
+      itineraryId: 1005847086
+      bookingDate: '2020-02-10'
+      voucherKey: ''
+      bookerEmail: null
+      distributorRef: null
+      totalPrice: 31.3
+      totalPriceFormatted: $31.30
+      totalPriceUSD: 31.3
+      hasVoucher: false
+      userId: null
+      currencyCode: USD
+    paymentGatewayInfo: null
+    promoCodeValid: false
+    promoCodeExpired: false
+    itineraryFromPrice: 29.53
+    itineraryFromPriceFormatted: $29.53
+    itineraryNewPrice: 29.53
+    itineraryNewPriceFormatted: $29.53
+    itinerarySaving: 0
+    itinerarySavingFormatted: $0.00
+    hasPromoCode: false
+    currencyCode: USD
+  dateStamp: '2020-02-10T18:26:49+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331003'

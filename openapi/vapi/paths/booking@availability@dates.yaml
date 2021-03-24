@@ -1,0 +1,53 @@
+get:
+  tags:
+    - Booking services
+  summary: /booking/availability/dates
+  operationId: bookingAvailabilityDates
+  description: >
+    Get dates on which a product is available
+
+
+    This service:
+
+    - retrieves all available dates for a product, excluding days it does not
+    operate and blocked-out dates
+
+    - returns a multi-dimensional array of year-month -> days that have any
+    availabile tour grade or traveler mix
+
+    - useful to present the user with a list of dates for selection on which
+    *this* product is available for booking
+
+    - **Notes**: 
+
+      - The user's desired traveler mix may not be eligible for booking; these details can be displayed when you retrieve its list of tour grades
+      - Availability data is limited to a period of **12 months** into the future from the present time on the production server and **6 months** on the sandbox server. 
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+    - $ref: ../components/parameters/productCode.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: object
+                    description: >
+                      **dictionary** of month identifiers (e.g., `'2018-12'`) to
+                      an array of days-of-the-month (text) specifying which days
+                      of the specified month *this* product is available to be
+                      booked"
+
+                      - **Note**: see response sample for object structure
+                    additionalProperties:
+                      type: array
+                      items:
+                        type: string
+          examples:
+            '1':
+              $ref: ../components/examples/booking-availability-dates-example.yaml

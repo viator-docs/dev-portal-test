@@ -1,0 +1,5 @@
+type: string
+description: >-
+  Three-letter code indicating the currency in which `itemPrice` and
+  `refundAmount` are displayed
+example: USD

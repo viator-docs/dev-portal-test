@@ -1,0 +1,8 @@
+type: object
+properties:
+  reasonCode:
+    type: string
+    description: >-
+      Machine-interpretable identification code for this cancellation reason,
+      retrieved from [/bookings/cancel-reasons](../../../../openapi/reference/operation/cancellationReasons/)
+    example: Customer_Service.I_canceled_my_entire_trip

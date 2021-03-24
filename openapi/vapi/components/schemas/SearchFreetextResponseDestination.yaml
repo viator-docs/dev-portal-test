@@ -1,0 +1,67 @@
+allOf:
+- $ref: ./SearchFreetextResponse.yaml  
+- type: object
+  properties:
+    data:
+      type: object
+      description: >-
+        **object** detailing **a destination** that matches the
+        search criteria
+      properties:
+        sortOrder:
+          type: integer
+          description: '**sort order** for this response'
+        selectable:
+          type: boolean
+          description: ignore - (Viator only)
+        destinationUrlName:
+          type: string
+          description: ignore - (Viator only)
+        defaultCurrencyCode:
+          description: >-
+            **currency code** for the currency in which pricing
+            is displayed
+          type: string
+        lookupId:
+          description: >
+            **hierarchy location specifier** for the destination
+            that is a concatenation of all `parentId` and
+            `destinationId` codes
+
+            - e.g. `'8.77.673'` for Chicago
+
+            - format: [top level `parentId`].[any additional
+            `parentId`].[`destinationId`]
+          type: string
+        parentId:
+          type: integer
+          description: >-
+            **unique numeric identifier** of the destination's
+            parent destination
+        timeZone:
+          type: string
+          description: '**time zone** of the destination'
+        iataCode:
+          $ref: ./iataCode.yaml
+        destinationId:
+          type: integer
+          description: >
+            **unique numeric identifier** of the destination
+
+            - use this value as the `destId` input field for
+            other Viator API services
+        destinationType:
+          $ref: ./destinationType.yaml
+        destinationName:
+          type: string
+          description: '**natural-language name** of the destination'
+        latitude:
+          type: number
+          description: >-
+            **latitude component** of the destination's
+            geolocation
+        longitude:
+          type: number
+          description: >-
+            **longitude component** of the destination's
+            geolocation

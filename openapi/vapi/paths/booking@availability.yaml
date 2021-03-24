@@ -1,0 +1,174 @@
+post:
+  tags:
+    - Booking services
+  summary: /booking/availability
+  operationId: bookingAvailability
+  description: >
+    Get the tour-grade with the lowest price that is available for a product on
+    each day of the specified month
+
+
+    This service:
+
+    - returns 
+
+    - useful when displaying a calendar of available tours
+
+    - For more information, see: [Availability
+    services](#section/Key-concepts/Availability-services)
+
+    - **Notes:** 
+      - [/booking/availability/dates](#operation/bookingAvailabilityDates) provides all availability in one call and is more suitable for calendars, etc.
+
+      - Availability data is limited to a period of **12 months** into the future from the present time on the production server and **6 months** on the sandbox server. 
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        example:
+          productCode: 5010SYDNEY
+          currencyCode: AUD
+          month: '12'
+          year: '2020'
+          ageBands:
+            - bandId: 1
+              count: 1
+        schema:
+          type: object
+          properties:
+            productCode:
+              type: string
+              description: >-
+                **unique alphanumeric identifier** of the product for which you
+                wish to retrieve tour grade availability information
+            currencyCode:
+              type: string
+              description: >-
+                **currency code** for the currency in which to display tour
+                grade pricing information
+            month:
+              type: string
+              description: >-
+                **month component** (text format) of the start of the date range
+                for which to retrieve tour grade availability information (must
+                be in the future)
+            year:
+              type: string
+              description: >-
+                **year component** (text format) of the start of the date range
+                for which to retrieve tour grade availability information (must
+                be in the future)
+            ageBands:
+              type: array
+              description: >-
+                **array of objects** specifying the age bands by which to to
+                filter search results
+              items:
+                type: object
+                properties:
+                  bandId:
+                    $ref: ../components/schemas/ageBandId.yaml
+                  count:
+                    type: integer
+                    description: '**number of people** in *this* age band'
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: object
+                    description: >-
+                      **object** detailing available tourgrades for the
+                      specified age bands and date range for this product
+                    properties:
+                      productCode:
+                        type: string
+                        description: >-
+                          **unique alphanumeric identifer** of the product that
+                          was specified in the request
+                      firstAvailableDate:
+                        type: string
+                        description: >-
+                          **first available date** (in plain text format) for
+                          the tour grade
+                      lastAvailableDate:
+                        type: string
+                        description: '**last available date** for the tour grade'
+                      availability:
+                        type: array
+                        description: '**array** of tour grade availability objects'
+                        items:
+                          type: object
+                          properties:
+                            sortOrder:
+                              type: integer
+                              description: >-
+                                **sort order** of this tour grade availability
+                                object
+                            bookingDate:
+                              type: string
+                              description: >-
+                                **date** on which *this* tour grade is available
+                                to be booked
+                            available:
+                              type: boolean
+                              description: >-
+                                **indicator** - `true` if *this* tour grade is
+                                available to book
+                            currencyCode:
+                              type: string
+                              description: >-
+                                **currency code** of the currency in which
+                                product pricing is displayed
+                            retailPrice:
+                              type: number
+                              description: >
+                                **numeric suggested retail price** for *this*
+                                tour grade
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+                            gradeCode:
+                              type: string
+                              description: >-
+                                **alphanumeric identifier** for *this* tour
+                                grade
+                            unavailableReason:
+                              type: string
+                              description: >-
+                                **natural-language explanation** as to why
+                                *this* tour grade is not available to be booked
+                            retailPriceFormatted:
+                              type: string
+                              description: >
+                                **currency-formatted suggested retail price**
+                                for *this* tour grade
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+                            merchantNetPrice:
+                              type: number
+                              description: >
+                                **numeric merchant net rate** for *this* tour
+                                grade
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+                            merchantNetPriceFormatted:
+                              type: string
+                              description: >
+                                **currency-formatted merchant net rate** for
+                                *this* tour grade
+
+                                - For more information, see: [Merchant
+                                pricing](#section/Merchant-APIs/Merchant-pricing)
+          examples:
+            '1':
+              $ref: ../components/examples/booking-availability-example.yaml

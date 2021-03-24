@@ -1,0 +1,8 @@
+type: string
+description: >
+  **natural-language description** of any special offers
+  available for *this* product when `specialOfferAvailable` is `true`.
+
+  - empty string if there are no specials available
+
+  - See [Special offers and on-sale pricing](../../../../developer-portal/papiv1/key-concepts/special-offers-and-on-sale-pricing) for more information.

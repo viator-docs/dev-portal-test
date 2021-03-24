@@ -1,0 +1,45 @@
+type: object
+description: '**object** containing itinerary booking status information'
+properties:
+  status:
+    type: integer
+    description: '**numeric identifier** of *this* itinerary''s booking status'
+  text:
+    type: string
+    description: '**natural-language description** of *this* itinerary''s booking status'
+  type:
+    type: string
+    description: >
+      **specifier** of *this* itinerary's booking status
+
+      * See: [bookingStatus fields and
+      meanings](../../../../developer-portal/papiv1/appendices/#bookingstatus-field-values-and-meanings)
+    enum:
+      - WAITING
+      - CONFIRMED
+      - PENDING
+      - FAILED
+      - CANCELLED
+      - AMENDED
+      - PENDING_AMEND
+  level:
+    type: string
+    description: '**level** of *this* itinerary''s booking status'
+    enum:
+      - ITEM
+      - ITINERARY
+  confirmed:
+    type: boolean
+    description: '**indicator**: `true` if *this* itinerary''s booking is confirmed'
+  pending:
+    type: boolean
+    description: '**indicator**: `true` if *this* itinerary''s booking is pending'
+  amended:
+    type: boolean
+    description: '**indicator**: `true` if *this* itinerary''s booking has been amended'
+  cancelled:
+    type: boolean
+    description: '**indicator**: `true` if *this* itinerary''s booking has been cancelled'
+  failed:
+    type: boolean
+    description: '**indicator**: `true` if *this* itinerary''s booking has failed'

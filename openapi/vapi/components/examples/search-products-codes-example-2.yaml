@@ -1,0 +1,15 @@
+summary: search products example invalid product
+value:
+  errorReference: null
+  data: []
+  dateStamp: '2020-02-09T16:11:27+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 0
+  errorMessageText: null
+  vmid: '331005'

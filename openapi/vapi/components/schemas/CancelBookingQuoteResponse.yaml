@@ -1,0 +1,19 @@
+type: object
+properties:
+  refundDetails:
+    $ref: ./RefundDetails.yaml
+  bookingId:
+    type: string
+    description: 'The booking reference number, prepended with `BR-`'
+  status:
+    type: string
+    description: |
+      String indicating the cancellation status of this itinerary item:
+
+        * `CANCELLABLE` - this booking is available to be cancelled
+        * `CANCELLED` - this booking has already been cancelled
+        * `NOT_CANCELLABLE` - this booking cannot be cancelled (because the product's operation date is now in the past)
+    enum:
+      - CANCELLABLE
+      - CANCELLED
+      - NOT_CANCELLABLE

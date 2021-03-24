@@ -1,0 +1,22 @@
+type: object
+properties:
+  bookingId:
+    type: string
+    description: 'Booking reference number for this booking, prepended with `BR-`'
+    example: BR-580254558
+  status:
+    type: string
+    description: |
+      String indicating the outcome of the booking cancellation request.
+
+        * `ACCEPTED`: The cancellation was successful
+        * `DECLINED`: The cancellation failed
+    enum:
+      - ACCEPTED
+      - DECLINED
+    example: DECLINED
+  reason:
+    type: string
+    enum:
+      - ALREADY_CANCELLED
+      - NOT_CANCELLABLE

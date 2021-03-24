@@ -1,0 +1,43 @@
+summary: booking pricing matrix example
+value:
+  errorReference: null
+  data:
+    - sortOrder: 1
+      pricingUnit: per person
+      bookingDate: '2020-03-11'
+      ageBandPrices:
+        - bandId: 1
+          prices:
+            - sortOrder: 1
+              currencyCode: EUR
+              price: 33.35
+              merchantNetPrice: 26.64
+              priceFormatted: '€33,35'
+              merchantNetPriceFormatted: '€26,64'
+              minNoOfTravellersRequiredForPrice: 1
+          sortOrder: 1
+          minimumCountRequired: 0
+          maximumCountRequired: 9
+        - bandId: 2
+          prices:
+            - sortOrder: 1
+              currencyCode: EUR
+              price: 22.61
+              merchantNetPrice: 18.06
+              priceFormatted: '€22,61'
+              merchantNetPriceFormatted: '€18,06'
+              minNoOfTravellersRequiredForPrice: 1
+          sortOrder: 2
+          minimumCountRequired: 0
+          maximumCountRequired: 9
+  dateStamp: '2020-02-11T16:21:23+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331003'

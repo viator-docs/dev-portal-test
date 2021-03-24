@@ -1,0 +1,89 @@
+get:
+  tags:
+    - Booking services
+  summary: /booking/hotels
+  operationId: bookingHotels
+  description: |
+    Get hotel pick-ups
+    Lists the hotel pickups available for either a product or a destination
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+    - $ref: ../components/parameters/productCode.yaml
+    - $ref: ../components/parameters/destId.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    description: '**array** of hotel pick-up objects'
+                    items:
+                      type: object
+                      properties:
+                        address:
+                          type: string
+                          description: '**natural-language address** of hotel pick-up point'
+                        name:
+                          type: string
+                          description: '**natural-language name** of hotel pick-up point'
+                        id:
+                          type: string
+                          description: '**identifier** of *this* hotel pick-up point`'
+                        phone:
+                          type: string
+                          description: '**phone number** of *this* hotel pick-up point'
+                        productCodes:
+                          type: array
+                          description: >-
+                            **array** of product codes pertaining to *this*
+                            hotel pick-up point
+                          items:
+                            type: string
+                        destinationId:
+                          type: integer
+                          description: >-
+                            **unique numeric identifer** of the destination that
+                            *this* hotel pick-up point pertains to
+                        city:
+                          type: string
+                          description: >-
+                            **natural-language name** of the destination that
+                            *this* hotel pick-up point pertains to
+                        notes:
+                          type: string
+                          description: >-
+                            **natural-language notes** about *this* hotel
+                            pick-up point
+                        latitude:
+                          type: number
+                          description: >-
+                            **numeric latitude component** of *this* hotel
+                            pick-up point's geolocation
+                        longitude:
+                          type: number
+                          description: >-
+                            **numeric longitude component** of *this* hotel
+                            pick-up point's geolocation
+                        postcode:
+                          type: string
+                          description: '**post code** of *this* hotel pick-up point'
+                        brand:
+                          type: string
+                          description: ignore (Viator only)
+                        hotelString:
+                          type: string
+                          description: ignore (Viator only)
+                        sortOrder:
+                          type: integer
+                          description: '**sort-order** of *this* hotel pick-up point'
+          examples:
+            '1':
+              $ref: ../components/examples/booking-hotels-example-1.yaml
+            '2':
+              $ref: ../components/examples/booking-hotels-example-2.yaml

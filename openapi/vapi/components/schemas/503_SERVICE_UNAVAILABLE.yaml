@@ -1,0 +1,18 @@
+type: object
+properties:
+  code:
+    type: string
+    enum:
+      - SERVICE_UNAVAILABLE
+  message:
+    type: string
+    enum:
+      - Internal server error
+  timestamp:
+    type: string
+    description: |
+      Timestamp of the request
+      e.g.: `2019-09-17T03:20:45.737043Z`
+  trackingId:
+    type: string
+    description: Tracking identifier for this error response

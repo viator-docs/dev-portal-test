@@ -1,0 +1,144 @@
+post:
+  tags:
+    - Deprecated services
+  summary: /merchant/cancellation
+  operationId: merchantCancellation
+  deprecated: true
+  description: >
+    Cancel a booking
+
+    **Note**: This service has been replaced by the
+    [cancellationReasons](#operation/cancellationReasons),
+    [bookingQuote](#operation/bookingQuote) and
+    [cancelBooking](#operation/cancelBooking) endpoints
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            itineraryId:
+              type: integer
+              example: 1234655
+              description: '**numeric identifier** for the itinerary'
+            distributorRef:
+              type: string
+              example: Jdp122
+              description: >-
+                **itinerary reference identifier** (partner defined) for the
+                booking to cancel
+            cancelItems:
+              type: array
+              description: '**array** of objects detailing itinerary items to cancel'
+              items:
+                type: object
+                properties:
+                  itemId:
+                    type: integer
+                    example: 330056
+                    description: '**numeric identifier** of item to cancel in itinerary'
+                  distributorItemRef:
+                    type: string
+                    example: JdpItin001
+                    description: '**alphanumeric reference code** of the distributor item'
+                  cancelCode:
+                    type: string
+                    example: '82'
+                    description: >
+                      **cancellation code** that describes the reason for the
+                      cancellation
+
+                      - see: [Suggested cancellation
+                      codes](#suggested-cancellation-codes)
+                  cancelDescription:
+                    type: string
+                    example: ''
+                    description: >-
+                      **natural-language description** of the reason for
+                      cancellation (a reason must be provided if `cancelCode` is
+                      `62` or `66`)
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      itineraryId:
+                        type: integer
+                        example: 3331605
+                        description: '**numeric** identifier for the itinerary'
+                      cancelItems:
+                        type: array
+                        description: '**array** of items to be cancelled'
+                        items:
+                          type: object
+                          properties:
+                            cancellationResponseStatusCode:
+                              type: string
+                              example: Confirmed
+                              description: >-
+                                See [cancellation response codes
+                                table](#cancellation-response-status-codes-and-their-meanings)
+                            cancellationResponseDescription:
+                              type: string
+                              example: No further action required
+                              description: See Response codes table
+                            itemId:
+                              type: string
+                              example: '600088255'
+                              description: '**numeric identifier** of the item to cancel'
+                            distributorItemRef:
+                              type: string
+                              example: ItinItemRef012
+                              description: >-
+                                **alphanumeric reference code** of the
+                                distributor item
+                      distributorRef:
+                        type: string
+                        example: ItinRef012
+                        description: '**reference code** for the distributor'
+    '400':
+      description: Error
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      cancellationResponseStatusCode:
+                        type: string
+                        example: Error.ItineraryUnknown
+                        description: >-
+                          **status code** for this response (see response codes
+                          table)
+                      cancellationResponseDescription:
+                        type: string
+                        example: >-
+                          Please double check the details or contact Viator
+                          Customer Service
+                        description: >-
+                          **natural-language description** for this response
+                          (see response codes table)
+                      itemId:
+                        type: string
+                        example: '600088255'
+                        description: '**identifier** for the item to cancel'
+                      distributorItemRef:
+                        type: string
+                        example: ItinItemRef012
+                        description: >-
+                          **alphanumeric reference code** of the distributor
+                          item

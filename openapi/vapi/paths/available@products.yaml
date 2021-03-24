@@ -1,0 +1,341 @@
+post:
+  tags:
+    - Product services
+  summary: /available/products
+  operationId: availableProducts
+  description: |
+    Find products that are available
+
+     This endpoint returns available products filtered by product code, date range or number of adult travelers
+
+
+     - **Note**: Availability data is limited to a period of **12 months** into the future from the present time on the production server and **6 months** on the sandbox server. 
+     
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            currencyCode:
+              type: string
+              description: |
+                **currency** in which to display product pricing
+                - default: `'USD'`
+            startDate:
+              type: string
+              description: >-
+                **start date** of the date range to search within (must be in
+                the future)
+            endDate:
+              type: string
+              description: >-
+                **end date** of the date range to search within (must be in the
+                future)
+            numAdults:
+              type: integer
+              description: |
+                **number of adult travelers** who wish to participate
+                - default: `1`
+            productCodes:
+              type: array
+              description: >
+                **array of unique alphanumeric product identifiers** specifying
+                which products to find the availability of
+
+                - maximum: `50`
+              example:
+                - 5010SYDNEY
+                - 2280SUN
+                - 9169P50
+              items:
+                type: string
+        example:
+          currencyCode: USD
+          startDate: '2020-12-21'
+          endDate: '2020-12-31'
+          numAdults: 1
+          productCodes:
+            - 5010SYDNEY
+            - 2280SUN
+            - 9169P50
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    description: '**array** of product objects'
+                    items:
+                      type: object
+                      properties:
+                        sortOrder:
+                          type: integer
+                          description: '**sort order** of this result object'
+                        supplierName:
+                          type: string
+                          description: >-
+                            **natural-language name** of *this* product's
+                            supplier
+                        currencyCode:
+                          $ref: ../components/schemas/currencyCode.yaml
+                        catIds:
+                          type: array
+                          description: >
+                            **list** of unique numeric category identifiers that
+                            this product falls under
+
+                            - `categoryId` is available from the
+                            [/taxonomy/categories](#operation/taxonomyCategories)
+                            service
+                          items:
+                            type: integer
+                        subCatIds:
+                          type: array
+                          description: >
+                            **list** of unique numeric subcategory identifiers
+                            that this product falls under
+
+                            - `subcategoryId` is available from the
+                            [/taxonomy/categories](#operation/taxonomyCategories)
+                            service
+                          items:
+                            type: integer
+                        webURL:
+                          $ref: ../components/schemas/webURL.yaml
+                        specialReservationDetails:
+                          type: string
+                          description: ignore (Viator only)
+                        sslSupported:
+                          type: boolean
+                          description: ignore (Viator only)
+                        panoramaCount:
+                          type: integer
+                          description: >-
+                            **number** of panoramic images available for *this*
+                            product
+                        merchantCancellable:
+                          type: boolean
+                          description: >
+                            ignore (Viator only)
+
+                                
+                            For cancellation information regarding the booking, please refer to the `merchantTermsAndConditions` object
+                        bookingEngineId:
+                          $ref: ../components/schemas/bookingEngineId.yaml
+                        onRequestPeriod:
+                          $ref: ../components/schemas/onRequestPeriod.yaml
+                        primaryGroupId:
+                          type: string
+                          description: ignore (Viator only)
+                        pas:
+                          type: object
+                          description: |
+                            **object** detailing product availability
+                            - `pas` stands for Product Availability Schema
+                          properties:
+                            productCode:
+                              type: string
+                              description: >-
+                                **unique alphanumeric identifier** of *this*
+                                product
+                            travellerMix:
+                              type: string
+                              description: >-
+                                **alphanumeric code** indicating the combination
+                                of adults and children being enquired about
+                            tourGrades:
+                              type: object
+                              description: >-
+                                **dictionary** of tour grade alphanumeric codes
+                                to tour grade objects
+                              additionalProperties:
+                                type: object
+                                properties:
+                                  tourGradeCode:
+                                    type: string
+                                    description: >-
+                                      **alphanumeric identifier** for *this*
+                                      tour grade
+                                  title:
+                                    type: string
+                                    description: >-
+                                      **natural-language title** of *this* tour
+                                      grade
+                                  description:
+                                    type: string
+                                    description: >-
+                                      **natural-language description** of *this*
+                                      tour grade
+                                  bookingEngine:
+                                    type: string
+                                    description: >-
+                                      **booking modality specifier** for *this*
+                                      tour grade
+                                  sapi:
+                                    type: boolean
+                                    description: ignore (Viator only)
+                                  languageServices:
+                                    type: object
+                                    description: >-
+                                      **dictionary** of language codes to array
+                                      of textual language service descriptors
+                                      available for *this* tour grade
+                                    additionalProperties:
+                                      type: array
+                                  availDates:
+                                    type: array
+                                    description: >-
+                                      **array of objects** with availability and
+                                      pricing information for *this* tour grade
+                                    items:
+                                      type: object
+                                      properties:
+                                        priceFrom:
+                                          type: string
+                                          description: >-
+                                            **lowest sale price** for *this* tour
+                                            grade formatted according to the example
+                                        priceQuote:
+                                          type: object
+                                          description: '**pricing object** for *this* tour grade'
+                                          properties:
+                                            retailPrice:
+                                              type: string
+                                              description: >-
+                                                **retail price** of *this* tour grade
+                                                formatted according to the example
+                                            generalRetailPrice:
+                                              type: string
+                                              description: >-
+                                                **general retail price** of *this* tour
+                                                grade formatted according to the example
+                                            merchantNetPrice:
+                                              type: string
+                                              description: ignore (Viator only)
+                                        dateList:
+                                          type: string
+                                          description: >-
+                                            **list of dates** on which *this* tour
+                                            grade is available formatted according
+                                            to the example
+                            incompleteQuote:
+                              type: boolean
+                              description: ignore (Viator only)
+                            removedChildAges:
+                              type: array
+                              description: ignore (Viator only)
+                              items:
+                                type: string
+                        available:
+                          type: boolean
+                          description: ignore (Viator only)
+                        productUrlName:
+                          type: string
+                          description: '**URL-formatted name** of *this* product'
+                        primaryDestinationUrlName:
+                          type: string
+                          description: >-
+                            **URL-formatted name** of *this* product's primary
+                            destination
+                        price:
+                          $ref: ../components/schemas/price.yaml
+                        supplierCode:
+                          type: string
+                          description: '**unique identifier** of *this* product''s supplier'
+                        translationLevel:
+                          $ref: ../components/schemas/translationLevel.yaml
+                        onSale:
+                          $ref: ../components/schemas/onSale.yaml
+                        photoCount:
+                          description: >-
+                            **number** of user photos published for *this*
+                            product
+                          type: integer
+                        reviewCount:
+                          $ref: ../components/schemas/reviewCount.yaml
+                        primaryDestinationId:
+                          description: >-
+                            **unique numeric identifier** of *this* product's
+                            primary destination
+                          type: integer
+                        thumbnailHiResURL:
+                          type: string
+                          description: >-
+                            **URL** of *this* product's high resolution
+                            thumbnail image
+                        priceFormatted:
+                          $ref: ../components/schemas/priceFormatted.yaml
+                        rrp:
+                          $ref: ../components/schemas/rrp.yaml
+                        rrpFormatted:
+                          $ref: ../components/schemas/rrpFormatted.yaml
+                        videoCount:
+                          type: integer
+                          description: >
+                            ignore (Viator only) – videos are not available to
+                            partners
+                        rating:
+                          $ref: ../components/schemas/rating.yaml
+                        primaryDestinationName:
+                          description: >-
+                            **natural-language name** of *this* product's
+                            primary destination
+                          type: string
+                        thumbnailURL:
+                          type: string
+                          description: '**URL** of *this* product''s thumbnail image'
+                        specialReservation:
+                          type: boolean
+                          description: ignore (Viator only)
+                        shortTitle:
+                          type: string
+                          description: >-
+                            **natural-language title (shortened)** of *this*
+                            product
+                        specialOfferAvailable:
+                          $ref: ../components/schemas/specialOfferAvailable.yaml
+                        uniqueShortDescription:
+                          description: '**natural-language description** of *this* product'
+                          type: string
+                        merchantNetPriceFrom: 
+                          $ref: ../components/schemas/merchantNetPriceFrom.yaml
+                        merchantNetPriceFromFormatted:
+                          $ref: ../components/schemas/merchantNetPriceFromFormatted.yaml
+                        savingAmount:
+                          $ref: ../components/schemas/savingAmount.yaml
+                        savingAmountFormated:
+                          $ref: ../components/schemas/savingAmountFormated.yaml
+                        essential:
+                          type: string
+                          description: ignore (Viator only)
+                        admission:
+                          type: string
+                          description: ignore (Viator only)
+                        title:
+                          type: string
+                          description: '**natural-language title** of *this* product'
+                        shortDescription:
+                          type: string
+                          description: >-
+                            **natural-language description** (short) of *this*
+                            product
+                        duration:
+                          type: string
+                          description: >-
+                            **natural-language description** of *this* product's
+                            duration
+                        code:
+                          type: string
+                          description: '**unique alphanumeric identifier** of *this* product'
+          examples:
+            '1':
+              $ref: ../components/examples/available-products-example.yaml

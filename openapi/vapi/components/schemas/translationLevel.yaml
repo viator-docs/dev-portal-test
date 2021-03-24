@@ -1,0 +1,17 @@
+enum:
+  - 0
+  - 80
+  - 100
+description: >
+  **numeric indicator** of the language translation level for *this* product
+  that is one of:
+
+  - `0`: no translation (English only)
+
+  - `80`: full machine translation
+
+  - `100`: full human translation
+
+
+  See: [Localization and translation](../../../../developer-portal/papiv1/key-concepts/localization-and-translation) for more information
+type: integer

@@ -1,0 +1,217 @@
+post:
+  tags:
+    - Booking services
+  summary: /booking/availability/tourgrades/pricingmatrix
+  operationId: bookingAvailabilityTourgradesPricingmatrix
+  description: >
+    Get a pricing matrix that includes availability and tour-grades for a
+    product
+
+
+    Given a month, this service returns days with available tour grades only
+    (i.e., days which have at least one tourgrade available), and the pricing
+    matrix for that tour grade for that day.
+
+
+    - **Note**: Availability data is limited to a period of **12 months** into
+    the future from the present time on the production server and **6 months**
+    on the sandbox server. 
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        example:
+          productCode: 2280AAHT
+          currenctCode: USD
+          month: '12'
+          year: '2020'
+        schema:
+          type: object
+          properties:
+            productCode:
+              type: string
+              description: >-
+                **alphanumeric identifier** of product about which to retrieve
+                tour grade and pricing information
+            currencyCode:
+              type: string
+              description: >-
+                **currency code** for the currency in which to display pricing
+                details
+            month:
+              type: string
+              description: >-
+                **month of year** (as text) by which to filter results (must be
+                in the future)
+            year:
+              type: string
+              description: >-
+                **year** (as text) by which to filter results (must be in the
+                future)
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      bookingMonth:
+                        type: string
+                        description: '**month of year** (as text) by which to filter results'
+                      pricingUnit:
+                        type: string
+                        description: >
+                          **natural-language label** for the pricing terms of
+                          this tour grade
+
+                          - see [Understanding the pricingUnit
+                          field](#section/Using-the-API/Understanding-the-pricingUnit-field)
+                          for more information
+                      dates:
+                        type: array
+                        description: >-
+                          **array of tour grade pricing objects** each detailing
+                          availability on a single day
+                        items:
+                          type: object
+                          properties:
+                            sortOrder:
+                              type: integer
+                              description: >-
+                                **sort order** for *this* tour grade pricing
+                                object
+                            bookingDate:
+                              type: string
+                              description: '**date** on which *this* product operates'
+                            tourGrades:
+                              type: array
+                              description: >-
+                                **array** of tour grade pricing information
+                                objects
+                              items:
+                                type: object
+                                properties:
+                                  sortOrder:
+                                    description: >-
+                                      **sort order** for *this* tour grade
+                                      pricing object
+                                    type: integer
+                                  gradeCode:
+                                    type: string
+                                    description: >-
+                                      **alphanumeric identifier** of the tour
+                                      grade
+                                  gradeTitle:
+                                    type: string
+                                    description: '**title of tour grade**'
+                                  pricingMatrix:
+                                    type: array
+                                    description: >-
+                                      **array of pricing objects** for *this*
+                                      tour grade
+                                    items:
+                                      type: object
+                                      properties:
+                                        sortOrder:
+                                          type: integer
+                                          description: '**sort order** for *this* pricing object'
+                                        pricingUnit:
+                                          type: string
+                                          description: >
+                                            **natural-language description** of the
+                                            pricing mode
+
+                                            - see [Understanding the pricingUnit
+                                            field](#section/Using-the-API/Understanding-the-pricingUnit-field)
+                                            for more information
+                                        bookingDate:
+                                          type: string
+                                          description: >-
+                                            **date** on which *this* product
+                                            operates
+                                        ageBandPrices:
+                                          type: array
+                                          description: '**array** of pricing objects by age band'
+                                          items:
+                                            type: object
+                                            properties:
+                                              bandId:
+                                                $ref: ../components/schemas/bandId.yaml
+                                              prices:
+                                                type: array
+                                                description: '**array** of pricing detail objects'
+                                                items:
+                                                  type: object
+                                                  properties:
+                                                    sortOrder:
+                                                      type: integer
+                                                      description: >-
+                                                        **sort order** *this* pricing detail
+                                                        object
+                                                    currencyCode:
+                                                      type: string
+                                                      description: >-
+                                                        **currency code** of the currency in
+                                                        which pricing details are displayed
+                                                    price:
+                                                      description: >
+                                                        **numeric suggested retail price** for
+                                                        *this* age band
+
+                                                        - For more information, see: [Merchant
+                                                        pricing](#section/Merchant-APIs/Merchant-pricing)
+                                                      type: number
+                                                    minNoOfTravellersRequiredForPrice:
+                                                      type: integer
+                                                    priceFormatted:
+                                                      type: string
+                                                      description: >
+                                                        **currency-formatted suggested retail
+                                                        price** for *this* age band
+
+                                                        - For more information, see: [Merchant
+                                                        pricing](#section/Merchant-APIs/Merchant-pricing)
+                                                      example: '799'
+                                                    merchantNetPrice:
+                                                      type: number
+                                                      description: >
+                                                        **numeric merchant net rate** for *this*
+                                                        age band
+
+                                                        - For more information, see: [Merchant
+                                                        pricing](#section/Merchant-APIs/Merchant-pricing)
+                                                    merchantNetPriceFormatted:
+                                                      type: string
+                                                      description: >
+                                                        **currency-formatted merchant net rate**
+                                                        for *this* age band
+
+                                                        - For more information, see: [Merchant
+                                                        pricing](#section/Merchant-APIs/Merchant-pricing)
+                                              sortOrder:
+                                                type: integer
+                                                description: '**sort order** for *this* tour grade'
+                                              minimumCountRequired:
+                                                description: >-
+                                                  **minimum number** of participants
+                                                  required for *this* tour grade
+                                                type: integer
+                                              maximumCountRequired:
+                                                type: integer
+                                                description: >-
+                                                  **maximum number** of participants
+                                                  allowed for *this* tour grade
+                            callForLastMinAvailability:
+                              type: boolean
+                              description: ignore (Viator only)
+          examples:
+            '1':
+              $ref: >-
+                ../components/examples/booking-availablility-tourgrades-pricingmatrix-example.yaml

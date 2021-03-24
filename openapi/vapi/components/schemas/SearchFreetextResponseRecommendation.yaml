@@ -1,0 +1,122 @@
+allOf:
+- $ref: ./SearchFreetextResponse.yaml  
+- type: object
+  properties:
+    data:
+      type: object
+      description: >-
+        **object** detailing a **recommendation** that matches the
+        search criteria
+      properties:
+        sortOrder:
+          type: integer
+          description: ignore (Viator only)
+        webURL:
+          $ref: ./webURL.yaml
+        pageUrlName: 
+          type: string
+          description: URL path fragment for this recommendation
+        primaryDestinationUrlName:
+          type: string
+          description: ignore (Viator only)
+        publishedDate:
+          type: string
+          nullable: true
+          description: ignore (Viator only)
+        panoramaCount: 
+          type: integer
+          description: ignore (Viator only)
+        userName: 
+          type: string
+          description: ignore (Viator only)
+        editorsPick: 
+          type: boolean
+          description: ignore (Viator only)
+        tabTitle: 
+          type: string
+          description: Tab-title for this recommendation
+        descriptionIntro: 
+          type: string
+          description: Introductory text for this recommendation
+        keywords:
+          type: array
+          description: ignore (Viator only)
+          items:
+            type: string
+            description: ignore (Viator only)
+        reviewCount: 
+          type: integer
+          description: number of reviews for this recommendation
+        seoType: 
+          type: string
+          description: Type of response; i.e. `"RECOMMENDATION"`
+        pageTitle: 
+          type: string
+          description: Title of this page
+        showReviews: 
+          type: boolean
+          description: ignore (Viator only)
+        descriptionText: 
+          type: string
+          description: Text for this recommendation
+        showPhotos: 
+          type: boolean
+          description: ignore (Viator only)
+        keywordCount: 
+          type: integer
+          description: ignore (Viator only)
+        overviewSummary: 
+          type: string
+          description: HTML-formatted overview of recommendation
+        pagePrimaryLanguage:
+          description: language for the natural-language text in this response
+          type: string
+        attractionLatitude: 
+          type: number
+          nullable: true
+          description: ignore (Viator only)
+        attractionLongitude:
+          type: number
+          nullable: true
+          description: ignore (Viator only)
+        attractionStreetAddress:
+          type: string
+          nullable: true
+          description: ignore (Viator only)
+        attractionCity:
+          type: string
+          nullable: true
+          description: ignore (Viator only)
+        attractionState: 
+          type: string
+          description: ignore (Viator only)
+        destinationId: 
+          type: integer
+          description: Destination Id for the destination of this recommendation
+        thumbnailHiResURL: 
+          type: string
+          description: URL for the high-resolution image for this recommendation
+        photoCount:
+          type: integer
+          description: ignore (Viator only)
+        primaryDestinationId: 
+          type: integer
+          description: Destination Id for the primary destination of this recommendation
+        rating:
+          type: number
+          description: Numeric average rating for this recommendation
+        primaryDestinationName: 
+          type: string
+          description: Name of primary destination for this recommendation
+        thumbnailURL: 
+          type: string
+          description: URL for medium-resolution image for this recommendation
+        seoId: 
+          type: integer
+          description: ignore (Viator only)
+        productCount: 
+          type: integer
+          description: Number of products that this recommendation refers to
+        title: 
+          type: string
+          description: Title of this recommendation

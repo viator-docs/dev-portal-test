@@ -1,0 +1,118 @@
+allOf:
+- $ref: ./SearchFreetextResponse.yaml  
+- type: object
+  properties:
+    data:
+      type: object
+      description: >-
+        **object** detailing **an attraction** that matches the
+        search criteria
+      properties:
+        sortOrder:
+          type: integer
+          description: ignore (Viator only)
+        webURL:
+          $ref: ./webURL.yaml
+        pageUrlName:
+          type: string
+          description: URL path fragment for attraction
+        primaryDestinationUrlName: 
+          type: string
+          description: Name of primary destination for this attraction
+        publishedDate: 
+          type: string
+          nullable: true
+          description: ignore (Viator only)
+        panoramaCount: 
+          type: integer
+          description: ignore (Viator only)
+        userName:
+          type: string
+          description: ignore (Viator only)
+        editorsPick: 
+          type: boolean
+          description: ignore (Viator only)
+        tabTitle: 
+          type: string
+          description: Tab title for this attraction
+        descriptionIntro:
+          type: string
+          description: Description introduction text
+        keywords: 
+          type: array
+          description: ignore (Viator only)
+          items:
+            type: string
+            description: ignore (Viator only)
+        reviewCount: 
+          type: integer
+          description: Number of reviews for this attraction
+        seoType: 
+          type: string
+          description: Type of result; i.e. `"ATTRACTION"`
+        pageTitle: 
+          type: string
+          description: Title of page
+        showReviews: 
+          type: boolean
+          description: ignore (Viator only)
+        descriptionText: 
+          type: string
+          description: Description of this attraction
+        showPhotos:
+          type: boolean
+          description: ignore (Viator only)
+        keywordCount: 
+          type: integer
+          description: ignore (Viator only)
+        overviewSummary: 
+          type: string
+          description: HTML-formatted summary overview of this attraction
+        pagePrimaryLanguage: 
+          type: string
+          description: Language of the natural-language elements in this response
+        attractionLatitude: 
+          type: number
+          description: Latitude of this attraction's location
+        attractionLongitude: 
+          type: number
+          description: Longitude of this attraction's location
+        attractionStreetAddress: 
+          type: number
+          description: Street address of this attraction
+        attractionCity: 
+          type: number
+          description: City in which this attraction is located
+        attractionState: 
+          type: number
+          description: State in which this attraction is located
+        destinationId:
+          type: integer
+          description: Destination ID for the destination in which this attraction is located
+        thumbnailHiResURL: 
+          type: string
+          description: URL for high-resolution image for this attraction
+        photoCount: 
+          type: integer
+          description: Number of photos available for this attraction
+        primaryDestinationId: 
+          type: integer
+          description: Primary destination ID for the destination in which this attraction is located
+        rating:
+          type: number
+          description: Numeric rating for this attraction
+        primaryDestinationName: 
+          type: string
+          description: Primary destination ID for the destination in which this attraction is located
+        thumbnailURL: 
+          type: string
+          description: URL for medium-resolution image for this attraction
+        seoId: 
+          type: integer
+          description: ignore (Viator only)
+        productCount: 
+          type: integer
+          description: ignore (Viator only)
+        title: 
+          type: string
+          description: Title of this attraction

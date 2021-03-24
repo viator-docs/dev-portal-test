@@ -1,0 +1,6 @@
+type: number
+description: >
+  Numeric 'from' (lowest possible) price that Viator will invoice the merchant for the sale of this product, excluding the transaction fee; i.e. the merchant net rate
+
+
+  For more information, see: [Merchant pricing](../../../../developer-portal/papiv1/key-concepts/merchant-pricing)

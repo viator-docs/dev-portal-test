@@ -1,11 +1,12 @@
 meta:
-  title: Redocly Training
-  description: The best API documentation generator ever.
-  siteUrl: https://portal-demo.redoc.ly
-headerIcon: ./images/logo.png
+  title: Viator Partner API v1
+  description: Developer resources for Viator Partner API v1 (merchant)
+  siteUrl: https://viator.com
+headerIcon: developer-portal/images/viator-partners.png
 enableToc: true
 oasDefinitions:
-  petstore: ./openapi/petstore.yaml
+  petstore: ./openapi/vapi/openapi.yaml
+  # petstore: ./openapi/vapi/openapi.yaml
   # add links to definitions in our API registry by using a fully qualified URL.
 stylesheets:
   - https://fonts.googleapis.com/css?family=Roboto:300,400,600,700
@@ -18,17 +19,24 @@ stylesheets:
 #  - ./static/intercom.js
 nav:
 
-  - label: Training exercises
-    page: developer-portal/index.md
+  # - label: Training exercises
+  #   page: developer-portal/index.md
 
-  - label: External docs
-    icon: ./images/redocly-icon-white.png
-    href: https://docs.redoc.ly/developer-portal/introduction/
+  # - label: Markdown exercises
+  #   page: developer-portal/markdown.md
+  
+  # - label: External docs
+  #   icon: ./images/redocly-icon-white.png
+  #   href: https://docs.redoc.ly/developer-portal/introduction/
 
+  # - label: Favorite website
+  #   href: https://redoc.ly
+  
   - search: true
+  
 
 footer:
-  copyrightText: Copyright © Redocly 2019-2020. All right reserved.
+  copyrightText: Copyright © Redocly LLC 2019-2020. All right reserved.
   columns:
     - group: Legal
       items:
@@ -38,6 +46,16 @@ footer:
           href: 'https://redoc.ly/privacy-policy/'
         - label: Cookie Notice
           href: 'https://redoc.ly/privacy-policy/'
+    
+    - group: Product
+      items:
+        - label: Reference docs
+          href: 'https://docs.redoc.ly/api-reference-docs/getting-started/'
+        - label: Developer portal
+          href: 'https://docs.redoc.ly/developer-portal/introduction/'
+        - label: CI/CD workflows
+          href: 'https://docs.redoc.ly/ci-cd-workflows/'
+
     - group: Support
       items:
         - label: FAQ

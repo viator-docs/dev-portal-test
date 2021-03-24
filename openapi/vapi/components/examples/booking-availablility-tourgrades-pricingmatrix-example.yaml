@@ -1,0 +1,1182 @@
+summary: booking availability tourgrades example
+value:
+  errorReference: null
+  data:
+    bookingMonth: 2020-03
+    pricingUnit: per person
+    dates:
+      - sortOrder: 1
+        bookingDate: '2020-03-01'
+        tourGrades:
+          - sortOrder: 1
+            gradeCode: 'EB_ASTAR_SP~07:00'
+            gradeTitle: 'Special: Earlybird A-Star 07:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 409.99
+                        merchantNetPrice: 383.4
+                        priceFormatted: $409.99
+                        merchantNetPriceFormatted: $383.40
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 2
+            gradeCode: 'EB_EC130_SP~07:00'
+            gradeTitle: 'Special: Earlybird EC-130 07:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 434.99
+                        merchantNetPrice: 404.7
+                        priceFormatted: $434.99
+                        merchantNetPriceFormatted: $404.70
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 3
+            gradeCode: 'TG1~08:00'
+            gradeTitle: 'Morning Departure; A-Star 08:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 459.99
+                        merchantNetPrice: 388.72
+                        priceFormatted: $459.99
+                        merchantNetPriceFormatted: $388.72
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 4
+            gradeCode: 'TG1~09:45'
+            gradeTitle: 'Morning Departure; A-Star 09:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 459.99
+                        merchantNetPrice: 388.72
+                        priceFormatted: $459.99
+                        merchantNetPriceFormatted: $388.72
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 5
+            gradeCode: 'TG1~10:45'
+            gradeTitle: 'Morning Departure; A-Star 10:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 459.99
+                        merchantNetPrice: 388.72
+                        priceFormatted: $459.99
+                        merchantNetPriceFormatted: $388.72
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 6
+            gradeCode: 'TG2~08:00'
+            gradeTitle: 'Morning Departure; EC-130 08:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 484.99
+                        merchantNetPrice: 410.02
+                        priceFormatted: $484.99
+                        merchantNetPriceFormatted: $410.02
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 7
+            gradeCode: 'TG2~09:45'
+            gradeTitle: 'Morning Departure; EC-130 09:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 484.99
+                        merchantNetPrice: 410.02
+                        priceFormatted: $484.99
+                        merchantNetPriceFormatted: $410.02
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 8
+            gradeCode: 'TG2~10:45'
+            gradeTitle: 'Morning Departure; EC-130 10:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 484.99
+                        merchantNetPrice: 410.02
+                        priceFormatted: $484.99
+                        merchantNetPriceFormatted: $410.02
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 9
+            gradeCode: 'TG3~12:30'
+            gradeTitle: 'Afternoon Departure; A-Star 12:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 449.99
+                        merchantNetPrice: 383.4
+                        priceFormatted: $449.99
+                        merchantNetPriceFormatted: $383.40
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 10
+            gradeCode: 'TG3~13:30'
+            gradeTitle: 'Afternoon Departure; A-Star 13:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 449.99
+                        merchantNetPrice: 383.4
+                        priceFormatted: $449.99
+                        merchantNetPriceFormatted: $383.40
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 11
+            gradeCode: 'TG4~12:30'
+            gradeTitle: 'Afternoon Departure; EC-130 12:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 474.99
+                        merchantNetPrice: 404.7
+                        priceFormatted: $474.99
+                        merchantNetPriceFormatted: $404.70
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 12
+            gradeCode: 'TG4~13:30'
+            gradeTitle: 'Afternoon Departure; EC-130 13:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-01'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 474.99
+                        merchantNetPrice: 404.7
+                        priceFormatted: $474.99
+                        merchantNetPriceFormatted: $404.70
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+        callForLastMinAvailability: false
+      - sortOrder: 2
+        bookingDate: '2020-03-02'
+        tourGrades:
+          - sortOrder: 1
+            gradeCode: 'EB_ASTAR_SP~07:00'
+            gradeTitle: 'Special: Earlybird A-Star 07:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 409.99
+                        merchantNetPrice: 383.4
+                        priceFormatted: $409.99
+                        merchantNetPriceFormatted: $383.40
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 2
+            gradeCode: 'EB_EC130_SP~07:00'
+            gradeTitle: 'Special: Earlybird EC-130 07:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 434.99
+                        merchantNetPrice: 404.7
+                        priceFormatted: $434.99
+                        merchantNetPriceFormatted: $404.70
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 3
+            gradeCode: 'TG1~08:00'
+            gradeTitle: 'Morning Departure; A-Star 08:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 459.99
+                        merchantNetPrice: 388.72
+                        priceFormatted: $459.99
+                        merchantNetPriceFormatted: $388.72
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 4
+            gradeCode: 'TG1~09:45'
+            gradeTitle: 'Morning Departure; A-Star 09:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 459.99
+                        merchantNetPrice: 388.72
+                        priceFormatted: $459.99
+                        merchantNetPriceFormatted: $388.72
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 5
+            gradeCode: 'TG1~10:45'
+            gradeTitle: 'Morning Departure; A-Star 10:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 459.99
+                        merchantNetPrice: 388.72
+                        priceFormatted: $459.99
+                        merchantNetPriceFormatted: $388.72
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 6
+            gradeCode: 'TG2~08:00'
+            gradeTitle: 'Morning Departure; EC-130 08:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 484.99
+                        merchantNetPrice: 410.02
+                        priceFormatted: $484.99
+                        merchantNetPriceFormatted: $410.02
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 7
+            gradeCode: 'TG2~09:45'
+            gradeTitle: 'Morning Departure; EC-130 09:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 484.99
+                        merchantNetPrice: 410.02
+                        priceFormatted: $484.99
+                        merchantNetPriceFormatted: $410.02
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 8
+            gradeCode: 'TG2~10:45'
+            gradeTitle: 'Morning Departure; EC-130 10:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 484.99
+                        merchantNetPrice: 410.02
+                        priceFormatted: $484.99
+                        merchantNetPriceFormatted: $410.02
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 9
+            gradeCode: 'TG3~12:30'
+            gradeTitle: 'Afternoon Departure; A-Star 12:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 449.99
+                        merchantNetPrice: 383.4
+                        priceFormatted: $449.99
+                        merchantNetPriceFormatted: $383.40
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 10
+            gradeCode: 'TG3~13:30'
+            gradeTitle: 'Afternoon Departure; A-Star 13:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 449.99
+                        merchantNetPrice: 383.4
+                        priceFormatted: $449.99
+                        merchantNetPriceFormatted: $383.40
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 11
+            gradeCode: 'TG4~12:30'
+            gradeTitle: 'Afternoon Departure; EC-130 12:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 474.99
+                        merchantNetPrice: 404.7
+                        priceFormatted: $474.99
+                        merchantNetPriceFormatted: $404.70
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 12
+            gradeCode: 'TG4~13:30'
+            gradeTitle: 'Afternoon Departure; EC-130 13:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-02'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 474.99
+                        merchantNetPrice: 404.7
+                        priceFormatted: $474.99
+                        merchantNetPriceFormatted: $404.70
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+        callForLastMinAvailability: false
+      - sortOrder: 3
+        bookingDate: '2020-03-03'
+        tourGrades:
+          - sortOrder: 1
+            gradeCode: 'EB_ASTAR_SP~07:00'
+            gradeTitle: 'Special: Earlybird A-Star 07:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 409.99
+                        merchantNetPrice: 383.4
+                        priceFormatted: $409.99
+                        merchantNetPriceFormatted: $383.40
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 2
+            gradeCode: 'EB_EC130_SP~07:00'
+            gradeTitle: 'Special: Earlybird EC-130 07:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 434.99
+                        merchantNetPrice: 404.7
+                        priceFormatted: $434.99
+                        merchantNetPriceFormatted: $404.70
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 3
+            gradeCode: 'TG1~08:00'
+            gradeTitle: 'Morning Departure; A-Star 08:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 459.99
+                        merchantNetPrice: 388.72
+                        priceFormatted: $459.99
+                        merchantNetPriceFormatted: $388.72
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 4
+            gradeCode: 'TG1~09:45'
+            gradeTitle: 'Morning Departure; A-Star 09:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 459.99
+                        merchantNetPrice: 388.72
+                        priceFormatted: $459.99
+                        merchantNetPriceFormatted: $388.72
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 5
+            gradeCode: 'TG1~10:45'
+            gradeTitle: 'Morning Departure; A-Star 10:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 459.99
+                        merchantNetPrice: 388.72
+                        priceFormatted: $459.99
+                        merchantNetPriceFormatted: $388.72
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 6
+            gradeCode: 'TG2~08:00'
+            gradeTitle: 'Morning Departure; EC-130 08:00'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 484.99
+                        merchantNetPrice: 410.02
+                        priceFormatted: $484.99
+                        merchantNetPriceFormatted: $410.02
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 7
+            gradeCode: 'TG2~09:45'
+            gradeTitle: 'Morning Departure; EC-130 09:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 484.99
+                        merchantNetPrice: 410.02
+                        priceFormatted: $484.99
+                        merchantNetPriceFormatted: $410.02
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 8
+            gradeCode: 'TG2~10:45'
+            gradeTitle: 'Morning Departure; EC-130 10:45'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 484.99
+                        merchantNetPrice: 410.02
+                        priceFormatted: $484.99
+                        merchantNetPriceFormatted: $410.02
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 9
+            gradeCode: 'TG3~12:30'
+            gradeTitle: 'Afternoon Departure; A-Star 12:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 449.99
+                        merchantNetPrice: 383.4
+                        priceFormatted: $449.99
+                        merchantNetPriceFormatted: $383.40
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 10
+            gradeCode: 'TG3~13:30'
+            gradeTitle: 'Afternoon Departure; A-Star 13:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 449.99
+                        merchantNetPrice: 383.4
+                        priceFormatted: $449.99
+                        merchantNetPriceFormatted: $383.40
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 11
+            gradeCode: 'TG4~12:30'
+            gradeTitle: 'Afternoon Departure; EC-130 12:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 474.99
+                        merchantNetPrice: 404.7
+                        priceFormatted: $474.99
+                        merchantNetPriceFormatted: $404.70
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+          - sortOrder: 12
+            gradeCode: 'TG4~13:30'
+            gradeTitle: 'Afternoon Departure; EC-130 13:30'
+            pricingMatrix:
+              - sortOrder: 1
+                pricingUnit: per person
+                bookingDate: '2020-03-03'
+                ageBandPrices:
+                  - bandId: 1
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 474.99
+                        merchantNetPrice: 404.7
+                        priceFormatted: $474.99
+                        merchantNetPriceFormatted: $404.70
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 1
+                    minimumCountRequired: 1
+                    maximumCountRequired: 9
+                  - bandId: 3
+                    prices:
+                      - sortOrder: 1
+                        currencyCode: USD
+                        price: 0
+                        merchantNetPrice: 0
+                        priceFormatted: $0.00
+                        merchantNetPriceFormatted: $0.00
+                        minNoOfTravellersRequiredForPrice: 1
+                    sortOrder: 2
+                    minimumCountRequired: 0
+                    maximumCountRequired: 9
+        callForLastMinAvailability: false
+  dateStamp: '2020-02-10T18:17:58+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331003'

@@ -1,0 +1,12 @@
+type: integer
+description: >
+  **number** of user reviews that have been submitted by users for *this*
+  product
+
+
+  If your account has been configured to limit the number of reviews you can
+  receive, this value will never be higher than that. Otherwise, this value will
+  show the total number of reviews available for this product. If there are more
+  than 24 reviews available, you will need to use the
+  [/product/reviews](../../../../openapi/reference/operation/productReviews) service
+  to retrieve the remainder of the reviews.

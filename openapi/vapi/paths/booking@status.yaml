@@ -1,0 +1,190 @@
+post:
+  tags:
+    - Booking services
+  summary: /booking/status
+  operationId: bookingStatus
+  description: >
+    Get the booking status for multiple items based on different criteria
+
+
+    This service: 
+
+    - is ideally be used in software for bulk updates of pending bookings
+
+    - returns a maximum of 1000 bookings (narrow your search if you expect a
+    greater number of results)
+
+    - will return <u>both</u> live <u>and</u> test bookings
+
+    - rate limited to <u>one request every 30 minutes</u>
+
+    - For more information, see: [Get the bookiing status for multiple
+    items](#section/Common-workflows-and-data-validation/Get-the-booking-status-for-multiple-items)
+
+
+    **Exceeding the rate limit**
+
+    - You will receive the following error message if you exceed the rate limit
+    allowed for this service. Set `test` to `true` to bypass this limit:
+
+    ```javascript
+
+    {
+        "data": null
+        "vmid": 221002
+        "errorMessage": ["Access allowed every 30 minutes"]
+        "errorType": "EXCEPTION"
+        "dateStamp": "2013-03-26T10:28:51+0000"
+        "errorReference": 55315512721712161381352771
+        "errorMessageText": ["Access allowed every 30 minutes"]
+        "success": false
+        "totalCount": 1
+        "errorName": "PollingDeniedException"  
+    }
+
+    ```
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        examples:
+          booking_date:
+            value:
+              bookingDateFrom: '2020-12-21'
+              bookingDateTo: '2020-12-31'
+              test: true
+          itemIds:
+            value:
+              itemIds:
+                - 580669678
+              test: true
+          distributorItemRefs:
+            value:
+              distributorItemRefs:
+                - itemRef1000000
+              test: true
+          lead_name:
+            value:
+              leadFirstName: Homer test
+              leadSurname: Simpson test
+              test: true
+          all:
+            value:
+              bookingDateFrom: '2020-12-21'
+              bookingDateTo: '2020-12-31'
+              itemIds:
+                - 580669678
+              distributorItemRefs:
+                - itemRef1000000
+              leadFirstName: Homer test
+              leadSurname: Simpson test
+              test: true
+        schema:
+          type: object
+          description: >-
+            **note**: all items are optional, but at least one needs to be
+            included
+          properties:
+            bookingDateFrom:
+              type: string
+              description: '**earliest date** for *this* booking (must be in the future)'
+            bookingDateTo:
+              type: string
+              description: '**latest date** for *this* booking (must be in the future)'
+            itemIds:
+              type: array
+              description: '**array** of item identifiers to check'
+              items:
+                type: integer
+                description: '**numeric item identifier**'
+            distributorRefs:
+              type: array
+              description: '**array** of partner-defined distributor reference identifiers'
+              items:
+                type: string
+            distributorItemRefs:
+              type: array
+              description: >-
+                **array** of partner-defined distributor item reference
+                identifiers e.g. `['refItem1','refItem2','refItem3']`
+              items:
+                type: string
+            leadFirstName:
+              type: string
+              description: '**first name** of the lead traveler'
+            leadSurname:
+              type: string
+              description: '**surname** of the lead traveler'
+            test:
+              type: boolean
+              description: >
+                **specifier**:
+
+                - `true`: bypass the poll limit in the prelive environment only
+                (recommended for testing)
+
+                - `false`: (default)
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    description: '**object** containing booking status and details'
+                    type: object
+                    properties:
+                      itineraryId:
+                        type: integer
+                        description: ignore (Viator only)
+                      bookingStatus:
+                        $ref: ../components/schemas/bookingStatus_itinerary.yaml
+                      bookingDate:
+                        type: string
+                        description: '**date**: of *this* booking'
+                      distributorRef:
+                        type: string
+                        description: >-
+                          **alphanumeric identifer** of the distributor for
+                          *this* booking
+                      itemSummaries:
+                        type: array
+                        description: '**array** of item summary objects'
+                        items:
+                          type: object
+                          properties:
+                            itineraryId:
+                              type: integer
+                              description: ignore (Viator only)
+                            itemId:
+                              type: integer
+                              description: >
+                                Booking-reference number generated by Viator
+
+                                - **Note**: For more information, see: [Booking
+                                references](#section/Key-concepts/Booking-references)
+                            bookingStatus:
+                              $ref: ../components/schemas/bookingStatus_item.yaml
+                            travelDate:
+                              type: string
+                              description: '**date** of the booking'
+                            distributorItemRef:
+                              type: string
+                              description: >-
+                                **partner-defined distributor item reference
+                                identifier**
+                            sortOrder:
+                              type: integer
+                              description: '**sort order** for *this* item'
+                      sortOrder:
+                        type: integer
+                        description: '**sort order** for *this* response'
+                        example: null
+          examples:
+            '1':
+              $ref: ../components/examples/booking-status-example.yaml

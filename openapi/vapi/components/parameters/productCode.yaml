@@ -1,0 +1,6 @@
+name: productCode
+in: query
+description: '**unique alphanumeric identifier** of the product'
+schema:
+  type: string
+example: 2280AAHT

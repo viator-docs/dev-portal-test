@@ -1,0 +1,203 @@
+post:
+  tags:
+    - Booking services
+  summary: /booking/availability/tourgrades
+  operationId: bookingAvailabilityTourgrades
+  description: >
+    Get the tour grades of a product that are currently available
+
+
+    This service reports:
+
+    - all tour grades for the specified product, on the specified day, that are
+    available for the specified age bands
+
+    - the pricing breakdown and the total depending on the travel date and
+    traveler mix
+
+
+    **Note**: Availability data is limited to a period of **12 months** into the
+    future from the present time on the production server and **6 months** on
+    the sandbox server. 
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        example:
+          productCode: 5010SYDNEY
+          currencyCode: AUD
+          bookingDate: '2020-12-28'
+          ageBands:
+            - bandId: 1
+              count: 1
+        schema:
+          type: object
+          properties:
+            productCode:
+              type: string
+            currencyCode:
+              type: string
+              description: >-
+                **currency code** for the currency in which to display pricing
+                information
+            bookingDate:
+              type: string
+              description: >-
+                **date** to enquire about available tour grades for *this*
+                product (must be in the future)
+            ageBands:
+              type: array
+              description: '**array** of ageBand objects'
+              items:
+                type: object
+                properties:
+                  bandId:
+                    $ref: ../components/schemas/bandId.yaml
+                  count:
+                    type: integer
+                    description: >-
+                      **numeric count** of number of travelers in *this* age
+                      band
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/basicErrorModel.yaml
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        sortOrder:
+                          type: integer
+                          description: >-
+                            **sort order** for *this* tour grade availability
+                            object
+                        bookingDate:
+                          type: string
+                          description: '**date** on which *this* tour grade operates'
+                        ageBands:
+                          type: array
+                          description: >-
+                            **array** of age band objects describing the age
+                            bands and respective passenger counts allowed to
+                            book *this* tour grade; `null` if `ageBandsRequired`
+                            is filled and `available` is `false`
+                        ageBandsRequired:
+                          type: array
+                          description: >
+                            **array of arrays** of age band objects describing
+                            the traveler mixes eligible to book *this* tour
+                            grade; `null` if `ageBands` is filled and
+                            `available` is `true`
+
+                            - **note**: multiple objects; structure will depend
+                            on available tour grades – see response sample for
+                            an example, but the exact result you receive will
+                            differ
+                          items:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                bandId:
+                                  $ref: ../components/schemas/bandId.yaml
+                                minimumCountRequired:
+                                  description: >-
+                                    **minimum number** of passengers from *this*
+                                    age band required for *this* tour grade
+                                  type: integer
+                                maximumCountRequired:
+                                  type: integer
+                                  description: >-
+                                    **maximum number** of passengers from *this*
+                                    age band allowable for *this* tour grade
+                        langServices:
+                          description: >-
+                            **object** detailing language services available for
+                            *this* product** (will be `null` if `available` is
+                            `false`)
+                          type: object
+                        gradeCode:
+                          type: string
+                          description: '**alphanumeric identifier** of *this* tour grade'
+                        unavailableReason:
+                          type: string
+                          description: >-
+                            **enum specifier of reason for product
+                            unavailability** (will be `null` if `available` is
+                            `true`)
+                        gradeTitle:
+                          type: string
+                          description: '**natural-language title** of the tour grade'
+                        gradeDepartureTime:
+                          type: string
+                          description: '**time** of *this* product'
+                        gradeDescription:
+                          type: string
+                          description: '**natural-language description** of the tour grade'
+                        defaultLanguageCode:
+                          type: string
+                          description: >-
+                            **language code for standard langauge** for *this*
+                            product
+                        available:
+                          type: boolean
+                          description: >-
+                            **indicator** - `true` if this tour grade is
+                            available to be booked according to the traveler mix
+                            specified
+                        retailPrice:
+                          type: number
+                          description: >
+                            **numeric suggested retail price** for *this* tour
+                            grade
+
+                            **Note**: will be `0` if `available` is `false`
+
+                            - For more information, see: [Merchant
+                            pricing](#section/Merchant-APIs/Merchant-pricing)
+                        retailPriceFormatted:
+                          type: string
+                          description: >
+                            **currency-formatted suggested retail price** for
+                            *this* tour grade
+
+                            **Note**: (will be '' if `available` is `false`)
+
+                            - For more information, see: [Merchant
+                            pricing](#section/Merchant-APIs/Merchant-pricing)
+                        merchantNetPrice:
+                          type: number
+                          description: >
+                            **numeric merchant net rate** for *this* tour grade
+
+                            **Note**: will be `0` if `available` is `false`
+
+                            - For more information, see: [Merchant
+                            pricing](#section/Merchant-APIs/Merchant-pricing)
+                        merchantNetPriceFormatted:
+                          type: string
+                          description: >
+                            **currency-formatted merchant net rate** for *this*
+                            tour grade
+
+                            **Note**: will be empty if `available` is `false`
+
+                            - For more information, see: [Merchant
+                            pricing](#section/Merchant-APIs/Merchant-pricing)
+                        currencyCode:
+                          type: string
+                          description: >-
+                            **currency code for the specified currency** (will
+                            be `'ERROR'` if `available` is `false`)
+          examples:
+            '1':
+              $ref: >-
+                ../components/examples/booking-availability-tourgrades-example.yaml

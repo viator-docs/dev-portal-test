@@ -1,0 +1,165 @@
+summary: booking availability tourgrades example
+value:
+  errorReference: null
+  data:
+    - sortOrder: 1
+      bookingDate: '2020-02-28'
+      ageBands:
+        - bandId: 1
+          count: 1
+          bandTotal: 42.41
+          pricePerTravelerFormatted: $42.41
+          pricePerTraveler: 42.41
+          bandTotalFormatted: $42.41
+          currencyCode: AUD
+      ageBandsRequired: null
+      langServices:
+        en/SERVICE_AUDIO: English - Audio
+        de/SERVICE_AUDIO: German - Audio
+        fr/SERVICE_AUDIO: French - Audio
+        es/SERVICE_AUDIO: Spanish - Audio
+        ja/SERVICE_AUDIO: Japanese - Audio
+        ko/SERVICE_AUDIO: Korean - Audio
+        zh/SERVICE_AUDIO: Chinese - Audio
+      gradeCode: 24HOUR
+      unavailableReason: null
+      gradeTitle: '24 Hour Classic Ticket '
+      gradeDepartureTime: ''
+      gradeDescription: >-
+        Unlimited use on Big Bus Sydney & Bondi Hop-on Hop-off Tour for 24 hours
+        from time of first use
+      defaultLanguageCode: en
+      available: true
+      retailPrice: 53.1
+      merchantNetPrice: 42.41
+      retailPriceFormatted: $53.10
+      merchantNetPriceFormatted: $42.41
+      currencyCode: AUD
+    - sortOrder: 2
+      bookingDate: '2020-02-28'
+      ageBands:
+        - bandId: 1
+          count: 1
+          bandTotal: 56.79
+          pricePerTravelerFormatted: $56.79
+          pricePerTraveler: 56.79
+          bandTotalFormatted: $56.79
+          currencyCode: AUD
+      ageBandsRequired: null
+      langServices:
+        en/SERVICE_AUDIO: English - Audio
+        de/SERVICE_AUDIO: German - Audio
+        fr/SERVICE_AUDIO: French - Audio
+        es/SERVICE_AUDIO: Spanish - Audio
+        ja/SERVICE_AUDIO: Japanese - Audio
+        ko/SERVICE_AUDIO: Korean - Audio
+        zh/SERVICE_AUDIO: Chinese - Audio
+      gradeCode: 48HOUR
+      unavailableReason: null
+      gradeTitle: '48 Hour Premium Ticket '
+      gradeDepartureTime: ''
+      gradeDescription: >-
+        48 Hour Premium Ticket: Unlimited use on Big Bus Sydney & Bondi Tour for
+        48 hours from time of first use PLUS a guided walking tour of The Rocks,
+        Syd
+      defaultLanguageCode: en
+      available: true
+      retailPrice: 71.1
+      merchantNetPrice: 56.79
+      retailPriceFormatted: $71.10
+      merchantNetPriceFormatted: $56.79
+      currencyCode: AUD
+    - sortOrder: 3
+      bookingDate: '2020-02-28'
+      ageBands:
+        - bandId: 1
+          count: 1
+          bandTotal: 79.08
+          pricePerTravelerFormatted: $79.08
+          pricePerTraveler: 79.08
+          bandTotalFormatted: $79.08
+          currencyCode: AUD
+      ageBandsRequired: null
+      langServices:
+        en/SERVICE_AUDIO: English - Audio
+        de/SERVICE_AUDIO: German - Audio
+        fr/SERVICE_AUDIO: French - Audio
+        es/SERVICE_AUDIO: Spanish - Audio
+        ja/SERVICE_AUDIO: Japanese - Audio
+        ko/SERVICE_AUDIO: Korean - Audio
+        zh/SERVICE_AUDIO: Chinese - Audio
+      gradeCode: DELUXE
+      unavailableReason: null
+      gradeTitle: 48 Hour Deluxe Bus and Cruise
+      gradeDepartureTime: ''
+      gradeDescription: >-
+        Big Bus and Habour Cruise: Combine two great Sydney experiences into one
+        with a hop-on hop off Big Bus Tours and a hop-on hop-off Sydney Harbour
+        cruise <br/>Duration: 2 days: SPECIAL OFFER: EXTRA FREE DAY when you
+        purchase a Deluxe ticket - have 3 days to explore Sydney not 2. Limited
+        time only.
+
+        <br/>Complimentary Walking Tour: Complimentary English-speaking
+        90-minute guided walking tour of “The Rocks” historic and harbourside
+        precinct.
+      defaultLanguageCode: en
+      available: true
+      retailPrice: 99
+      merchantNetPrice: 79.08
+      retailPriceFormatted: $99.00
+      merchantNetPriceFormatted: $79.08
+      currencyCode: AUD
+    - sortOrder: 4
+      bookingDate: '2020-02-28'
+      ageBands:
+        - bandId: 1
+          count: 1
+          bandTotal: 103.04
+          pricePerTravelerFormatted: $103.04
+          pricePerTraveler: 103.04
+          bandTotalFormatted: $103.04
+          currencyCode: AUD
+      ageBandsRequired: null
+      langServices:
+        en/SERVICE_AUDIO: English - Audio
+        de/SERVICE_AUDIO: German - Audio
+        fr/SERVICE_AUDIO: French - Audio
+        es/SERVICE_AUDIO: Spanish - Audio
+        ja/SERVICE_AUDIO: Japanese - Audio
+        ko/SERVICE_AUDIO: Korean - Audio
+        zh/SERVICE_AUDIO: Chinese - Audio
+      gradeCode: TG1
+      unavailableReason: null
+      gradeTitle: 48Hour Deluxe PLUS Attractions
+      gradeDepartureTime: ''
+      gradeDescription: >-
+        Hop-on Hop-Off and Attractions: 48hr Big Bus Tours, 1-day Hop-On Hop-Off
+        Harbour Cruise, 4 Attractions: Tower Eye, Madame Tussauds, Wildlife Zoo,
+        Aquarium<br/>Duration: 2 days: SPECIAL OFFER: EXTRA FREE DAY when you
+        purchase a Deluxe ticket - have 3 days to explore Sydney not 2. Limited
+        time only.
+
+        <br/>Complimentary Walking Tours: Complimentary English-speaking guided
+        walking tour of “The Rocks” historic and harbourside precinct.
+      defaultLanguageCode: en
+      available: true
+      retailPrice: 129
+      merchantNetPrice: 103.04
+      retailPriceFormatted: $129.00
+      merchantNetPriceFormatted: $103.04
+      currencyCode: AUD
+  dateStamp: '2020-02-10T16:57:56+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject:
+    CDE_BRAINTREE:
+      APPAY: sandbox_rtg2qcnx_yx8ptb2tqsjnzdnj
+      PP: sandbox_rtg2qcnx_yx8ptb2tqsjnzdnj
+      GPAY: sandbox_rtg2qcnx_yx8ptb2tqsjnzdnj
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331003'

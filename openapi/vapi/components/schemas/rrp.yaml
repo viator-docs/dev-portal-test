@@ -1,0 +1,3 @@
+type: integer
+description: >-
+  **numeric original price** for this product if the product is on special / a discount has been applied. `0` if there is no discount on this product. See [Special offers and on-sale pricing](../../../../developer-portal/papiv1/key-concepts/special-offers-and-on-sale-pricing) for more information.

@@ -1,0 +1,97 @@
+openapi: 3.0.1
+info:
+  title: Viator API Documentation & Specification – Merchant Partners
+  version: 1.0.0
+  contact:
+    name: Viator Partner Support Team
+    url: 'https://docs.viator.com/partner-api/merchant/#support-procedures-merchant/'
+    email: dpsupport@viator.com
+  license:
+    name: CC BY 4.0
+    url: 'https://creativecommons.org/licenses/by/4.0/au'
+servers:
+  - url: 'https://viatorapi.sandbox.viator.com/service'
+    description: Sandbox server (uses test data)
+  - url: 'https://viatorapi.viator.com/service'
+    description: Production server (uses live data)
+tags:
+  - name: General services
+    description: General services
+  - name: Taxonomy services
+    description: Taxonomy services
+  - name: Product services
+    description: Product services
+  - name: Booking services
+    description: Booking services
+  - name: Deprecated services
+    description: Deprecated services
+components:
+  securitySchemes:
+    API-key:
+      type: apiKey
+      in: header
+      name: exp-api-key
+    Legacy-API-key:
+      type: apiKey
+      in: query
+      name: apiKey
+security:
+  - API-key: []
+  - Legacy-API-key: []
+paths:
+  /health/check:
+    $ref: paths/health@check.yaml
+  /taxonomy/destinations:
+    $ref: paths/taxonomy@destinations.yaml
+  /taxonomy/categories:
+    $ref: paths/taxonomy@categories.yaml
+  /taxonomy/attractions:
+    $ref: paths/taxonomy@attractions.yaml
+  /search/products:
+    $ref: paths/search@products.yaml
+  /search/products/codes:
+    $ref: paths/search@products@codes.yaml
+  /search/freetext:
+    $ref: paths/search@freetext.yaml
+  /product:
+    $ref: paths/product.yaml
+  /product/reviews:
+    $ref: paths/product@reviews.yaml
+  /product/photos:
+    $ref: paths/product@photos.yaml
+  /available/products:
+    $ref: paths/available@products.yaml
+  /booking/availability:
+    $ref: paths/booking@availability.yaml
+  /booking/availability/dates:
+    $ref: paths/booking@availability@dates.yaml
+  /booking/availability/tourgrades:
+    $ref: paths/booking@availability@tourgrades.yaml
+  /booking/availability/tourgrades/pricingmatrix:
+    $ref: paths/booking@availability@tourgrades@pricingmatrix.yaml
+  /booking/calculateprice:
+    $ref: paths/booking@calculateprice.yaml
+  /booking/hotels:
+    $ref: paths/booking@hotels.yaml
+  /booking/book:
+    $ref: paths/booking@book.yaml
+  /booking/status:
+    $ref: paths/booking@status.yaml
+  /booking/status/items:
+    $ref: paths/booking@status@items.yaml
+  /booking/pricingmatrix:
+    $ref: paths/booking@pricingmatrix.yaml
+  /booking/voucher:
+    $ref: paths/booking@voucher.yaml
+  /booking/pastbooking:
+    $ref: paths/booking@pastbooking.yaml
+  /booking/mybookings:
+    $ref: paths/booking@mybookings.yaml
+  /bookings/cancel-reasons:
+    $ref: paths/bookings@cancel-reasons.yaml
+  /bookings/{booking-reference}/cancel-quote:
+    $ref: paths/bookings@{booking-reference}@cancel-quote.yaml
+  /bookings/{booking-reference}/cancel:
+    $ref: paths/bookings@{booking-reference}@cancel.yaml
+  /merchant/cancellation:
+    $ref: paths/merchant@cancellation.yaml

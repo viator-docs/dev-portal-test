@@ -1,0 +1,9 @@
+type: boolean
+description: >
+  **indicator**: `true` if a special offer is available for *this* product. 
+
+
+  If `true`, the `specialOffer` field will contain a text string providing details of the special offer which you may wish to display in your product search results. E.g. 'Book by May 27 to save 34% off our previously offered price!'. 
+
+  
+  See [Special offers and on-sale pricing](../../../../developer-portal/papiv1/key-concepts/special-offers-and-on-sale-pricing) for more information.

@@ -1,0 +1,172 @@
+summary: booking voucher example
+value:
+  errorReference: null
+  data: >
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta name="viewport" content="width=device-width" />
+            <title>Viator</title>
+        </head>
+        <body>
+            <div id="content" class="voucher_box">
+                    <div id="voucher_1">
+
+            <div class="section">
+                <div class="voucher_title">
+                    Voucher 1
+                    of 1: Homer test Simpson test
+                </div>
+            </div>
+
+            <div class="section bline">
+                <div class="btn_box">
+                </div>
+            </div>
+
+            <div style="line-height: 1.5;font-family:'Arial','Helvetica','Verdana',sans-serif; font-size: 12px; padding: 0 10px; border-bottom: 1px solid #CAE2EA;">
+
+                <h2 style="font-size:16px;font-weight:bold;margin:0.5em 0;padding:0;">
+                Grand Canyon All-American Helicopter Tour
+                        <span style="display: block;font-size:12px;">
+                            Morning Departure; A-Star 08:00
+                        </span>
+                </h2>
+
+                <div class="barcode">
+                    <img src="/voucher/resource?type=barcode&itineraryItemId=580669678&voucherToken=4af44c13ecf3f1a7d3f9ef2fc00c2257e08fa42ae20f877f3039ff9b52aba24e" alt=""/>
+                </div>
+
+                    <h2 style="font-size:16px;font-weight:bold;margin:0.5em 0;padding:0;">SAMPLE ONLY</h2>
+
+                <ul style="margin:0 0 1em 1em; padding:0;">
+                    <li>
+                        <strong>Date:</strong>
+                    Tuesday March 31, 2020
+                    </li>
+                </ul>
+
+                <ul style="margin:0 0 1em 1em; padding:0;">
+                        <li>
+                            <strong>Lead traveler
+                                :
+                            </strong>Homer test Simpson test
+                        </li>
+                        <li>
+                            <strong>Number of Travelers
+                                :
+                            </strong>1 Adult</li>
+
+                    <li>
+                        <strong>Booking Reference:
+                        </strong>BR-580669678</li>
+
+                    <li>
+                        <strong>Product Code:
+                        </strong>2280AAHT</li>
+
+                        <li>
+                            <strong>Option Code:
+                            </strong>TG1~08:00</li>
+
+                        <li>
+                            <strong>Supplier
+                                : </strong>Sundance Helicopters</li>
+
+
+
+
+
+                    <li>
+                        <strong>Location
+                            :</strong>
+                                <p>Traveler pickup is offered<br><br></p>
+                    </li>
+
+                        <li>
+                            <strong>Tour Option Description
+                                :</strong>
+                        Morning departure between 8am and 11:45am on an A-Star Helicopter for the All American Helicopter Tour
+                            
+                        </li>
+                </ul>
+
+                <h3 style="font-size:14px;font-weight:bold;margin:0.5em 0;padding:0;">
+                Voucher Information
+                </h3>
+
+                <ul style="margin:0 0 1em 1em; padding:0;">
+                    You can present either a paper or an electronic voucher for this activity.
+                        <span style="color:#888888;"> / You can present either a paper or an electronic voucher for this activity.</span>
+                </ul>
+
+                <h3 style="font-size:14px;font-weight:bold;margin:0.5em 0;padding:0;">
+                Important Information
+                </h3>
+                    <ul>
+    <li>Your local contact is Sundance Helicopters on +17027360606.</li></ul>
+
+    • Important: due to comfort, weight and balance of the aircraft, the maximum
+    weight per passenger to ride in an A-Star helicopter is 275lbs (125kg /
+    19.6st). If passengers weigh in between 275lbs and 300lbs (136kg/21.4st),
+    you will be required to upgrade to the EC-130.<br> • Any passenger over
+    300lbs will be required to purchase an additional seat. This is payable
+    directly to the tour operator on the day of the tour.<br> • Due to the
+    nature of this tour and the safety of all guests, the tour operator reserves
+    the right to refuse service to passengers who are intoxicated or show signs
+    of intoxication. If, as a result, your tour is canceled, you will not be
+    entitled to a refund.<br> • Infant children must be under the age of two and
+    have proof of age, such as a passport and are considered lap children.<br> •
+    Per FAA regulations, all passenger must present photo ID at check in.<br> •
+    If you would like a vegetarian meal as your lunch option, please contact the
+    local operator as soon as possible.<br> • Please Note: Please look for your
+    Limo driver who will get out and will be looking for the lead traveler’s
+    last name of whom the reservation is under. There is also a sign in the
+    front windshield of the Limo that will say Sundance
+    Helicopters.<br><br>Hotel pickups commence prior to this time, you must
+    contact the local service provider to verify your exact pickup
+    time.<br><br>All flight times are approximate and subject to change due to
+    weather conditions and weight restrictions.<br>
+
+                    <h3 style="font-size:14px;font-weight:bold;margin:0.5em 0;padding:0;">
+                    Inclusions
+                    </h3>
+                        <ul>
+    <li>45-minute (approx.) flight each way (helicopter based on option
+    selected)</li><li>Hotel pickup and drop-off by
+    limousine</li><li>Snacks</li><li>Glass of Champagne</li><li>All taxes and
+    fees</li></ul>
+
+
+                    <h3 style="font-size:14px;font-weight:bold;margin:0.5em 0;padding:0;">
+                    Exclusions
+                    </h3>
+                        <ul>
+    <li>Gratuities</li></ul>
+
+
+
+            </div>
+
+        </div>
+            <br/>
+
+            </div>
+
+        </body>
+    </html>
+  dateStamp: '2020-02-11T19:50:39+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331003'

@@ -1,0 +1,135 @@
+post:
+  tags:
+    - Booking services
+  description: >
+    Submits a cancellation request for the specified booking
+
+
+    For information on how to use this service, see: [Cancellation API
+    workflow](#section/Common-workflows-and-data-validation/Cancellation-API-workflow)
+
+
+    **Note**: 
+
+      * This service <u>requires</u> [exp-api-key](#section/Authentication/exp-api-key) to be included as a header parameter. Please speak to your account manager if you have not yet been issued an exp-api-key.
+      * The base URL for the server for this endpoint is different from the older endpoints described in this document. Use `https://api.sandbox.viator.com/partner/bookings/{booking-reference}/cancel`
+  operationId: cancelBooking
+  summary: '/bookings/{booking-reference}/cancel'
+  servers:
+    - url: 'https://api.sandbox.viator.com/partner'
+      description: Sandbox server (uses test data)
+  parameters:
+    - name: booking-reference
+      in: path
+      description: The ID of the booking
+      required: true
+      schema:
+        type: string
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CancellationRequest.yaml
+        example:
+          reasonCode: Customer_Service.I_canceled_my_entire_trip
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CancelBookingResponse.yaml
+          examples:
+            '1':
+              summary: canceled
+              value:
+                bookingId: BR-580669678
+                status: ACCEPTED
+            '2':
+              summary: already canceled
+              value:
+                bookingId: BR-580669678
+                reason: ALREADY_CANCELLED
+                status: DECLINED
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                  - BAD_REQUEST
+                example: BAD_REQUEST
+              message:
+                type: string
+                enum:
+                  - Missing cancellation reason
+                example: Missing cancellation reason
+              timestamp:
+                type: string
+                description: Timestamp of the request
+                example: '2019-09-17T03:20:45.737043Z'
+              trackingId:
+                type: string
+                description: >-
+                  Tracking identifier for this error response (useful when
+                  seeking support)
+                example: XXXX
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/401_UNAUTHORIZED.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              code:
+                type: string
+                enum:
+                  - NOT_FOUND
+                example: NOT_FOUND
+              message:
+                type: string
+                description: >-
+                  The specified booking was not found; or, it was not created
+                  with this API key
+                enum:
+                  - Booking not found
+                example: Booking not found
+              timestamp:
+                type: string
+                description: Timestamp of the request
+                example: '2019-09-17T03:20:45.737043Z'
+              trackingId:
+                type: string
+                description: >-
+                  Tracking identifier for this error response (useful when
+                  seeking support)
+                example: XXXX
+    '406':
+      description: Not Acceptable
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/406_NOT_ACCEPTABLE.yaml
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/500_INTERNAL_SERVER_ERROR.yaml
+    '503':
+      description: Service Unavailable
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/503_SERVICE_UNAVAILABLE.yaml

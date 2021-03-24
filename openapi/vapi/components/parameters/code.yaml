@@ -1,0 +1,6 @@
+name: code
+in: query
+schema:
+  type: string
+description: '**unique alphanumeric identifier** of the product'
+example: 5010SYDNEY

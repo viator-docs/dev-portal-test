@@ -1,0 +1,60 @@
+get:
+  tags:
+    - Booking services
+  description: >
+    Retrieves a dictionary of unique identification codes
+    (`cancellationReasonCode`) and their associated natural-language
+    descriptions (`cancellationReasonText`).
+
+
+    For information on how to use this service, see: [Cancellation API
+    workflow](#section/Common-workflows-and-data-validation/Cancellation-API-workflow)
+
+
+    **Note**: 
+
+      * This service <u>requires</u> [exp-api-key](#section/Authentication/exp-api-key) to be included as a header parameter. Please speak to your account manager if you have not yet been issued an exp-api-key.
+      * The base URL for the server for this endpoint is different from the older endpoints described in this document. Use `https://api.sandbox.viator.com/partner/cancel-reasons`
+  summary: /bookings/cancel-reasons
+  operationId: cancellationReasons
+  servers:
+    - url: 'https://api.sandbox.viator.com/partner'
+      description: Sandbox server (uses test data)
+  parameters:
+    - $ref: ../components/parameters/acceptLanguage.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/CancellationReasonsResponse.yaml
+          examples:
+            '1':
+              $ref: ../components/examples/cancel-reasons-example.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/401_UNAUTHORIZED.yaml
+    '406':
+      description: Not Acceptable
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/406_NOT_ACCEPTABLE.yaml
+    '500':
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/500_INTERNAL_SERVER_ERROR.yaml
+    '503':
+      description: Service Unavailable
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/503_SERVICE_UNAVAILABLE.yaml

@@ -1,0 +1,7 @@
+type: string
+description: >
+  **currency-formatted suggested sell ('from') price** for
+  this product in the currency set in the `currencyCode` parameter
+
+  
+  - For more information, see: [Merchant pricing](../../../../developer-portal/papiv1/key-concepts/merchant-pricing)

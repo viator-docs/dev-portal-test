@@ -1,0 +1,6 @@
+name: destId
+in: query
+description: '**unique numeric identifier** of the destination'
+schema:
+  type: integer
+example: 123

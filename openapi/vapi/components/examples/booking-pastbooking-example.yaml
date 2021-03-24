@@ -1,0 +1,135 @@
+summary: booking pastbooking example
+value:
+  errorReference: null
+  data:
+    sortOrder: 0
+    rulesApplied: null
+    omniPreRuleList: []
+    bookingStatus:
+      status: 3
+      text: Confirmed
+      type: CONFIRMED
+      level: ITINERARY
+      confirmed: true
+      pending: false
+      amended: false
+      cancelled: false
+      failed: false
+    itemSummaries:
+      - sortOrder: 0
+        rulesApplied: null
+        bookingStatus:
+          status: 1
+          text: Paid &amp; Confirmed
+          type: CONFIRMED
+          level: ITEM
+          failed: false
+          confirmed: true
+          amended: false
+          pending: false
+          cancelled: false
+        travellerAgeBands:
+          - sortOrder: 0
+            count: 1
+            pluralDescription: Adults
+            description: Adult
+            ageBandId: 1
+        voucherKey: >-
+          1005851866:4af44c13ecf3f1a7d3f9ef2fc00c2257e08fa42ae20f877f3039ff9b52aba24e:580669678
+        voucherURL: >-
+          https://viatorapi.live.rc.viator.com/service/merchant/voucher.jspa?code=1005851866:4af44c13ecf3f1a7d3f9ef2fc00c2257e08fa42ae20f877f3039ff9b52aba24e:580669678&embedResources=false
+        voucherRequirements: >-
+          You can present either a paper or an electronic voucher for this
+          activity.
+        appleWalletURL: null
+        productPulledDown: false
+        merchantCancellable: true
+        productWidgetList: null
+        savingAmount: 0
+        applePassSupported: false
+        supplierName: Sundance Helicopters
+        supplierPhoneNumber: +1 123 456 7890
+        vouchers: null
+        passbooks: null
+        termsAndConditions: null
+        merchantTermsAndConditions:
+          termsAndConditions: >-
+            For a full refund, cancel at least 24 hours in advance of the start
+            date of the experience.
+          merchantTermsAndConditionsType: 1
+          amountRefundable: USD 412.04
+          cancellationFromTourDate:
+            - dayRangeMin: 1
+              dayRangeMax: null
+              percentageRefundable: 100
+              policyStartTimestamp: null
+              policyEndTimestamp: 1585580400
+            - dayRangeMin: 0
+              dayRangeMax: 1
+              percentageRefundable: 0
+              policyStartTimestamp: 1585580400
+              policyEndTimestamp: 1585666800
+        productCode: 2280AAHT
+        travelDate: '2020-03-31'
+        tourGradeCode: 'TG1~08:00'
+        distributorItemRef: itemRef1000000
+        startingTime: '8:00 AM'
+        languageServicesLanguageCode: en
+        price: 412.04
+        leadTravellerSurname: Simpson test
+        itineraryId: 1005851866
+        productTitle: Grand Canyon All-American Helicopter Tour
+        merchantNetPrice: 388.72
+        priceFormatted: $412.04
+        destId: 684
+        voucherOption: VOUCHER_E
+        itemId: 580669678
+        barcodeOption: tour
+        barcodeType: code128
+        departurePoint: Traveler pickup is offered<br><br>
+        departurePointAddress: null
+        departurePointDirections: null
+        leadTravellerFirstname: Homer test
+        rnplInfo: null
+        obfsId: 362208
+        leadTravellerTitle: Mr
+        lastRetailPrice: 388.72
+        savingAmountFormated: $0.00
+        pickupHotelName: 'null'
+        hoursConfirmed: 0
+        lastRetailPriceFormatted: $388.72
+        tourGradeDescription: 'Morning Departure; A-Star 08:00 (TG1~08:00)'
+        bookingEngineId: FO
+        merchantNetPriceFormatted: $388.72
+        departsFrom: 'Las Vegas, United States'
+        pickupHotelId: null
+        priceUSD: 412.04
+        currencyCode: USD
+    voucherURL: >-
+      https://viatorapi.live.rc.viator.com/service/merchant/voucher.jspa?code=1005851866:4af44c13ecf3f1a7d3f9ef2fc00c2257e08fa42ae20f877f3039ff9b52aba24e&embedResources=false
+    securityToken: 4af44c13ecf3f1a7d3f9ef2fc00c2257e08fa42ae20f877f3039ff9b52aba24e
+    paypalRedirectURL: null
+    exchangeRate: 1
+    itineraryId: 1005851866
+    bookingDate: '2020-02-11'
+    voucherKey: >-
+      1005851866:4af44c13ecf3f1a7d3f9ef2fc00c2257e08fa42ae20f877f3039ff9b52aba24e
+    bookerEmail: apitest@viator.com
+    distributorRef: distributorRef100000
+    totalPrice: 412.04
+    totalPriceFormatted: $412.04
+    totalPriceUSD: 412.04
+    hasVoucher: true
+    userId: null
+    currencyCode: USD
+  dateStamp: '2020-02-11T20:06:43+0000'
+  errorType: null
+  errorCodes: []
+  errorMessage: null
+  errorName: null
+  extraInfo: {}
+  extraObject: null
+  success: true
+  totalCount: 1
+  errorMessageText: null
+  vmid: '331003'

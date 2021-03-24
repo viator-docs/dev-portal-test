@@ -1,0 +1,13 @@
+type: array
+description: >
+  **array** of user review objects
+
+
+  The number of reviews returned here will either be the number of reviews you
+  are entitled to according to your account configuration; or, if you are not
+  limited in the number of reviews you can receive, will be a maxiumum of 24
+  reviews. If the value of `reviewCount` in this response exceeds 24, you can
+  use the [/product/reviews](../../../../openapi/reference/operation/productReviews)
+  endpoint to retrieve the remainder of the reviews.
+items:
+  $ref: ./reviewObject.yaml
